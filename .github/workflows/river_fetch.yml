@@ -1,0 +1,40 @@
+name: "River Fetcher — ArcGIS Gin River"
+
+on:
+  schedule:
+    # Every hour at 30 minutes past (staggered from weather_fetch to avoid race conditions)
+    - cron: "30 * * * *"
+  workflow_dispatch:
+
+jobs:
+  fetch-river:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch river level data
+        run: python river_fetcher.py
+
+      - name: Commit and push updated data
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: data/river_data.json
+          message: "chore: auto-update river_data.json [skip ci]"
+          default_author: github_actions
