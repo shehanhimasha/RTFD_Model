@@ -1,6 +1,6 @@
 {
   "source": "openweathermap",
-  "fetched_at": "2026-03-10T22:17:09",
+  "fetched_at": "2026-03-10T23:18:30",
   "locations": [
     {
       "station_id": "BAD01",
@@ -10,7 +10,7 @@
       "lon": 80.18,
       "rainfall_1h_mm": 0.0,
       "humidity": 91,
-      "clouds_pct": 20,
+      "clouds_pct": 21,
       "weather_description": "few clouds"
     },
     {
@@ -21,7 +21,7 @@
       "lon": 80.33,
       "rainfall_1h_mm": 0.0,
       "humidity": 97,
-      "clouds_pct": 15,
+      "clouds_pct": 14,
       "weather_description": "few clouds"
     },
     {
@@ -32,7 +32,7 @@
       "lon": 80.56,
       "rainfall_1h_mm": 0.0,
       "humidity": 97,
-      "clouds_pct": 31,
+      "clouds_pct": 37,
       "weather_description": "scattered clouds"
     },
     {
@@ -43,8 +43,8 @@
       "lon": 80.47,
       "rainfall_1h_mm": 0.0,
       "humidity": 98,
-      "clouds_pct": 24,
-      "weather_description": "few clouds"
+      "clouds_pct": 26,
+      "weather_description": "scattered clouds"
     },
     {
       "station_id": "MAK01",
@@ -54,7 +54,7 @@
       "lon": 80.17,
       "rainfall_1h_mm": 0.0,
       "humidity": 91,
-      "clouds_pct": 20,
+      "clouds_pct": 21,
       "weather_description": "few clouds"
     },
     {
@@ -65,7 +65,7 @@
       "lon": 80.32,
       "rainfall_1h_mm": 0.0,
       "humidity": 95,
-      "clouds_pct": 15,
+      "clouds_pct": 14,
       "weather_description": "few clouds"
     }
   ]
