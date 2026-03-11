@@ -1,14 +1,14 @@
 {
   "source": "arcgis_gin_river",
-  "fetched_at": "2026-03-11T15:12:14",
+  "fetched_at": "2026-03-11T16:10:08",
   "stations": [
     {
       "station_id": "THA01",
       "station_name": "Thawalama",
       "river_name": "Gin Ganga",
-      "current_water_level_m": 0.86,
+      "current_water_level_m": 0.83,
       "rainfall_mm_per_hour": 0.0,
-      "observed_at": "2026-03-11T14:34:46",
+      "observed_at": "2026-03-11T15:33:37",
       "alert_level_m": 4,
       "minor_flood_level_m": 6,
       "major_flood_level_m": 7.5
@@ -19,7 +19,7 @@
       "river_name": "Gin Ganga",
       "current_water_level_m": 1.1,
       "rainfall_mm_per_hour": 0.0,
-      "observed_at": "2026-03-11T14:31:28",
+      "observed_at": "2026-03-11T15:32:08",
       "alert_level_m": 3.5,
       "minor_flood_level_m": 4,
       "major_flood_level_m": 5
