@@ -95,9 +95,26 @@ def save_output(locations: list[dict]) -> None:
         "fetched_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S"),
         "locations": locations,
     }
+    
+    # Load existing records
+    existing_records = []
+    if OUTPUT_FILE.exists():
+        try:
+            with open(OUTPUT_FILE, "r", encoding="utf-8") as fh:
+                data = json.load(fh)
+                if isinstance(data, list):
+                    existing_records = data
+                elif isinstance(data, dict):
+                    # Migrate old single-object dict to list
+                    existing_records = [data]
+        except Exception as exc:
+            log.warning("Could not read existing %s: %s", OUTPUT_FILE, exc)
+
+    existing_records.append(payload)
+
     with open(OUTPUT_FILE, "w", encoding="utf-8") as fh:
-        json.dump(payload, fh, indent=2, ensure_ascii=False)
-    log.info("Saved %d station(s) to %s", len(locations), OUTPUT_FILE)
+        json.dump(existing_records, fh, indent=2, ensure_ascii=False)
+    log.info("Saved %d station(s) to %s (Total snapshots: %d)", len(locations), OUTPUT_FILE, len(existing_records))
 
 
 # ── Main ─────────────────────────────────────────────────────────────────────

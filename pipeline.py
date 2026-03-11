@@ -105,7 +105,12 @@ def get_weather_features(weather_data, station_name: str) -> dict:
     if not weather_data:
         return defaults
 
-    locations = weather_data.get("locations", [])
+    if isinstance(weather_data, list):
+        latest_snapshot = weather_data[-1] if weather_data else {}
+    else:
+        latest_snapshot = weather_data
+
+    locations = latest_snapshot.get("locations", [])
     for loc in locations:
         if str(loc.get("station_name", "")).lower() == station_name.lower():
             return {
@@ -125,7 +130,12 @@ def get_river_features(river_data, station_name: str) -> dict:
     if not river_data:
         return defaults
 
-    stations = river_data.get("stations", [])
+    if isinstance(river_data, list):
+        latest_snapshot = river_data[-1] if river_data else {}
+    else:
+        latest_snapshot = river_data
+
+    stations = latest_snapshot.get("stations", [])
     for st in stations:
         if str(st.get("station_name", "")).lower() == station_name.lower():
             return {

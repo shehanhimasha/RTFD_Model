@@ -21,8 +21,8 @@ from bs4 import BeautifulSoup
 
 DMC_URL = (
     "https://www.dmc.gov.lk/index.php"
-    "?option=com_dmcreports&view=reports&Itemid=274"
-    "&report_type_id=2&lang=en"
+    "?option=com_dmcreports&view=reports&Itemid=277"
+    "&report_type_id=6&lang=en"
 )
 BASE_URL = "https://www.dmc.gov.lk"
 LAST_SEEN_FILE = Path("last_seen_pdf.txt")
@@ -240,9 +240,24 @@ def parse_pdf(pdf_path: Path) -> list[dict]:
 
 def save_output(records: list[dict]) -> None:
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    
+    # Load existing records if any
+    existing_records = []
+    if OUTPUT_FILE.exists():
+        try:
+            with open(OUTPUT_FILE, "r", encoding="utf-8") as fh:
+                existing_records = json.load(fh)
+                if not isinstance(existing_records, list):
+                    existing_records = []
+        except Exception as exc:
+            log.warning("Could not read existing %s: %s", OUTPUT_FILE, exc)
+            
+    # Append the new records
+    existing_records.extend(records)
+    
     with open(OUTPUT_FILE, "w", encoding="utf-8") as fh:
-        json.dump(records, fh, indent=2, ensure_ascii=False)
-    log.info("Saved %d records to %s", len(records), OUTPUT_FILE)
+        json.dump(existing_records, fh, indent=2, ensure_ascii=False)
+    log.info("Saved %d new records to %s (Total: %d)", len(records), OUTPUT_FILE, len(existing_records))
 
 
 # ── Main ─────────────────────────────────────────────────────────────────────
@@ -263,7 +278,7 @@ def main() -> None:
         log.info("PDF '%s' already processed. Nothing to do.", pdf_filename)
         return
 
-    tmp_pdf = Path("data/tmp_dmc_latest.pdf")
+    tmp_pdf = Path(f"rainfall_pdf/{pdf_filename}")
     if not download_pdf(pdf_url, tmp_pdf):
         log.error("Download failed. Keeping existing dmc_data.json unchanged.")
         return
@@ -279,8 +294,7 @@ def main() -> None:
     save_last_seen(pdf_filename)
     log.info("Done. Processed PDF: %s", pdf_filename)
 
-    # Clean up temp file
-    tmp_pdf.unlink(missing_ok=True)
+    log.info("Done. Processed PDF: %s", pdf_filename)
 
 
 if __name__ == "__main__":

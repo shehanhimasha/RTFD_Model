@@ -1,4 +1,19 @@
 {
-  "predicted_at": "",
-  "predictions": []
+  "predicted_at": "2026-03-11T20:11:52",
+  "predictions": [
+    {
+      "station_id": "BAD01",
+      "station_name": "Baddegama",
+      "flood_risk": "Low",
+      "predicted_water_level_m": 1.1,
+      "confidence": 0.65
+    },
+    {
+      "station_id": "THA01",
+      "station_name": "Thawalama",
+      "flood_risk": "Low",
+      "predicted_water_level_m": 0.81,
+      "confidence": 0.65
+    }
+  ]
 }
