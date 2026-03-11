@@ -1,6 +1,6 @@
 {
   "source": "openweathermap",
-  "fetched_at": "2026-03-11T04:00:12",
+  "fetched_at": "2026-03-11T05:12:33",
   "locations": [
     {
       "station_id": "BAD01",
@@ -9,8 +9,8 @@
       "lat": 6.17,
       "lon": 80.18,
       "rainfall_1h_mm": 0.0,
-      "humidity": 63,
-      "clouds_pct": 80,
+      "humidity": 57,
+      "clouds_pct": 82,
       "weather_description": "broken clouds"
     },
     {
@@ -20,8 +20,8 @@
       "lat": 6.34,
       "lon": 80.33,
       "rainfall_1h_mm": 0.0,
-      "humidity": 59,
-      "clouds_pct": 81,
+      "humidity": 48,
+      "clouds_pct": 72,
       "weather_description": "broken clouds"
     },
     {
@@ -31,9 +31,9 @@
       "lat": 6.35,
       "lon": 80.56,
       "rainfall_1h_mm": 0.0,
-      "humidity": 61,
-      "clouds_pct": 85,
-      "weather_description": "overcast clouds"
+      "humidity": 51,
+      "clouds_pct": 73,
+      "weather_description": "broken clouds"
     },
     {
       "station_id": "LAN01",
@@ -42,8 +42,8 @@
       "lat": 6.37,
       "lon": 80.47,
       "rainfall_1h_mm": 0.0,
-      "humidity": 59,
-      "clouds_pct": 83,
+      "humidity": 47,
+      "clouds_pct": 71,
       "weather_description": "broken clouds"
     },
     {
@@ -53,8 +53,8 @@
       "lat": 6.18,
       "lon": 80.17,
       "rainfall_1h_mm": 0.0,
-      "humidity": 63,
-      "clouds_pct": 80,
+      "humidity": 57,
+      "clouds_pct": 82,
       "weather_description": "broken clouds"
     },
     {
@@ -64,8 +64,8 @@
       "lat": 6.23,
       "lon": 80.32,
       "rainfall_1h_mm": 0.0,
-      "humidity": 63,
-      "clouds_pct": 78,
+      "humidity": 50,
+      "clouds_pct": 76,
       "weather_description": "broken clouds"
     }
   ]
