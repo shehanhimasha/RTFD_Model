@@ -1,6 +1,6 @@
 {
   "source": "openweathermap",
-  "fetched_at": "2026-03-11T16:39:34",
+  "fetched_at": "2026-03-11T17:41:42",
   "locations": [
     {
       "station_id": "BAD01",
@@ -9,8 +9,8 @@
       "lat": 6.17,
       "lon": 80.18,
       "rainfall_1h_mm": 0.0,
-      "humidity": 82,
-      "clouds_pct": 99,
+      "humidity": 83,
+      "clouds_pct": 96,
       "weather_description": "overcast clouds"
     },
     {
@@ -20,8 +20,8 @@
       "lat": 6.34,
       "lon": 80.33,
       "rainfall_1h_mm": 0.0,
-      "humidity": 95,
-      "clouds_pct": 86,
+      "humidity": 96,
+      "clouds_pct": 88,
       "weather_description": "overcast clouds"
     },
     {
@@ -31,8 +31,8 @@
       "lat": 6.35,
       "lon": 80.56,
       "rainfall_1h_mm": 0.0,
-      "humidity": 95,
-      "clouds_pct": 88,
+      "humidity": 96,
+      "clouds_pct": 89,
       "weather_description": "overcast clouds"
     },
     {
@@ -43,7 +43,7 @@
       "lon": 80.47,
       "rainfall_1h_mm": 0.0,
       "humidity": 97,
-      "clouds_pct": 86,
+      "clouds_pct": 89,
       "weather_description": "overcast clouds"
     },
     {
@@ -53,8 +53,8 @@
       "lat": 6.18,
       "lon": 80.17,
       "rainfall_1h_mm": 0.0,
-      "humidity": 82,
-      "clouds_pct": 99,
+      "humidity": 83,
+      "clouds_pct": 96,
       "weather_description": "overcast clouds"
     },
     {
@@ -64,7 +64,7 @@
       "lat": 6.23,
       "lon": 80.32,
       "rainfall_1h_mm": 0.0,
-      "humidity": 92,
+      "humidity": 93,
       "clouds_pct": 90,
       "weather_description": "overcast clouds"
     }
