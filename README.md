@@ -1,6 +1,6 @@
 # RTFD Model — Real-Time Flood Detection Pipeline
 
-Automated disaster prediction pipeline for the **Gin Ganga (Gin River)** basin — Baddegama & Thawalama stations. Fully automated via GitHub Actions (free tier).
+Automated disaster prediction pipeline for the **Gin Ganga (Gin River)** basin — Baddegama & Thawalama stations. Fully automated via GitHub Actions.
 
 ---
 
@@ -39,7 +39,7 @@ data/dmc_data.json         data/weather_data.json         data/river_data.json
 │   ├── river_data.json     # Source 3 latest output
 │   └── prediction.json     # Final model prediction
 │
-├── models/                 # (you supply)
+├── models/                 # 
 │   ├── xgboost_model.pkl   # Trained XGBoost model (joblib)
 │   └── lstm_model.keras    # Trained LSTM model (TensorFlow/Keras)
 │
@@ -58,7 +58,7 @@ Go to **Settings → Secrets and variables → Actions → New repository secret
 
 | Name | Value |
 |------|-------|
-| `OPENWEATHER_API_KEY` | Your OpenWeatherMap free-tier API key |
+| `OPENWEATHER_API_KEY` | OpenWeatherMap free-tier API key |
 
 ### 2. Enable GitHub Actions
 Go to the **Actions** tab and enable workflows.  
