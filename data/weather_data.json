@@ -4035,5 +4035,6125 @@
         "weather_description": "broken clouds"
       }
     ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-14T12:26:20",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 67,
+        "clouds_pct": 70,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.13,
+        "humidity": 73,
+        "clouds_pct": 62,
+        "weather_description": "light rain"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 74,
+        "clouds_pct": 61,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 75,
+        "clouds_pct": 62,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 67,
+        "clouds_pct": 70,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 71,
+        "clouds_pct": 63,
+        "weather_description": "broken clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-14T13:39:01",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 79,
+        "clouds_pct": 42,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 91,
+        "clouds_pct": 13,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.12,
+        "humidity": 91,
+        "clouds_pct": 24,
+        "weather_description": "light rain"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 92,
+        "clouds_pct": 21,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 79,
+        "clouds_pct": 42,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 86,
+        "clouds_pct": 21,
+        "weather_description": "few clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-14T14:20:06",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 79,
+        "clouds_pct": 42,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 91,
+        "clouds_pct": 13,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 91,
+        "clouds_pct": 24,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 92,
+        "clouds_pct": 21,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 79,
+        "clouds_pct": 42,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 86,
+        "clouds_pct": 21,
+        "weather_description": "few clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-14T15:18:00",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 81,
+        "clouds_pct": 34,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 91,
+        "clouds_pct": 17,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 92,
+        "clouds_pct": 33,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 29,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 81,
+        "clouds_pct": 34,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 17,
+        "weather_description": "few clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-14T16:19:08",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 83,
+        "clouds_pct": 27,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 92,
+        "clouds_pct": 19,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 41,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 94,
+        "clouds_pct": 34,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 83,
+        "clouds_pct": 27,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 15,
+        "weather_description": "few clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-14T17:18:42",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 84,
+        "clouds_pct": 26,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 20,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 42,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 35,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 84,
+        "clouds_pct": 26,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 90,
+        "clouds_pct": 13,
+        "weather_description": "few clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-14T18:22:37",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 85,
+        "clouds_pct": 32,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 94,
+        "clouds_pct": 9,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 20,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 11,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 85,
+        "clouds_pct": 32,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 91,
+        "clouds_pct": 17,
+        "weather_description": "few clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-14T19:20:12",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 86,
+        "clouds_pct": 59,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 54,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 44,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 43,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 86,
+        "clouds_pct": 59,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 92,
+        "clouds_pct": 61,
+        "weather_description": "broken clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-14T20:16:20",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 52,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 68,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 70,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 72,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 52,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 61,
+        "weather_description": "broken clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-14T21:17:31",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 54,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 78,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 68,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 72,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 54,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 94,
+        "clouds_pct": 75,
+        "weather_description": "broken clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-14T22:15:26",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 63,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 79,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 68,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 72,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 63,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 94,
+        "clouds_pct": 81,
+        "weather_description": "broken clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-14T23:18:06",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 64,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 72,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 61,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 66,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 64,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 94,
+        "clouds_pct": 75,
+        "weather_description": "broken clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-15T01:15:50",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 53,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 55,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 52,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 54,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 53,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 41,
+        "weather_description": "scattered clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-15T04:23:45",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 63,
+        "clouds_pct": 25,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 61,
+        "clouds_pct": 25,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 63,
+        "clouds_pct": 27,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 61,
+        "clouds_pct": 28,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 63,
+        "clouds_pct": 25,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 63,
+        "clouds_pct": 16,
+        "weather_description": "few clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-15T06:00:28",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 57,
+        "clouds_pct": 7,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 47,
+        "clouds_pct": 7,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 46,
+        "clouds_pct": 7,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 45,
+        "clouds_pct": 8,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 57,
+        "clouds_pct": 7,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 57,
+        "clouds_pct": 5,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-15T06:59:48",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 62,
+        "clouds_pct": 28,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 43,
+        "clouds_pct": 35,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 41,
+        "clouds_pct": 3,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 40,
+        "clouds_pct": 16,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 62,
+        "clouds_pct": 28,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 62,
+        "clouds_pct": 32,
+        "weather_description": "scattered clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-15T07:45:03",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 62,
+        "clouds_pct": 33,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 47,
+        "clouds_pct": 51,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 38,
+        "clouds_pct": 18,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 40,
+        "clouds_pct": 36,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 62,
+        "clouds_pct": 33,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 50,
+        "clouds_pct": 40,
+        "weather_description": "scattered clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-15T08:25:10",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 62,
+        "clouds_pct": 33,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 47,
+        "clouds_pct": 51,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 38,
+        "clouds_pct": 18,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 40,
+        "clouds_pct": 36,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 62,
+        "clouds_pct": 33,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 50,
+        "clouds_pct": 40,
+        "weather_description": "scattered clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-15T09:24:18",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 70,
+        "clouds_pct": 37,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 67,
+        "clouds_pct": 71,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 46,
+        "clouds_pct": 41,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 53,
+        "clouds_pct": 64,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 70,
+        "clouds_pct": 37,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 65,
+        "clouds_pct": 56,
+        "weather_description": "broken clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-15T10:19:19",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 69,
+        "clouds_pct": 36,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 70,
+        "clouds_pct": 78,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 73,
+        "clouds_pct": 52,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 74,
+        "clouds_pct": 76,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 69,
+        "clouds_pct": 36,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 70,
+        "clouds_pct": 63,
+        "weather_description": "broken clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-15T11:17:22",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 69,
+        "clouds_pct": 40,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 77,
+        "clouds_pct": 74,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 82,
+        "clouds_pct": 42,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 83,
+        "clouds_pct": 65,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 69,
+        "clouds_pct": 40,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 74,
+        "clouds_pct": 66,
+        "weather_description": "broken clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-15T12:27:56",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 72,
+        "clouds_pct": 39,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 82,
+        "clouds_pct": 61,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 86,
+        "clouds_pct": 34,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 86,
+        "clouds_pct": 53,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 72,
+        "clouds_pct": 39,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 78,
+        "clouds_pct": 58,
+        "weather_description": "broken clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-15T13:40:02",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 79,
+        "clouds_pct": 6,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 92,
+        "clouds_pct": 14,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 94,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 79,
+        "clouds_pct": 6,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 8,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-15T14:21:36",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 79,
+        "clouds_pct": 6,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 92,
+        "clouds_pct": 14,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 94,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 79,
+        "clouds_pct": 6,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 8,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-15T15:19:54",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 81,
+        "clouds_pct": 4,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 8,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 81,
+        "clouds_pct": 4,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 90,
+        "clouds_pct": 5,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-15T16:20:22",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 83,
+        "clouds_pct": 3,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 94,
+        "clouds_pct": 6,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 83,
+        "clouds_pct": 3,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 91,
+        "clouds_pct": 4,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-15T17:18:52",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 84,
+        "clouds_pct": 3,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 5,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 84,
+        "clouds_pct": 3,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 92,
+        "clouds_pct": 3,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-15T18:24:11",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 86,
+        "clouds_pct": 5,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 4,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 86,
+        "clouds_pct": 5,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 3,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-15T19:21:19",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 87,
+        "clouds_pct": 6,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 4,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 5,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 5,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 87,
+        "clouds_pct": 6,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 5,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-15T20:17:10",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 3,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 3,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 94,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-15T21:18:29",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 3,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 3,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-15T22:16:56",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-15T23:19:00",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 90,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 90,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-16T01:15:25",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 91,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 91,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 94,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-16T04:30:36",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 63,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 52,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 54,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 52,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 63,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 63,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-16T06:14:26",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 63,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 44,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 47,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 44,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 63,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 63,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-16T08:01:55",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 60,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 37,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 38,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 35,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 60,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 45,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-16T09:54:08",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 65,
+        "clouds_pct": 4,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 62,
+        "clouds_pct": 15,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 60,
+        "clouds_pct": 17,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 60,
+        "clouds_pct": 19,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 65,
+        "clouds_pct": 4,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 64,
+        "clouds_pct": 15,
+        "weather_description": "few clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-16T10:44:15",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 66,
+        "clouds_pct": 5,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 73,
+        "clouds_pct": 23,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 32,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 85,
+        "clouds_pct": 32,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 66,
+        "clouds_pct": 5,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 69,
+        "clouds_pct": 21,
+        "weather_description": "few clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-16T11:39:27",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 71,
+        "clouds_pct": 11,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 80,
+        "clouds_pct": 29,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 86,
+        "clouds_pct": 29,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 85,
+        "clouds_pct": 31,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 71,
+        "clouds_pct": 11,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 77,
+        "clouds_pct": 30,
+        "weather_description": "scattered clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-16T12:44:29",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 74,
+        "clouds_pct": 60,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 85,
+        "clouds_pct": 100,
+        "weather_description": "overcast clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 91,
+        "clouds_pct": 39,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 90,
+        "clouds_pct": 65,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 74,
+        "clouds_pct": 60,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 81,
+        "clouds_pct": 98,
+        "weather_description": "overcast clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-16T14:14:28",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 76,
+        "clouds_pct": 64,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 96,
+        "weather_description": "overcast clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 24,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 47,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 76,
+        "clouds_pct": 64,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 84,
+        "clouds_pct": 93,
+        "weather_description": "overcast clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-16T15:55:42",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 79,
+        "clouds_pct": 68,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 90,
+        "clouds_pct": 73,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 12,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 24,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 79,
+        "clouds_pct": 68,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 87,
+        "clouds_pct": 80,
+        "weather_description": "broken clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-16T16:52:47",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 81,
+        "clouds_pct": 63,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 92,
+        "clouds_pct": 59,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 11,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 18,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 81,
+        "clouds_pct": 63,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 69,
+        "weather_description": "broken clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-16T17:53:25",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 84,
+        "clouds_pct": 33,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 94,
+        "clouds_pct": 50,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 13,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 18,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 84,
+        "clouds_pct": 33,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 91,
+        "clouds_pct": 49,
+        "weather_description": "scattered clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-16T18:46:32",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 87,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 87,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 92,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-16T19:46:28",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 87,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 87,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-16T20:27:25",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 87,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 87,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-16T21:29:50",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 87,
+        "clouds_pct": 3,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 3,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 87,
+        "clouds_pct": 3,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 3,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-16T22:23:24",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 3,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 3,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-16T23:22:00",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 94,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-17T01:07:22",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 63,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 94,
+        "clouds_pct": 58,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 50,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 54,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 63,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 92,
+        "clouds_pct": 47,
+        "weather_description": "scattered clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-17T04:08:04",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 69,
+        "clouds_pct": 40,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 59,
+        "clouds_pct": 36,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 62,
+        "clouds_pct": 39,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 59,
+        "clouds_pct": 36,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 69,
+        "clouds_pct": 40,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 69,
+        "clouds_pct": 37,
+        "weather_description": "scattered clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-17T05:52:01",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 59,
+        "clouds_pct": 26,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 44,
+        "clouds_pct": 48,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 46,
+        "clouds_pct": 54,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 43,
+        "clouds_pct": 54,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 59,
+        "clouds_pct": 26,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 49,
+        "clouds_pct": 43,
+        "weather_description": "scattered clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-17T06:51:25",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 58,
+        "clouds_pct": 42,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 38,
+        "clouds_pct": 38,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 41,
+        "clouds_pct": 17,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 38,
+        "clouds_pct": 18,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 58,
+        "clouds_pct": 42,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 44,
+        "clouds_pct": 51,
+        "weather_description": "broken clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-17T07:46:54",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 63,
+        "clouds_pct": 42,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 43,
+        "clouds_pct": 56,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 38,
+        "clouds_pct": 33,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 38,
+        "clouds_pct": 41,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 63,
+        "clouds_pct": 42,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 50,
+        "clouds_pct": 60,
+        "weather_description": "broken clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-17T08:39:23",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 75,
+        "clouds_pct": 52,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 66,
+        "clouds_pct": 71,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 48,
+        "clouds_pct": 52,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 52,
+        "clouds_pct": 57,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 75,
+        "clouds_pct": 52,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 71,
+        "clouds_pct": 77,
+        "weather_description": "broken clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-17T09:44:14",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 76,
+        "clouds_pct": 58,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 79,
+        "clouds_pct": 76,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 76,
+        "clouds_pct": 62,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 79,
+        "clouds_pct": 68,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 76,
+        "clouds_pct": 58,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 79,
+        "clouds_pct": 81,
+        "weather_description": "broken clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-17T10:40:26",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 73,
+        "clouds_pct": 50,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 79,
+        "clouds_pct": 64,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 83,
+        "clouds_pct": 65,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 83,
+        "clouds_pct": 66,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 73,
+        "clouds_pct": 50,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 76,
+        "clouds_pct": 66,
+        "weather_description": "broken clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-17T11:36:34",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 76,
+        "clouds_pct": 44,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 84,
+        "clouds_pct": 55,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 86,
+        "clouds_pct": 63,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 87,
+        "clouds_pct": 62,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 76,
+        "clouds_pct": 44,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 82,
+        "clouds_pct": 56,
+        "weather_description": "broken clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-17T12:42:46",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 81,
+        "clouds_pct": 4,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 91,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 91,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 92,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 81,
+        "clouds_pct": 4,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-17T14:12:58",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 84,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 94,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 84,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 91,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-17T15:54:31",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 86,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 86,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-17T16:55:01",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 3,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-17T17:56:03",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 6,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 88,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 1,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-17T18:46:01",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 8,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 12,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 8,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 8,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 8,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 13,
+        "weather_description": "few clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-17T19:47:38",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 8,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 11,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 5,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 7,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 8,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 13,
+        "weather_description": "few clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-17T20:28:45",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 8,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 11,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 5,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 7,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 8,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 13,
+        "weather_description": "few clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-17T21:27:56",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 9,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 10,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 4,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 5,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 9,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 94,
+        "clouds_pct": 12,
+        "weather_description": "few clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-17T22:23:06",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 7,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 7,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 3,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 98,
+        "clouds_pct": 4,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 7,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 94,
+        "clouds_pct": 9,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-17T23:22:33",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 6,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 6,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 3,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 4,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 6,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 94,
+        "clouds_pct": 8,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-18T01:11:33",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 2,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 4,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 4,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 94,
+        "clouds_pct": 0,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-18T04:14:03",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 67,
+        "clouds_pct": 6,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 59,
+        "clouds_pct": 6,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 61,
+        "clouds_pct": 7,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 58,
+        "clouds_pct": 7,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 67,
+        "clouds_pct": 6,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 62,
+        "clouds_pct": 3,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-18T05:57:08",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 56,
+        "clouds_pct": 6,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 42,
+        "clouds_pct": 6,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 48,
+        "clouds_pct": 7,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 44,
+        "clouds_pct": 6,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 56,
+        "clouds_pct": 6,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 46,
+        "clouds_pct": 6,
+        "weather_description": "clear sky"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-18T06:53:22",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 58,
+        "clouds_pct": 61,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 39,
+        "clouds_pct": 70,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 44,
+        "clouds_pct": 29,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 41,
+        "clouds_pct": 42,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 58,
+        "clouds_pct": 61,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 45,
+        "clouds_pct": 83,
+        "weather_description": "broken clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-18T07:45:28",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 73,
+        "clouds_pct": 73,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 56,
+        "clouds_pct": 85,
+        "weather_description": "overcast clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 41,
+        "clouds_pct": 52,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 44,
+        "clouds_pct": 65,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 73,
+        "clouds_pct": 73,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 63,
+        "clouds_pct": 92,
+        "weather_description": "overcast clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-18T08:36:21",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 75,
+        "clouds_pct": 75,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 81,
+        "clouds_pct": 94,
+        "weather_description": "overcast clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 59,
+        "clouds_pct": 71,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 67,
+        "clouds_pct": 81,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 75,
+        "clouds_pct": 75,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 77,
+        "clouds_pct": 94,
+        "weather_description": "overcast clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-18T09:42:19",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 73,
+        "clouds_pct": 71,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 82,
+        "clouds_pct": 100,
+        "weather_description": "overcast clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 78,
+        "clouds_pct": 79,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 82,
+        "clouds_pct": 89,
+        "weather_description": "overcast clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 73,
+        "clouds_pct": 71,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 77,
+        "clouds_pct": 96,
+        "weather_description": "overcast clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-18T10:41:26",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 73,
+        "clouds_pct": 67,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.27,
+        "humidity": 82,
+        "clouds_pct": 100,
+        "weather_description": "light rain"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.18,
+        "humidity": 85,
+        "clouds_pct": 79,
+        "weather_description": "light rain"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.43,
+        "humidity": 85,
+        "clouds_pct": 91,
+        "weather_description": "light rain"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 73,
+        "clouds_pct": 67,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 78,
+        "clouds_pct": 94,
+        "weather_description": "overcast clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-18T11:37:55",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 77,
+        "clouds_pct": 60,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 86,
+        "clouds_pct": 85,
+        "weather_description": "overcast clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.11,
+        "humidity": 89,
+        "clouds_pct": 72,
+        "weather_description": "light rain"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.11,
+        "humidity": 89,
+        "clouds_pct": 79,
+        "weather_description": "light rain"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 77,
+        "clouds_pct": 60,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 83,
+        "clouds_pct": 81,
+        "weather_description": "broken clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-18T12:43:15",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 82,
+        "clouds_pct": 34,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 91,
+        "clouds_pct": 65,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 91,
+        "clouds_pct": 100,
+        "weather_description": "overcast clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 100,
+        "weather_description": "overcast clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 82,
+        "clouds_pct": 34,
+        "weather_description": "scattered clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 87,
+        "clouds_pct": 57,
+        "weather_description": "broken clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-18T14:15:09",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 84,
+        "clouds_pct": 16,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 92,
+        "clouds_pct": 64,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.32,
+        "humidity": 91,
+        "clouds_pct": 100,
+        "weather_description": "light rain"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.13,
+        "humidity": 93,
+        "clouds_pct": 100,
+        "weather_description": "light rain"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 84,
+        "clouds_pct": 16,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 90,
+        "clouds_pct": 42,
+        "weather_description": "scattered clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-18T16:00:34",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 87,
+        "clouds_pct": 17,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 94,
+        "clouds_pct": 69,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 94,
+        "clouds_pct": 86,
+        "weather_description": "overcast clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 95,
+        "weather_description": "overcast clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 87,
+        "clouds_pct": 17,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 92,
+        "clouds_pct": 43,
+        "weather_description": "scattered clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-18T17:02:35",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 87,
+        "clouds_pct": 15,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 57,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 69,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 96,
+        "clouds_pct": 77,
+        "weather_description": "broken clouds"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 87,
+        "clouds_pct": 15,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 93,
+        "clouds_pct": 36,
+        "weather_description": "scattered clouds"
+      }
+    ]
+  },
+  {
+    "source": "openweathermap",
+    "fetched_at": "2026-03-18T18:43:10",
+    "locations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "lat": 6.17,
+        "lon": 80.18,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 17,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "lat": 6.34,
+        "lon": 80.33,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 95,
+        "clouds_pct": 17,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 12,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "LAN01",
+        "station_name": "Lankagama",
+        "river_name": "Gin Ganga",
+        "lat": 6.37,
+        "lon": 80.47,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 97,
+        "clouds_pct": 10,
+        "weather_description": "clear sky"
+      },
+      {
+        "station_id": "MAK01",
+        "station_name": "Makurugoda",
+        "river_name": "Gin Ganga",
+        "lat": 6.18,
+        "lon": 80.17,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 17,
+        "weather_description": "few clouds"
+      },
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 94,
+        "clouds_pct": 24,
+        "weather_description": "few clouds"
+      }
+    ]
   }
 ]

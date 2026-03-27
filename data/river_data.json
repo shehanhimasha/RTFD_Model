@@ -1429,15 +1429,15 @@
   },
   {
     "source": "arcgis_gin_river",
-    "fetched_at": "2026-03-27T15:46:44",
+    "fetched_at": "2026-03-14T11:46:25",
     "stations": [
       {
         "station_id": "BAD01",
         "station_name": "Baddegama",
         "river_name": "Gin Ganga",
-        "current_water_level_m": 1.18,
+        "current_water_level_m": 1.23,
         "rainfall_mm_per_hour": 0.0,
-        "observed_at": "2026-03-27T15:37:01",
+        "observed_at": "2026-03-14T11:41:45",
         "alert_level_m": 3.5,
         "minor_flood_level_m": 4,
         "major_flood_level_m": 5
@@ -1446,9 +1446,9 @@
         "station_id": "THA01",
         "station_name": "Thawalama",
         "river_name": "Gin Ganga",
-        "current_water_level_m": 1.06,
+        "current_water_level_m": 1.2,
         "rainfall_mm_per_hour": 0.0,
-        "observed_at": "2026-03-27T15:36:08",
+        "observed_at": "2026-03-14T11:35:22",
         "alert_level_m": 4,
         "minor_flood_level_m": 6,
         "major_flood_level_m": 7.5
@@ -1457,15 +1457,99 @@
   },
   {
     "source": "arcgis_gin_river",
-    "fetched_at": "2026-03-27T15:49:45",
+    "fetched_at": "2026-03-14T13:27:21",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.2,
+        "rainfall_mm_per_hour": 3.2,
+        "observed_at": "2026-03-14T12:33:08",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.23,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-14T12:31:20",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-14T14:00:49",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.28,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-14T13:50:24",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.07,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-14T13:36:03",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-14T14:53:19",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.39,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-14T14:53:18",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.07,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-14T13:36:03",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-14T15:49:58",
     "stations": [
       {
         "station_id": "BAD01",
         "station_name": "Baddegama",
         "river_name": "Gin Ganga",
-        "current_water_level_m": 1.18,
+        "current_water_level_m": 1.0,
         "rainfall_mm_per_hour": 0.0,
-        "observed_at": "2026-03-27T15:37:01",
+        "observed_at": "2026-03-14T15:39:11",
         "alert_level_m": 3.5,
         "minor_flood_level_m": 4,
         "major_flood_level_m": 5
@@ -1474,12 +1558,1944 @@
         "station_id": "THA01",
         "station_name": "Thawalama",
         "river_name": "Gin Ganga",
-        "current_water_level_m": 1.06,
+        "current_water_level_m": 1.46,
         "rainfall_mm_per_hour": 0.0,
-        "observed_at": "2026-03-27T15:36:08",
+        "observed_at": "2026-03-14T15:35:48",
         "alert_level_m": 4,
         "minor_flood_level_m": 6,
         "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-14T16:56:46",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.5,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-14T16:44:03",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.99,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-14T16:40:17",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-14T17:51:23",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.98,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-14T17:36:37",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.72,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-14T17:32:54",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-14T19:03:26",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.76,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-14T18:56:40",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.02,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-14T18:33:42",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-14T19:47:42",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.07,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-14T19:36:57",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.79,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-14T19:34:49",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-14T20:52:20",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.12,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-14T20:40:14",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.79,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-14T19:34:49",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-14T21:49:24",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.86,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-14T21:47:41",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.15,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-14T21:33:41",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-14T22:52:11",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.89,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-14T22:37:07",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.18,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-14T22:35:11",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-14T23:50:56",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.91,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-14T23:39:53",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.21,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-14T23:38:20",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-15T03:39:43",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.4,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T03:36:08",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.82,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T03:32:19",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-15T05:50:10",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.72,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T05:33:09",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.48,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T04:31:37",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-15T07:27:56",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.55,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T06:35:01",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.66,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T06:32:57",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-15T07:59:32",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.58,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T07:58:07",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.52,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T07:34:11",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-15T09:01:47",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.6,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T08:57:06",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.47,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T08:32:15",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-15T09:57:09",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.31,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T09:34:27",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.56,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T09:30:49",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-15T10:57:05",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.49,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T10:41:42",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.2,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T10:32:39",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-15T11:48:02",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.2,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T11:33:11",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.49,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T10:41:42",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-15T13:28:57",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.34,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T12:37:27",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.38,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T12:32:54",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-15T14:03:16",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.25,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T13:41:17",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.39,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T13:31:54",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-15T14:55:07",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.18,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T14:52:28",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.43,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T14:39:49",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-15T15:52:12",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.4,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T15:36:23",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.11,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T15:36:15",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-15T16:56:07",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.04,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T16:41:38",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.38,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T16:34:12",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-15T17:53:34",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.0,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T17:36:11",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.36,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T17:34:13",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-15T19:04:24",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.98,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T18:36:03",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.34,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T18:33:31",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-15T19:49:14",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.96,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T19:36:50",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.31,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T19:34:21",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-15T20:53:32",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.94,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T20:35:20",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.29,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T20:31:47",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-15T21:50:38",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.94,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T21:43:22",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.33,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T21:32:13",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-15T22:54:43",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.94,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T22:48:03",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.27,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T22:39:48",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-15T23:51:54",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.9,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T23:41:05",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.23,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-15T23:33:34",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-16T03:43:22",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.77,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T03:37:41",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.29,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T03:34:20",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-16T06:04:30",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.34,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T05:38:52",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.69,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T05:36:25",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-16T07:54:12",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.69,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T07:53:10",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.22,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T07:36:03",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-16T09:38:41",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.13,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T09:32:47",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.8,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T09:31:52",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-16T11:26:57",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.86,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T10:39:37",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.1,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T10:35:17",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-16T12:04:29",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.9,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T12:00:25",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.07,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T11:35:00",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-16T13:59:17",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.98,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T13:37:26",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.07,
+        "rainfall_mm_per_hour": 0.5,
+        "observed_at": "2026-03-16T13:35:28",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-16T15:47:04",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.23,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T15:35:10",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.04,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T15:34:11",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-16T17:34:26",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.08,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T16:39:54",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.36,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T16:35:13",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-16T19:34:11",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.11,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T18:41:38",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.43,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T17:35:12",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-16T21:04:54",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.4,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T20:37:52",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.13,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T20:35:53",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-16T22:01:30",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.15,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T21:35:59",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.35,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T21:34:15",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-16T22:56:56",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.31,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T22:34:19",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.15,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T21:35:59",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-16T23:51:46",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.16,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T23:42:42",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.27,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-16T23:34:52",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-17T03:18:19",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.1,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T02:50:40",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.1,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T02:33:17",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-17T05:09:13",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.01,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T04:36:31",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.04,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T04:34:37",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-17T06:38:39",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.9,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T06:34:35",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.1,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T06:31:38",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-17T08:07:01",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.88,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T07:40:20",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.12,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T07:37:57",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-17T09:14:30",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.85,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T08:44:28",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.07,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T08:36:54",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-17T10:13:19",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.86,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T09:41:21",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.05,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T09:32:17",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-17T11:13:19",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.87,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T10:57:10",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.03,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T10:36:13",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-17T12:01:45",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.02,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T11:33:38",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.87,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T10:57:10",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-17T13:56:16",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.04,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T13:49:27",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.98,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T13:40:52",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-17T15:38:23",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.02,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T15:37:02",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.2,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T15:33:43",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-17T17:35:16",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.29,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T17:34:13",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.02,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T15:37:02",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-17T19:34:20",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.35,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T19:34:07",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.03,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T17:45:56",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-17T21:04:03",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.03,
+        "rainfall_mm_per_hour": 8.0,
+        "observed_at": "2026-03-17T20:44:02",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.35,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T20:34:11",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-17T22:01:50",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.06,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T21:38:30",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.33,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T21:34:03",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-17T22:59:27",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.08,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T22:39:27",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.29,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T22:34:03",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-17T23:54:27",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.1,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T23:36:35",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.2,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-17T23:35:25",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-18T03:25:25",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.13,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-18T02:36:02",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.1,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-18T02:35:22",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-18T05:13:45",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.01,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-18T04:34:27",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.1,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-18T04:33:09",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-18T06:39:18",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.9,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-18T06:37:06",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.07,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-18T06:33:32",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-18T08:05:04",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.06,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-18T07:42:46",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.87,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-18T07:40:23",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-18T09:13:20",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.05,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-18T08:41:16",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.87,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-18T08:35:19",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-18T10:29:19",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.89,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-18T09:34:31",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.05,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-18T09:32:47",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-18T11:26:23",
+    "stations": [
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.93,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-18T10:33:56",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      },
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.05,
+        "rainfall_mm_per_hour": 17.5,
+        "observed_at": "2026-03-18T10:33:48",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-18T12:05:03",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.1,
+        "rainfall_mm_per_hour": 4.1,
+        "observed_at": "2026-03-18T11:34:58",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 0.95,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-18T11:33:13",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-18T13:58:34",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.2,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-18T13:36:16",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.01,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-18T13:31:22",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-18T15:47:36",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.3,
+        "rainfall_mm_per_hour": 0.5,
+        "observed_at": "2026-03-18T15:38:42",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.01,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-18T15:31:35",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
+      }
+    ]
+  },
+  {
+    "source": "arcgis_gin_river",
+    "fetched_at": "2026-03-18T17:36:09",
+    "stations": [
+      {
+        "station_id": "THA01",
+        "station_name": "Thawalama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.41,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-18T17:34:23",
+        "alert_level_m": 4,
+        "minor_flood_level_m": 6,
+        "major_flood_level_m": 7.5
+      },
+      {
+        "station_id": "BAD01",
+        "station_name": "Baddegama",
+        "river_name": "Gin Ganga",
+        "current_water_level_m": 1.01,
+        "rainfall_mm_per_hour": 0.0,
+        "observed_at": "2026-03-18T16:35:49",
+        "alert_level_m": 3.5,
+        "minor_flood_level_m": 4,
+        "major_flood_level_m": 5
       }
     ]
   }
