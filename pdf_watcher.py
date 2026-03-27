@@ -140,93 +140,73 @@ def parse_pdf(pdf_path: Path) -> list[dict]:
 
     try:
         with pdfplumber.open(pdf_path) as pdf:
+            time_str_parsed = None
+            time_ut_parsed = None
+            if len(pdf.pages) > 0:
+                text = pdf.pages[0].extract_text()
+                if text:
+                    time_match = re.search(r"DATE\s*:\s*([\d-]+[A-Za-z]+[\d-]+)\s+TIME\s*:\s*([\d:]+\s*[APMapm]+)", text)
+                    if time_match:
+                        date_str = time_match.group(1).strip()
+                        time_str = time_match.group(2).strip()
+                        try:
+                            time_dt = datetime.strptime(f"{date_str} {time_str}", "%d-%b-%Y %I:%M %p")
+                            time_str_parsed = time_dt.strftime("%Y-%m-%d %H:%M:%S")
+                            time_ut_parsed = time_dt.timestamp()
+                        except ValueError:
+                            pass
+
+            if not time_str_parsed:
+                time_dt = datetime.utcnow()
+                time_str_parsed = time_dt.strftime("%Y-%m-%d %H:%M:%S")
+                time_ut_parsed = time_dt.timestamp()
+                log.warning("Could not parse time from header; using UTC now.")
+
             for page in pdf.pages:
                 tables = page.extract_tables()
                 for table in tables:
                     if not table:
                         continue
-                    # Determine if this table has the expected columns
-                    # Expected: Station | Time | Previous WL | Current WL | Remarks | Rising/Falling | Rainfall
-                    header = [str(c).strip().lower() for c in (table[0] or [])]
-                    # Try to locate relevant column indices by keyword
-                    col_station = next(
-                        (i for i, h in enumerate(header) if "station" in h or "gauging" in h),
-                        0,
-                    )
-                    col_time = next(
-                        (i for i, h in enumerate(header) if "time" in h or "date" in h),
-                        1,
-                    )
-                    col_prev = next(
-                        (i for i, h in enumerate(header) if "prev" in h),
-                        2,
-                    )
-                    col_curr = next(
-                        (i for i, h in enumerate(header) if "curr" in h),
-                        3,
-                    )
-                    col_remark = next(
-                        (i for i, h in enumerate(header) if "remark" in h),
-                        4,
-                    )
-                    col_rf = next(
-                        (i for i, h in enumerate(header)
-                         if "rising" in h or "fall" in h or "trend" in h),
-                        5,
-                    )
-                    col_rain = next(
-                        (i for i, h in enumerate(header) if "rain" in h or "mm" in h),
-                        6,
-                    )
-
+                    
                     for row in table[1:]:
-                        if not row or len(row) < 4:
+                        if not row or len(list(row)) < 4:
                             continue
-                        station_raw = row[col_station] if col_station < len(row) else ""
-                        canonical = match_station(station_raw or "")
-                        if canonical is None:
-                            continue
-
-                        # Parse time string
-                        time_raw = str(row[col_time]).strip() if col_time < len(row) else ""
-                        time_dt = None
-                        for fmt in ("%Y-%m-%d %H:%M:%S", "%d/%m/%Y %H:%M", "%Y-%m-%d %H:%M"):
-                            try:
-                                time_dt = datetime.strptime(time_raw, fmt)
+                        
+                        canonical = None
+                        idx_station: int = -1
+                        row_items = list(row)
+                        for idx, cell in enumerate(row_items[:5]):
+                            canonical = match_station(str(cell) if cell is not None else "")
+                            if canonical:
+                                idx_station = int(idx)
                                 break
-                            except ValueError:
-                                pass
-                        if time_dt is None:
-                            # Use current time as fallback
-                            time_dt = datetime.utcnow()
-                            log.warning("Could not parse time '%s'; using UTC now.", time_raw)
-
-                        time_str = time_dt.strftime("%Y-%m-%d %H:%M:%S")
-                        time_ut = time_dt.timestamp()
-
-                        prev_wl = parse_float(row[col_prev]) if col_prev < len(row) else None
-                        curr_wl = parse_float(row[col_curr]) if col_curr < len(row) else None
-                        remark = str(row[col_remark]).strip() if col_remark < len(row) else ""
-                        rising_raw = str(row[col_rf]).strip().lower() if col_rf < len(row) else ""
-                        rain_mm = parse_float(row[col_rain]) if col_rain < len(row) else None
-
-                        # Normalise rising_or_falling
+                        
+                        if canonical is None or idx_station == -1:
+                            continue
+                        
+                        prev_wl = parse_float(row_items[idx_station + 5]) if (idx_station + 5) < len(row_items) else None
+                        curr_wl = parse_float(row_items[idx_station + 6]) if (idx_station + 6) < len(row_items) else None
+                        remark = str(row_items[idx_station + 7]).strip() if (idx_station + 7) < len(row_items) and row_items[idx_station + 7] is not None else ""
+                        rising_raw = str(row_items[idx_station + 8]).strip().lower() if (idx_station + 8) < len(row_items) and row_items[idx_station + 8] is not None else ""
+                        
+                        rain_parts = [str(x).strip() for x in row_items[idx_station + 9:] if x is not None]
+                        rain_mm_str = "".join(rain_parts).replace(" ", "").replace("\n", "")
+                        rain_mm = parse_float(rain_mm_str) if rain_mm_str else None
+                        
                         if "ris" in rising_raw:
                             rising = "Rising"
                         elif "fall" in rising_raw:
                             rising = "Falling"
-                        elif "steady" in rising_raw or "stable" in rising_raw:
-                            rising = "Steady"
                         else:
-                            rising = rising_raw.title() or "Unknown"
+                            rising = None
 
                         record = {
                             "gauging_station_name": canonical,
-                            "time_str": time_str,
-                            "time_ut": float(time_ut),
+                            "time_str": time_str_parsed,
+                            "time_ut": float(time_ut_parsed) if time_ut_parsed is not None else 0.0,
                             "previous_water_level": prev_wl,
                             "current_water_level": curr_wl,
-                            "remarks": remark if remark else None,
+                            "remarks": remark if remark else "Normal",
                             "rising_or_falling": rising,
                             "rainfall_mm": rain_mm,
                         }
