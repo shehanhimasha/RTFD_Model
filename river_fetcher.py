@@ -18,9 +18,11 @@ Confirmed field names (verified live):
   majorpull    — major flood threshold (m)
 """
 
+import argparse
 import json
 import logging
-from datetime import datetime, timezone
+import time
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import requests
@@ -145,7 +147,7 @@ def save_output(stations: list[dict]) -> None:
 # ── Main ─────────────────────────────────────────────────────────────────────
 
 
-def main() -> None:
+def collect_data() -> None:
     log.info("=== ArcGIS River Fetcher starting ===")
 
     features = query_arcgis()
@@ -186,6 +188,29 @@ def main() -> None:
 
     save_output(station_records)
     log.info("Done. Captured %d / %d target station(s).", len(station_records), len(TARGET_STATIONS))
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Fetch ArcGIS river data.")
+    parser.add_argument("--continuous", action="store_true", help="Run continuously every hour on the hour.")
+    args = parser.parse_args()
+
+    if args.continuous:
+        log.info("Starting continuous collector. Will run at the top of every hour.")
+        while True:
+            now = datetime.now()
+            next_hour = now.replace(minute=0, second=0, microsecond=0) + timedelta(hours=1)
+            sleep_secs = (next_hour - now).total_seconds()
+            log.info("Sleeping for %.1f seconds until %s", sleep_secs, next_hour.strftime("%Y-%m-%dT%H:%M:%S"))
+            
+            # Simple interruptible sleep loop avoiding long blocks
+            end_sleep = time.time() + sleep_secs
+            while time.time() < end_sleep:
+                time.sleep(1)
+                
+            collect_data()
+    else:
+        collect_data()
 
 
 if __name__ == "__main__":
