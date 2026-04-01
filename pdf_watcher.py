@@ -15,7 +15,10 @@ from pathlib import Path
 
 import pdfplumber
 import requests
+import urllib3
 from bs4 import BeautifulSoup
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # ── Configuration ────────────────────────────────────────────────────────────
 
@@ -66,7 +69,7 @@ def get_latest_pdf_link() -> tuple[str, str] | None:
     Returns None if nothing is found or on network error.
     """
     try:
-        resp = requests.get(DMC_URL, timeout=30)
+        resp = requests.get(DMC_URL, timeout=30, verify=False)
         resp.raise_for_status()
     except requests.RequestException as exc:
         log.error("Failed to fetch DMC page: %s", exc)
@@ -98,7 +101,7 @@ def get_latest_pdf_link() -> tuple[str, str] | None:
 def download_pdf(url: str, dest: Path) -> bool:
     """Download the PDF to dest. Returns True on success."""
     try:
-        resp = requests.get(url, timeout=60, stream=True)
+        resp = requests.get(url, timeout=60, stream=True, verify=False)
         resp.raise_for_status()
         dest.parent.mkdir(parents=True, exist_ok=True)
         with open(dest, "wb") as fh:
