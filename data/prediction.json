@@ -1,19 +1,56 @@
 {
-  "predicted_at": "2026-03-11T20:11:52",
-  "predictions": [
-    {
-      "station_id": "BAD01",
-      "station_name": "Baddegama",
-      "flood_risk": "Low",
-      "predicted_water_level_m": 1.1,
-      "confidence": 0.65
+  "predicted_at": "2026-04-08T00:00:57",
+  "model": "XGBoost + LightGBM ensemble",
+  "stations": {
+    "BAD01": {
+      "flood_category": "Normal",
+      "flood_label": 0,
+      "confidence": 0.9984,
+      "probabilities": {
+        "Normal": 0.9984,
+        "Alert": 0.0006,
+        "Minor Flood": 0.0005,
+        "Major Flood": 0.0005
+      },
+      "current_water_level_m": 1.02,
+      "w_avg_m": 1.02,
+      "w_max_m": 1.02,
+      "rainfall_today_mm": 0.0,
+      "rising_flag": 0,
+      "alert_level_m": 3.5,
+      "minor_flood_level_m": 4.0,
+      "major_flood_level_m": 5.0,
+      "flood_timing": {},
+      "data_source": {
+        "arcgis_available": true,
+        "dmc_available": true,
+        "owm_available": true
+      }
     },
-    {
-      "station_id": "THA01",
-      "station_name": "Thawalama",
-      "flood_risk": "Low",
-      "predicted_water_level_m": 0.81,
-      "confidence": 0.65
+    "THA01": {
+      "flood_category": "Normal",
+      "flood_label": 0,
+      "confidence": 0.9984,
+      "probabilities": {
+        "Normal": 0.9984,
+        "Alert": 0.0005,
+        "Minor Flood": 0.0005,
+        "Major Flood": 0.0005
+      },
+      "current_water_level_m": 0.91,
+      "w_avg_m": 0.91,
+      "w_max_m": 0.91,
+      "rainfall_today_mm": 0.0,
+      "rising_flag": 0,
+      "alert_level_m": 4.0,
+      "minor_flood_level_m": 6.0,
+      "major_flood_level_m": 7.5,
+      "flood_timing": {},
+      "data_source": {
+        "arcgis_available": true,
+        "dmc_available": true,
+        "owm_available": true
+      }
     }
-  ]
+  }
 }

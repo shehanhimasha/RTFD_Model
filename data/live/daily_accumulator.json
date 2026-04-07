@@ -1,36 +1,28 @@
 {
-  "date": "2026-04-07",
+  "date": "2026-04-08",
   "BAD01": {
     "readings": [
-      1.01,
-      1.01,
-      1.01
+      1.02
     ],
     "rainfall_readings": [
-      0.0,
-      0.0,
       0.0
     ],
-    "w_avg": 1.01,
-    "w_max": 1.01,
-    "w_min": 1.01,
+    "w_avg": 1.02,
+    "w_max": 1.02,
+    "w_min": 1.02,
     "rainfall_mm": 0.0,
     "rising_flag": 0
   },
   "THA01": {
     "readings": [
-      0.95,
-      0.95,
-      0.95
+      0.91
     ],
     "rainfall_readings": [
-      0.0,
-      0.0,
       0.0
     ],
-    "w_avg": 0.95,
-    "w_max": 0.95,
-    "w_min": 0.95,
+    "w_avg": 0.91,
+    "w_max": 0.91,
+    "w_min": 0.91,
     "rainfall_mm": 0.0,
     "rising_flag": 0
   }
