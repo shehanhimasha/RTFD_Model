@@ -233,24 +233,33 @@ def parse_rising_flag(rising_or_falling: str) -> int:
 # Get upstream rainfall from OWM data
 # =============================================================================
 
-def extract_upstream_rainfall(weather_data: dict) -> dict:
+def extract_upstream_rainfall(weather_data) -> dict:
     """
-    Extract today's hourly rainfall for all 6 stations from OWM data.
+    Extract latest hourly rainfall for all 6 stations from OWM data.
     Returns a dict of station_id → rainfall_1h_mm.
 
     Args:
-        weather_data: the loaded weather_data.json dict
+        weather_data: the loaded weather_data.json dict or list
 
     Returns:
         dict like {'BAD01': 0.0, 'DEN01': 5.2, ...}
     """
     rainfall = {}
 
-    locations = weather_data.get('locations', [])
-    for loc in locations:
-        station_id  = loc.get('station_id')
-        rain_1h     = loc.get('rainfall_1h_mm', 0.0)
-        if station_id:
-            rainfall[station_id] = float(rain_1h) if rain_1h else 0.0
+    snapshots = weather_data if isinstance(weather_data, list) else [weather_data]
+
+    latest = {}
+    for snapshot in snapshots:
+        locations = snapshot.get('locations', []) if isinstance(snapshot, dict) else []
+        for loc in locations:
+            station_id  = loc.get('station_id')
+            if station_id:
+                obs_time = snapshot.get('fetched_at', '')
+                if station_id not in latest or obs_time > latest[station_id][1]:
+                    rain_1h = loc.get('rainfall_1h_mm', 0.0)
+                    latest[station_id] = (float(rain_1h) if rain_1h else 0.0, obs_time)
+
+    for station_id, (rain_1h, _) in latest.items():
+        rainfall[station_id] = rain_1h
 
     return rainfall

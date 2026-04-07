@@ -23,3 +23,8 @@ env/
 # OS
 .DS_Store
 Thumbs.db
+
+# Ignore live/generated data
+data/*.json
+data/**/*.json
+*.log
