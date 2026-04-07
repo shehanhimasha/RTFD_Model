@@ -167,23 +167,32 @@ def parse_dmc(dmc_data: dict) -> dict:
     return result
 
 
-def parse_arcgis(river_data: dict) -> dict:
+def parse_arcgis(river_data) -> dict:
     """
-    Extract water level and rainfall per station from ArcGIS JSON.
+    Extract latest water level and rainfall per station from ArcGIS JSON.
 
     Returns:
         {'BAD01': {'water_level': 1.22, 'rainfall_mm': 0.0}, ...}
     """
     result = {}
 
-    stations = river_data.get('stations', [])
-    for s in stations:
-        station_id = s.get('station_id')
-        if station_id in TARGET_STATIONS:
-            result[station_id] = {
-                'water_level': float(s.get('current_water_level_m', 0.0) or 0.0),
-                'rainfall_mm': float(s.get('rainfall_mm_per_hour', 0.0) or 0.0),
-            }
+    snapshots = river_data if isinstance(river_data, list) else [river_data]
+
+    latest = {}
+    for snapshot in snapshots:
+        stations = snapshot.get('stations', []) if isinstance(snapshot, dict) else []
+        for s in stations:
+            station_id = s.get('station_id')
+            if station_id in TARGET_STATIONS:
+                obs_time = s.get('observed_at', '')
+                if station_id not in latest or obs_time > latest[station_id]['observed_at']:
+                    latest[station_id] = s
+
+    for station_id, s in latest.items():
+        result[station_id] = {
+            'water_level': float(s.get('current_water_level_m', 0.0) or 0.0),
+            'rainfall_mm': float(s.get('rainfall_mm_per_hour', 0.0) or 0.0),
+        }
 
     return result
 
@@ -575,7 +584,7 @@ def run_pipeline():
 if __name__ == "__main__":
     prediction = run_pipeline()
 
-    print("\n── Prediction output ──")
+    print("\n-- Prediction output --")
     for station_id, result in prediction['stations'].items():
         print(f"\n{station_id}:")
         print(f"  Category:   {result['flood_category']}")
