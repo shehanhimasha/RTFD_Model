@@ -1,0 +1,33 @@
+name: Run prediction pipeline
+
+on:
+  schedule:
+    - cron: "45 * * * *" # runs every hour at :45 — after weather(:00) and river(:30) have fetched
+  workflow_dispatch: # allows manual trigger from GitHub Actions tab
+
+jobs:
+  predict:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run prediction pipeline
+        run: python -m src.pipeline.pipeline
+
+      - name: Commit prediction.json
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/prediction.json data/live/
+          git diff --staged --quiet || git commit -m "Update prediction $(date -u '+%Y-%m-%d %H:%M')"
+          git push
