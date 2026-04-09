@@ -9,14 +9,18 @@ jobs:
   predict:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: pip
 
       - name: Install dependencies
         run: pip install -r requirements.txt
@@ -25,9 +29,9 @@ jobs:
         run: python -m src.pipeline.pipeline
 
       - name: Commit prediction.json
-        run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git add data/prediction.json data/live/
-          git diff --staged --quiet || git commit -m "Update prediction $(date -u '+%Y-%m-%d %H:%M')"
-          git push
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: "data/prediction.json data/live/"
+          message: "Update prediction data [skip ci]"
+          default_author: github_actions
+          pull: "--rebase --autostash"
