@@ -1,121 +1,109 @@
 # RTFD Model — Real-Time Flood Detection Pipeline
 
-Automated disaster prediction pipeline for the **Gin Ganga (Gin River)** basin — Baddegama & Thawalama stations. Fully automated via GitHub Actions.
+> Automated disaster prediction pipeline for the **Gin Ganga (Gin River)** basin — Baddegama & Thawalama stations. Fully automated via GitHub Actions.
 
----
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/shehanhimasha/RTFD_Model/pipeline.yml?branch=main)
 
-## Architecture
+## 📖 Table of Contents
+- [Overview](#overview)
+- [Architecture](#architecture)
+- [Monitored Stations](#monitored-stations)
+- [Pipeline Execution](#pipeline-execution)
+- [Machine Learning Models](#machine-learning-models)
+- [Failure Handling & Resilience](#failure-handling--resilience)
+- [Troubleshooting Reference](#troubleshooting-reference)
 
+## 📌 Overview
+RTFD (Real-Time Flood Detection) is an automated machine learning pipeline predicting flood conditions for the Gin Ganga basin in Sri Lanka. It ingests data continuously from Disaster Management Centre PDFs, OpenWeatherMap API, and ArcGIS REST API, utilizing an ensemble approach of XGBoost and LightGBM models for real-time predictions. 
+
+## 🏗 Architecture
+The data ingestion and model inference pipeline operates continuously, orchestrated via scheduled GitHub Actions workflows.
+
+```mermaid
+graph TD
+    A[DMC PDF<br>every 10 min] -->|pdf_watcher.py| D(data/dmc_data.json)
+    B[OpenWeatherMap<br>every hr] -->|weather_fetcher.py| E(data/weather_data.json)
+    C[ArcGIS REST API<br>every hr] -->|river_fetcher.py| F(data/river_data.json)
+
+    D --> G{pipeline.py}
+    E --> G
+    F --> G
+
+    G -->|Merge + XGBoost + LightGBM| H(data/prediction.json)
 ```
-DMC PDF (every 10 min)      OpenWeatherMap (every hr)      ArcGIS REST API (every hr)
-       │                              │                              │
- pdf_watcher.py               weather_fetcher.py            river_fetcher.py
-       │                              │                              │
-data/dmc_data.json         data/weather_data.json         data/river_data.json
-       └──────────────────────────────┴──────────────────────────────┘
-                                      │
-                                 pipeline.py
-                          (merge + XGBoost + LSTM)
-                                      │
-                           data/prediction.json
-```
 
----
+## 📍 Monitored Stations
 
----
+| Station ID | Station Name | Latitude | Longitude | River     | Focus            |
+| ---------- | ------------ | -------- | --------- | --------- | ---------------- |
+| `BAD01`    | Baddegama    | 6.17     | 80.18     | Gin Ganga | All Sources      |
+| `THA01`    | Thawalama    | 6.34     | 80.33     | Gin Ganga | All Sources      |
+| `DEN01`    | Deniyaya     | 6.35     | 80.56     | Gin Ganga | OWM Only         |
+| `LAN01`    | Lankagama    | 6.37     | 80.47     | Gin Ganga | OWM Only         |
+| `MAK01`    | Makurugoda   | 6.18     | 80.17     | Gin Ganga | OWM Only         |
+| `UDU01`    | Udugama      | 6.23     | 80.32     | Gin Ganga | OWM Only         |
 
-## Setup
+*(OWM fetches target all 6 locations; DMC and ArcGIS services natively focus on Baddegama & Thawalama)*
 
-### 1. GitHub Secret
+## ⚙️ Pipeline Execution
 
-Go to **Settings → Secrets and variables → Actions → New repository secret**:
+### GitHub Actions Environment
+Workflows run automatically on defined cron schedules.
+Required Repository Secret: `OPENWEATHER_API_KEY`
 
-| Name                  | Value                            |
-| --------------------- | -------------------------------- |
-| `OPENWEATHER_API_KEY` | OpenWeatherMap free-tier API key |
-
-### 2. Enable GitHub Actions
-
-Go to the **Actions** tab and enable workflows.  
-GitHub Actions will run automatically on the cron schedule.
-
-### 3. Run Locally (optional)
-
+### Local Execution
+To manually run the pipeline components:
 ```bash
-pip install -r requirements.txt
-
-# Source 2 (needs API key)
-set OPENWEATHER_API_KEY=your_key_here   # Windows
-export OPENWEATHER_API_KEY=your_key_here  # Linux/Mac
+# Requires OPENWEATHER_API_KEY environment variable
 python weather_fetcher.py
-
-# Source 3
 python river_fetcher.py
-
-# Source 1
 python pdf_watcher.py
 
-# Full pipeline
+# Run model inference and data merge
 python pipeline.py
 ```
 
----
+## 🧠 Machine Learning Models
 
-## ML Models
+Model artifacts are stored in the `models/` directory:
+- `models/xgboost_model.pkl`
+- `models/lightgbm_model.pkl`
 
-Place your trained models in the `models/` directory:
+**Fallback Mechanism:** If the model binaries are missing or fail to load, `pipeline.py` defaults to a resilient rule-based threshold predictor.
 
-- `models/xgboost_model.pkl` — trained with `joblib.dump(model, path)`
-- `models/lstm_model.keras` — saved with `model.save(path)`
+### Feature Vectors
+Prediction relies on the following model inputs:
 
-**If models are absent**, `pipeline.py` falls back to a rule-based threshold predictor so the pipeline never crashes.
+| Feature | Source | Description |
+|---|---|---|
+| `dmc_current_wl` | DMC PDF | Current Water Level |
+| `dmc_previous_wl` | DMC PDF | Previous Water Level |
+| `dmc_rainfall_mm` | DMC PDF | Rainfall |
+| `dmc_rising` | DMC PDF | Target Status (1: Rising, 0: Falling) |
+| `owm_rainfall_1h` | OWM | Weather Map Rainfall (1 hour) |
+| `owm_humidity` | OWM | Humidity Percentage |
+| `owm_clouds_pct` | OWM | Cloud Covering Percentage |
+| `arc_water_level_m` | ArcGIS | Live Feature Server Water Level |
+| `arc_rainfall_mm_hr` | ArcGIS | Live Feature Server Rainfall Measurement |
 
-Feature vector (per station):
-| Feature | Source |
-|---|---|
-| `dmc_current_wl` | DMC PDF |
-| `dmc_previous_wl` | DMC PDF |
-| `dmc_rainfall_mm` | DMC PDF |
-| `dmc_rising` | DMC PDF (1=Rising, 0=Falling) |
-| `owm_rainfall_1h` | OpenWeatherMap |
-| `owm_humidity` | OpenWeatherMap |
-| `owm_clouds_pct` | OpenWeatherMap |
-| `arc_water_level_m` | ArcGIS |
-| `arc_rainfall_mm_hr` | ArcGIS |
+## 🛡️ Failure Handling & Resilience
 
----
+The pipeline is built to handle intermittent source downtime gracefully.
 
-## ArcGIS Note
+| Scenario | System Behavior |
+| --- | --- |
+| **DMC site unreachable** | Logs warning; bypasses update and utilizes existing `dmc_data.json`. |
+| **Same PDF seen twice** | Silently skipped (validated via `last_seen_pdf.txt`). |
+| **PDF parse yields 0 records** | Aborts overwrite; retains existing JSON data. |
+| **OWM fetch fails (1 station)** | Logs warning; omits the specific failing station. |
+| **All OWM fetches fail** | Logs error; retains `weather_data.json`. |
+| **ArcGIS returns 0 features** | Logs warning; initializes an empty-stations JSON object. |
+| **Source JSON missing** | Re-loads the last committed file version; pipeline execution continues. |
+| **ML Models not found** | Executes safety rule-based threshold fallback logic. |
 
-`river_fetcher.py` targets the feature service behind the [Gin River Dashboard](https://www.arcgis.com/apps/dashboards/2cffe83c9ff5497d97375498bdf3ff38).  
-If readings come back empty, open the dashboard, press **F12 → Network → filter "FeatureServer"**, copy the actual query URL, and update `ARCGIS_SERVICE_URL` at the top of `river_fetcher.py`.
+## 🛠️ Troubleshooting Reference
 
----
-
-## Failure Handling
-
-| Scenario                            | Behaviour                                      |
-| ----------------------------------- | ---------------------------------------------- |
-| DMC site unreachable                | Log warning, keep existing `dmc_data.json`     |
-| Same PDF seen twice                 | Skip silently (tracked by `last_seen_pdf.txt`) |
-| PDF parse yields 0 records          | Keep existing JSON, don't overwrite            |
-| OWM fetch fails for one station     | Log warning, omit that station only            |
-| All OWM fetches fail                | Log error, keep existing `weather_data.json`   |
-| ArcGIS returns 0 features           | Log warning, write empty-stations JSON         |
-| Any source JSON missing in pipeline | Load last committed version; continue          |
-| Models not found                    | Rule-based threshold fallback                  |
-
----
-
-## Stations
-
-| station_id | station_name | lat  | lon   | River     |
-| ---------- | ------------ | ---- | ----- | --------- |
-| BAD01      | Baddegama    | 6.17 | 80.18 | Gin Ganga |
-| THA01      | Thawalama    | 6.34 | 80.33 | Gin Ganga |
-| DEN01      | Deniyaya     | 6.35 | 80.56 | Gin Ganga |
-| LAN01      | Lankagama    | 6.37 | 80.47 | Gin Ganga |
-| MAK01      | Makurugoda   | 6.18 | 80.17 | Gin Ganga |
-| UDU01      | Udugama      | 6.23 | 80.32 | Gin Ganga |
-
-_(OWM fetches all 6; DMC + ArcGIS focus on Baddegama & Thawalama only)_
+### ArcGIS Fetch Failures
+`river_fetcher.py` directly targets the feature service supporting the Gin River Dashboard. If the internal queries shift and return empty features:
+1. Verify the exact query in browser Developer Tools (Network tab -> "FeatureServer").
+2. Update the `ARCGIS_SERVICE_URL` string in `river_fetcher.py` with the updated query parameters.
