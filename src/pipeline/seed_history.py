@@ -1,6 +1,6 @@
 # =============================================================================
 #
-# Run once to back-fill the last 7 days into history_store.json
+# Run to back-fill the last 7 days into history_store.json
 # from the processed CSV data.
 #
 # Run: python -m src.pipeline.seed_history
