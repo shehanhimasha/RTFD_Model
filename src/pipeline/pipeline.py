@@ -426,7 +426,7 @@ def run_pipeline():
     """
     now = datetime.now()
     today = str(date.today())
-    is_midnight = now.hour == 0
+    is_midnight = now.hour in [0, 1]
 
     logger.info("=" * 55)
     logger.info(f"PIPELINE RUN — {now.strftime('%Y-%m-%d %H:%M')}")
