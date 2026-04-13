@@ -2,27 +2,31 @@
   "date": "2026-04-13",
   "BAD01": {
     "readings": [
-      1.42
+      1.42,
+      1.65
     ],
     "rainfall_readings": [
+      0.0,
       0.0
     ],
-    "w_avg": 1.42,
-    "w_max": 1.42,
+    "w_avg": 1.535,
+    "w_max": 1.65,
     "w_min": 1.42,
     "rainfall_mm": 0.0,
     "rising_flag": 0
   },
   "THA01": {
     "readings": [
-      1.63
+      1.63,
+      1.53
     ],
     "rainfall_readings": [
+      0.0,
       0.0
     ],
-    "w_avg": 1.63,
+    "w_avg": 1.58,
     "w_max": 1.63,
-    "w_min": 1.63,
+    "w_min": 1.53,
     "rainfall_mm": 0.0,
     "rising_flag": 0
   }
