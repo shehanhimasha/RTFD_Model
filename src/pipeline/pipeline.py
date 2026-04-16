@@ -48,6 +48,7 @@ DMC_PATH        = RTFD_DATA_DIR / "dmc_data.json"
 WEATHER_PATH    = RTFD_DATA_DIR / "weather_data.json"
 RIVER_PATH      = RTFD_DATA_DIR / "river_data.json"
 PREDICTION_PATH = RTFD_DATA_DIR / "prediction.json"
+ACCUMULATOR_PATH = RTFD_DATA_DIR / "live" / "daily_accumulator.json"
 
 # ── Model paths ───────────────────────────────────────────────────────────────
 MODEL_DIR       = paths.MODELS
@@ -531,15 +532,23 @@ def run_pipeline():
         if timing.get('note'):
             logger.info(f"  Timing: {timing['note']}")
 
-    # ── Save accumulator ──
+    # ─ Save accumulator ─
     save_accumulator(acc)
 
-    # ── At midnight — update history store with yesterday's completed values ──
+    # ─ At midnight — update history store with yesterday's completed values ─
     if is_midnight:
-        logger.info("\nMidnight detected — updating history store...")
+        logger.info("\nMidnight — updating history store with yesterday's values...")
         yesterday = str(date.fromordinal(date.today().toordinal() - 1))
 
         for station_id in TARGET_STATIONS:
+            # Load accumulator BEFORE checking for new day
+            acc_raw = {}
+            if ACCUMULATOR_PATH.exists():
+                with open(ACCUMULATOR_PATH, 'r') as f:
+                    acc_raw = json.load(f)
+
+            is_new_day = acc_raw.get('date') != today
+
             acc_stats = get_station_stats(acc, station_id)
 
             # Build upstream rainfall totals for yesterday
@@ -562,7 +571,7 @@ def run_pipeline():
 
         save_history(history)
 
-    # ── Write prediction.json ──
+    # ─ Write prediction.json ─
     prediction = {
         'predicted_at': now.strftime('%Y-%m-%dT%H:%M:%S'),
         'model':        'XGBoost + LightGBM ensemble',
