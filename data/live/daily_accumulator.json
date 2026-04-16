@@ -4,16 +4,18 @@
     "readings": [
       1.17,
       1.17,
-      1.13
+      1.13,
+      1.11
     ],
     "rainfall_readings": [
       0.0,
       0.0,
+      0.0,
       0.0
     ],
-    "w_avg": 1.1567,
+    "w_avg": 1.145,
     "w_max": 1.17,
-    "w_min": 1.13,
+    "w_min": 1.11,
     "rainfall_mm": 0.0,
     "rising_flag": 0
   },
@@ -21,16 +23,18 @@
     "readings": [
       1.56,
       1.32,
-      1.23
+      1.23,
+      1.18
     ],
     "rainfall_readings": [
       0.0,
       0.0,
+      0.0,
       0.0
     ],
-    "w_avg": 1.37,
+    "w_avg": 1.3225,
     "w_max": 1.56,
-    "w_min": 1.23,
+    "w_min": 1.18,
     "rainfall_mm": 0.0,
     "rising_flag": 0
   }
