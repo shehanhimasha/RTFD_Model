@@ -1,5 +1,10 @@
 from pathlib import Path
 from dataclasses import dataclass
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 @dataclass
 class Paths:
@@ -9,4 +14,10 @@ class Paths:
     MODELS         = PROJECT_ROOT / "models" / "trained"
     LOGS           = PROJECT_ROOT / "logs"
 
+@dataclass
+class Config:
+    DOTNET_WEBHOOK_URL = os.getenv("DOTNET_WEBHOOK_URL")
+    INTERNAL_API_KEY = os.getenv("INTERNAL_API_KEY")
+
 paths = Paths()
+config = Config()
