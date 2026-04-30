@@ -3,13 +3,15 @@
   "BAD01": {
     "readings": [
       0.95,
+      0.89,
       0.89
     ],
     "rainfall_readings": [
       0.0,
+      0.0,
       0.0
     ],
-    "w_avg": 0.92,
+    "w_avg": 0.91,
     "w_max": 0.95,
     "w_min": 0.89,
     "rainfall_mm": 0.0,
@@ -18,14 +20,16 @@
   "THA01": {
     "readings": [
       1.32,
-      1.24
+      1.24,
+      1.33
     ],
     "rainfall_readings": [
       0.0,
+      0.0,
       0.0
     ],
-    "w_avg": 1.28,
-    "w_max": 1.32,
+    "w_avg": 1.2967,
+    "w_max": 1.33,
     "w_min": 1.24,
     "rainfall_mm": 0.0,
     "rising_flag": 0
