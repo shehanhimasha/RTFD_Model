@@ -1,0 +1,72 @@
+{
+  "basin": "Gin Basin",
+  "country": "Sri Lanka",
+  "stations": [
+    {
+      "station_id": "BAD01",
+      "station_name": "Baddegama",
+      "river_name": "Gin Ganga",
+      "basin_name": "Gin Basin",
+      "province": "Southern",
+      "district": "Galle",
+      "station_type": "river_gauge",
+      "latitude": 6.17,
+      "longitude": 80.18
+    },
+    {
+      "station_id": "THA01",
+      "station_name": "Thawalama",
+      "river_name": "Gin Ganga",
+      "basin_name": "Gin Basin",
+      "province": "Southern",
+      "district": "Galle",
+      "station_type": "river_gauge",
+      "latitude": 6.34,
+      "longitude": 80.33
+    },
+    {
+      "station_id": "DEN01",
+      "station_name": "Deniyaya",
+      "river_name": "Gin Ganga",
+      "basin_name": "Gin Basin",
+      "province": "Southern",
+      "district": "Matara",
+      "station_type": "river_gauge",
+      "latitude": 6.35,
+      "longitude": 80.56
+    },
+    {
+      "station_id": "LAN01",
+      "station_name": "Lankagama",
+      "river_name": "Gin Ganga",
+      "basin_name": "Gin Basin",
+      "province": "Southern",
+      "district": "Galle",
+      "station_type": "river_gauge",
+      "latitude": 6.37,
+      "longitude": 80.47
+    },
+    {
+      "station_id": "MAK01",
+      "station_name": "Makurugoda",
+      "river_name": "Gin Ganga",
+      "basin_name": "Gin Basin",
+      "province": "Southern",
+      "district": "Galle",
+      "station_type": "river_gauge",
+      "latitude": 6.18,
+      "longitude": 80.17
+    },
+    {
+      "station_id": "UDU01",
+      "station_name": "Udagama",
+      "river_name": "Gin Ganga",
+      "basin_name": "Gin Basin",
+      "province": "Southern",
+      "district": "Galle",
+      "station_type": "river_gauge",
+      "latitude": 6.23,
+      "longitude": 80.32
+    }
+  ]
+}
