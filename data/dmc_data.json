@@ -888,5 +888,25 @@
     "remarks": "Normal",
     "rising_or_falling": null,
     "rainfall_mm": 75.3
+  },
+  {
+    "gauging_station_name": "Baddegama",
+    "time_str": "2026-05-13 09:30:00",
+    "time_ut": 1778664600.0,
+    "previous_water_level": 2.28,
+    "current_water_level": 2.34,
+    "remarks": "Normal",
+    "rising_or_falling": null,
+    "rainfall_mm": 44.2
+  },
+  {
+    "gauging_station_name": "Thawalama",
+    "time_str": "2026-05-13 09:30:00",
+    "time_ut": 1778664600.0,
+    "previous_water_level": 2.51,
+    "current_water_level": 2.94,
+    "remarks": "Normal",
+    "rising_or_falling": null,
+    "rainfall_mm": 134.9
   }
 ]
