@@ -1,23 +1,29 @@
-# =============================================================================
-#   Main orchestrator — runs every hour via GitHub Actions.
-#   Reads the three live JSON files, assembles 36 features per station,
-#   runs the XGBoost + LightGBM ensemble, estimates alert timing,
-#   and writes prediction.json.
+# Main orchestrator — runs every hour via GitHub Actions.
 #
-# Run order (GitHub Actions cron):
-#   Every hour → python -m src.pipeline.pipeline
-#   At midnight → same script detects new day and updates history store
+# Fixes applied:
+#   FIX 1 — Upstream rainfall in history_store was always 0 because the
+#            midnight update was reading the raw OWM hourly reading (almost
+#            always 0 at midnight) instead of the day's accumulated total.
+#            Now a separate upstream_accumulator.json sums OWM hourly
+#            readings for all stations throughout the day, same as the
+#            main accumulator does for BAD01 and THA01 water levels.
 #
-# Prerequisites (run once before first deployment):
-#   python -m src.pipeline.rating_curve
+#   FIX 2 — Live data was never stored for future retraining.
+#            After each run, all 36 features + prediction output are
+#            appended to data/live/daily_log.csv. This grows into the
+#            real-world training dataset for future model improvement.
 #
-# Input files (written by your existing fetchers in RTFD_Model):
+# Input files:
 #   data/dmc_data.json
 #   data/weather_data.json
 #   data/river_data.json
 #
 # Output:
 #   data/prediction.json
+#   data/live/daily_accumulator.json
+#   data/live/upstream_accumulator.json   
+#   data/live/history_store.json
+#   data/live/daily_log.csv              
 # =============================================================================
 
 import json
@@ -27,13 +33,13 @@ import pandas as pd
 from datetime import datetime, date
 from pathlib import Path
 from config.settings import paths
-from src.pipeline.accumulator  import (
+from src.pipeline.accumulator import (
     load_accumulator, add_reading, get_station_stats,
-    save_accumulator, parse_rising_flag, extract_upstream_rainfall
+    save_accumulator, parse_rising_flag, extract_upstream_rainfall,
 )
 from src.pipeline.history_store import (
     load_history, update_history, get_lag_features,
-    build_daily_record, save_history
+    build_daily_record, save_history,
 )
 from src.pipeline.rating_curve import estimate_discharge
 from src.utils.logger import setup_logger
@@ -41,35 +47,32 @@ from src.utils.logger import setup_logger
 logger = setup_logger(__name__)
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
-# RTFD_Model data folder — where your fetchers write their JSON files
-RTFD_DATA_DIR   = paths.PROJECT_ROOT / "data"
+RTFD_DATA_DIR     = paths.PROJECT_ROOT / "data"
+LIVE_DIR          = RTFD_DATA_DIR / "live"
 
-DMC_PATH        = RTFD_DATA_DIR / "dmc_data.json"
-WEATHER_PATH    = RTFD_DATA_DIR / "weather_data.json"
-RIVER_PATH      = RTFD_DATA_DIR / "river_data.json"
-PREDICTION_PATH = RTFD_DATA_DIR / "prediction.json"
-ACCUMULATOR_PATH = RTFD_DATA_DIR / "live" / "daily_accumulator.json"
+DMC_PATH          = RTFD_DATA_DIR / "dmc_data.json"
+WEATHER_PATH      = RTFD_DATA_DIR / "weather_data.json"
+RIVER_PATH        = RTFD_DATA_DIR / "river_data.json"
+PREDICTION_PATH   = RTFD_DATA_DIR / "prediction.json"
 
-# ── Model paths ───────────────────────────────────────────────────────────────
-MODEL_DIR       = paths.MODELS
-XGB_PATH        = MODEL_DIR / "xgboost_model.pkl"
-LGBM_PATH       = MODEL_DIR / "lightgbm_model.pkl"
-CURVES_PATH     = MODEL_DIR / "rating_curves.pkl"
-WEIGHTS_PATH    = MODEL_DIR / "ensemble_weights.pkl"
+UPSTREAM_ACC_PATH = LIVE_DIR / "upstream_accumulator.json"   # FIX 1
+DAILY_LOG_PATH    = LIVE_DIR / "daily_log.csv"               # FIX 2
+
+MODEL_DIR         = paths.MODELS
+XGB_PATH          = MODEL_DIR / "xgboost_model.pkl"
+LGBM_PATH         = MODEL_DIR / "lightgbm_model.pkl"
+CURVES_PATH       = MODEL_DIR / "rating_curves.pkl"
+WEIGHTS_PATH      = MODEL_DIR / "ensemble_weights.pkl"
 FEATURE_COLS_PATH = paths.DATA_PROCESSED / "Gin river" / "feature_columns.txt"
 
 # ── Station config ────────────────────────────────────────────────────────────
-STATION_CODE = {'BAD01': 0, 'THA01': 1}
-TARGET_STATIONS = ['BAD01', 'THA01']
+STATION_CODE      = {'BAD01': 0, 'THA01': 1}
+TARGET_STATIONS   = ['BAD01', 'THA01']
+UPSTREAM_STATIONS = ['DEN01', 'LAN01', 'THA01', 'UDU01', 'MAK01']
+ALL_STATIONS      = ['BAD01', 'THA01', 'DEN01', 'LAN01', 'UDU01', 'MAK01']
 
-LABEL_NAMES = {
-    0: 'Normal',
-    1: 'Alert',
-    2: 'Minor Flood',
-    3: 'Major Flood'
-}
+LABEL_NAMES = {0: 'Normal', 1: 'Alert', 2: 'Minor Flood', 3: 'Major Flood'}
 
-# ── Flood thresholds (from settings / station_master) ─────────────────────────
 THRESHOLDS = {
     'BAD01': {'alert': 3.5, 'minor': 4.0, 'major': 5.0},
     'THA01': {'alert': 4.0, 'minor': 6.0, 'major': 7.5},
@@ -77,12 +80,114 @@ THRESHOLDS = {
 
 
 # =============================================================================
+# Upstream accumulator
+# Accumulates OWM hourly rainfall for all stations throughout the day.
+# At midnight these totals go into history_store as the day's upstream
+# rainfall — replacing the broken approach of reading a single midnight value.
+# =============================================================================
+
+def load_upstream_accumulator() -> dict:
+    """Load upstream accumulator, reset if from a previous day."""
+    today = str(date.today())
+
+    if UPSTREAM_ACC_PATH.exists():
+        with open(UPSTREAM_ACC_PATH, 'r') as f:
+            acc = json.load(f)
+        if acc.get('date') != today:
+            logger.info("New day — resetting upstream accumulator")
+            acc = _empty_upstream_acc(today)
+    else:
+        acc = _empty_upstream_acc(today)
+
+    return acc
+
+
+def _empty_upstream_acc(today: str) -> dict:
+    """Create a fresh upstream accumulator for a new day."""
+    acc = {'date': today}
+    for sid in ALL_STATIONS:
+        acc[sid] = 0.0
+    return acc
+
+
+def update_upstream_accumulator(acc: dict, owm_rainfall: dict) -> dict:
+    """
+    Add this hour's OWM rainfall reading to each station's running daily total.
+
+    owm_rainfall contains rainfall_1h_mm for all 6 stations.
+    We sum these hourly values throughout the day so that at midnight
+    we have the true daily total — not a single midnight reading.
+    """
+    for sid in ALL_STATIONS:
+        hourly    = float(owm_rainfall.get(sid, 0.0))
+        acc[sid]  = round(acc.get(sid, 0.0) + hourly, 2)
+
+    non_zero = {k: v for k, v in acc.items() if k != 'date' and v > 0}
+    if non_zero:
+        logger.info(f"  Upstream rainfall today: {non_zero}")
+    else:
+        logger.info("  Upstream rainfall today: all 0.0mm so far")
+
+    return acc
+
+
+def save_upstream_accumulator(acc: dict) -> None:
+    LIVE_DIR.mkdir(parents=True, exist_ok=True)
+    with open(UPSTREAM_ACC_PATH, 'w') as f:
+        json.dump(acc, f, indent=2)
+
+
+# =============================================================================
+# Daily log
+# Appends all 36 features + prediction to daily_log.csv every run.
+# Grows into real-world training data for future model retraining.
+# =============================================================================
+
+def append_to_daily_log(
+    station_id:    str,
+    run_time:      str,
+    feature_cols:  list,
+    feature_vec:   np.ndarray,
+    flood_label:   int,
+    flood_category: str,
+    confidence:    float,
+) -> None:
+    """
+    Append one row to daily_log.csv.
+
+    Columns: run_time, station_id, flood_label, flood_category,
+             confidence, then all 36 feature values.
+
+    When you have 6-12 months of this data, run the training pipeline
+    using daily_log.csv as additional training data to improve the model
+    on recent real-world conditions.
+    """
+    row = {
+        'run_time':      run_time,
+        'station_id':    station_id,
+        'flood_label':   flood_label,
+        'flood_category': flood_category,
+        'confidence':    confidence,
+    }
+    for col, val in zip(feature_cols, feature_vec):
+        row[col] = round(float(val), 6)
+
+    row_df = pd.DataFrame([row])
+
+    if DAILY_LOG_PATH.exists():
+        row_df.to_csv(DAILY_LOG_PATH, mode='a', header=False, index=False)
+    else:
+        LIVE_DIR.mkdir(parents=True, exist_ok=True)
+        row_df.to_csv(DAILY_LOG_PATH, mode='w', header=True, index=False)
+
+    logger.info(f"  Appended to daily_log.csv")
+
+
+# =============================================================================
 # Load models
 # =============================================================================
 
 def load_models() -> tuple:
-    """Load XGBoost, LightGBM, rating curves and feature columns."""
-
     xgb_model  = joblib.load(XGB_PATH)
     lgbm_model = joblib.load(LGBM_PATH)
     curves     = joblib.load(CURVES_PATH)
@@ -91,22 +196,15 @@ def load_models() -> tuple:
     with open(FEATURE_COLS_PATH, 'r') as f:
         feature_cols = [line.strip() for line in f.readlines()]
 
-    logger.info("Models loaded: XGBoost, LightGBM, rating curves")
-    logger.info(f"Feature columns: {len(feature_cols)}")
-
+    logger.info(f"Models loaded — {len(feature_cols)} feature columns")
     return xgb_model, lgbm_model, curves, weights, feature_cols
 
 
 # =============================================================================
-# Read live data files
+# Read and parse live data
 # =============================================================================
 
 def read_live_data() -> tuple:
-    """
-    Read the three JSON files written by the fetchers.
-    Returns (dmc_data, weather_data, river_data).
-    Any missing file returns an empty dict — pipeline continues with fallback.
-    """
     def safe_load(path):
         try:
             with open(path, 'r') as f:
@@ -120,35 +218,18 @@ def read_live_data() -> tuple:
     river_data   = safe_load(RIVER_PATH)
 
     logger.info(
-        f"Live data loaded: "
-        f"DMC={bool(dmc_data)}, "
-        f"OWM={bool(weather_data)}, "
-        f"ArcGIS={bool(river_data)}"
+        f"Live data: DMC={bool(dmc_data)}, "
+        f"OWM={bool(weather_data)}, ArcGIS={bool(river_data)}"
     )
-
     return dmc_data, weather_data, river_data
 
 
-# =============================================================================
-# Parse live data into per-station dicts
-# =============================================================================
-
 def parse_dmc(dmc_data: dict) -> dict:
-    """
-    Extract latest water level and rising flag per station from DMC JSON.
-    DMC data may have multiple readings per day — we take the latest.
-
-    Returns:
-        {'BAD01': {'water_level': 1.09, 'rising_flag': 0, 'rainfall_mm': 4.9}, ...}
-    """
-    result = {}
-
-    records = dmc_data if isinstance(dmc_data, list) else dmc_data.get('records', [])
-
+    result   = {}
+    records  = dmc_data if isinstance(dmc_data, list) else dmc_data.get('records', [])
     name_map = {'Baddegama': 'BAD01', 'Thawalama': 'THA01'}
+    latest   = {}
 
-    # Group by station and take latest record
-    latest = {}
     for rec in records:
         name       = rec.get('gauging_station_name', '')
         station_id = name_map.get(name)
@@ -160,57 +241,31 @@ def parse_dmc(dmc_data: dict) -> dict:
 
     for station_id, rec in latest.items():
         result[station_id] = {
-            'water_level':  float(rec.get('current_water_level', 0.0) or 0.0),
-            'rising_flag':  parse_rising_flag(rec.get('rising_or_falling', '')),
-            'rainfall_mm':  float(rec.get('rainfall_mm', 0.0) or 0.0),
+            'water_level': float(rec.get('current_water_level', 0.0) or 0.0),
+            'rising_flag': parse_rising_flag(rec.get('rising_or_falling', '')),
+            'rainfall_mm': float(rec.get('rainfall_mm', 0.0) or 0.0),
         }
-
     return result
 
 
-def parse_arcgis(river_data) -> dict:
-    """
-    Extract latest water level and rainfall per station from ArcGIS JSON.
-
-    Returns:
-        {'BAD01': {'water_level': 1.22, 'rainfall_mm': 0.0}, ...}
-    """
+def parse_arcgis(river_data: dict) -> dict:
     result = {}
-
-    snapshots = river_data if isinstance(river_data, list) else [river_data]
-
-    latest = {}
-    for snapshot in snapshots:
-        stations = snapshot.get('stations', []) if isinstance(snapshot, dict) else []
-        for s in stations:
-            station_id = s.get('station_id')
-            if station_id in TARGET_STATIONS:
-                obs_time = s.get('observed_at', '')
-                if station_id not in latest or obs_time > latest[station_id]['observed_at']:
-                    latest[station_id] = s
-
-    for station_id, s in latest.items():
-        result[station_id] = {
-            'water_level': float(s.get('current_water_level_m', 0.0) or 0.0),
-            'rainfall_mm': float(s.get('rainfall_mm_per_hour', 0.0) or 0.0),
-        }
-
+    for s in river_data.get('stations', []):
+        sid = s.get('station_id')
+        if sid in TARGET_STATIONS:
+            result[sid] = {
+                'water_level': float(s.get('current_water_level_m', 0.0) or 0.0),
+                'rainfall_mm': float(s.get('rainfall_mm_per_hour', 0.0) or 0.0),
+            }
     return result
 
 
 def parse_owm(weather_data: dict) -> dict:
-    """
-    Extract hourly rainfall per station from OWM JSON.
-    All 6 stations present.
-
-    Returns:
-        {'BAD01': 0.0, 'THA01': 0.0, 'DEN01': 5.2, ...}
-    """
     return extract_upstream_rainfall(weather_data)
 
 
 # =============================================================================
-# Build feature vector for one station
+# Build 36-feature vector
 # =============================================================================
 
 def build_feature_vector(
@@ -218,104 +273,68 @@ def build_feature_vector(
     acc_stats:         dict,
     discharge:         dict,
     lag_features:      dict,
-    upstream_rainfall: dict,
+    upstream_daily:    dict,
     feature_cols:      list,
 ) -> np.ndarray:
     """
-    Assemble the 36-feature vector in the exact order from feature_columns.txt.
+    Assemble the exact 36-column feature vector in feature_columns.txt order.
 
-    This function is the critical bridge between live data and model input.
-    Column order must exactly match what the models were trained on.
-
-    Args:
-        station_id:        'BAD01' or 'THA01'
-        acc_stats:         today's running daily stats from accumulator
-        discharge:         estimated q_avg, q_max, q_min from rating curve
-        lag_features:      all lag and rolling features from history store
-        upstream_rainfall: today's rainfall at all 6 stations from OWM
-        feature_cols:      ordered list of column names from feature_columns.txt
-
-    Returns:
-        1D numpy array of shape (36,) ready for model.predict_proba()
+    upstream_daily: accumulated daily totals from upstream_accumulator
+                    (not raw hourly OWM — that was FIX 1)
     """
-    # Build a dict of all available features
-    # Keys must match feature_columns.txt exactly
-
     w_avg = acc_stats['w_avg']
-    w_max = acc_stats['w_max']
-    w_min = acc_stats['w_min']
 
-    # Compute delta features using lag values from history
-    w_avg_delta     = round(w_avg - lag_features.get('w_avg_lag_1', 0.0), 4)
-    rainfall_delta  = round(
+    w_avg_delta    = round(w_avg - lag_features.get('w_avg_lag_1', 0.0), 4)
+    rainfall_delta = round(
         acc_stats['rainfall_mm'] - lag_features.get('rainfall_mm_lag_1', 0.0), 4
     )
 
     all_features = {
-        # Current snapshot features
-        'rainfall_mm':   acc_stats['rainfall_mm'],
-        'w_avg':         w_avg,
-        'w_max':         w_max,
-        'w_min':         w_min,
-        'q_avg':         discharge['q_avg'],
-        'q_max':         discharge['q_max'],
-        'q_min':         discharge['q_min'],
+        'rainfall_mm':    acc_stats['rainfall_mm'],
+        'w_avg':          w_avg,
+        'w_max':          acc_stats['w_max'],
+        'w_min':          acc_stats['w_min'],
+        'q_avg':          discharge['q_avg'],
+        'q_max':          discharge['q_max'],
+        'q_min':          discharge['q_min'],
 
-        # Upstream rainfall today
-        'rainfall_DEN01': upstream_rainfall.get('DEN01', 0.0),
-        'rainfall_LAN01': upstream_rainfall.get('LAN01', 0.0),
-        'rainfall_THA01': upstream_rainfall.get('THA01', 0.0),
-        'rainfall_UDU01': upstream_rainfall.get('UDU01', 0.0),
-        'rainfall_MAK01': upstream_rainfall.get('MAK01', 0.0),
-        'rainfall_BAD01': upstream_rainfall.get('BAD01', 0.0),
+        # Today's accumulated upstream rainfall totals
+        'rainfall_DEN01': upstream_daily.get('DEN01', 0.0),
+        'rainfall_LAN01': upstream_daily.get('LAN01', 0.0),
+        'rainfall_THA01': upstream_daily.get('THA01', 0.0),
+        'rainfall_UDU01': upstream_daily.get('UDU01', 0.0),
+        'rainfall_MAK01': upstream_daily.get('MAK01', 0.0),
+        'rainfall_BAD01': upstream_daily.get('BAD01', 0.0),
 
-        # Metadata
-        'rising_flag':   acc_stats['rising_flag'],
-        'station_code':  STATION_CODE[station_id],
+        'rising_flag':    acc_stats['rising_flag'],
+        'station_code':   STATION_CODE[station_id],
 
-        # Delta features
         'w_avg_delta':    w_avg_delta,
         'rainfall_delta': rainfall_delta,
 
-        # All lag and rolling features from history store
         **lag_features,
     }
 
-    # Assemble in exact column order
-    vector = []
-    for col in feature_cols:
-        val = all_features.get(col, 0.0)
-        vector.append(float(val))
-
+    vector = [float(all_features.get(col, 0.0)) for col in feature_cols]
     return np.array(vector, dtype=np.float32)
 
 
 # =============================================================================
-# Run ensemble prediction
+# Ensemble prediction
 # =============================================================================
 
 def predict(
     xgb_model,
     lgbm_model,
-    weights: dict,
-    X: np.ndarray,
+    weights:      dict,
+    X:            np.ndarray,
+    feature_cols: list,
 ) -> tuple:
-    """
-    Run soft-voting ensemble prediction on a single feature vector.
+    # Wrap in DataFrame so LightGBM doesn't warn about missing feature names
+    X_df = pd.DataFrame(X.reshape(1, -1), columns=feature_cols)
 
-    Args:
-        xgb_model:  trained XGBClassifier
-        lgbm_model: trained LGBMClassifier
-        weights:    ensemble config dict with xgb_weight and lgbm_weight
-        X:          feature vector shape (36,) — reshaped to (1, 36) internally
-
-    Returns:
-        (flood_label, flood_category, confidence, probabilities_dict)
-    """
-    X_2d = X.reshape(1, -1)   # model expects 2D input
-
-    xgb_proba  = xgb_model.predict_proba(X_2d)[0]
-    lgbm_proba = lgbm_model.predict_proba(X_2d)[0]
+    xgb_proba  = xgb_model.predict_proba(X_df)[0]
+    lgbm_proba = lgbm_model.predict_proba(X_df)[0]
 
     avg_proba = (
         weights['xgb_weight']  * xgb_proba +
@@ -325,8 +344,7 @@ def predict(
     flood_label    = int(np.argmax(avg_proba))
     flood_category = LABEL_NAMES[flood_label]
     confidence     = round(float(avg_proba[flood_label]), 4)
-
-    probabilities = {
+    probabilities  = {
         LABEL_NAMES[i]: round(float(avg_proba[i]), 4)
         for i in range(4)
     }
@@ -335,7 +353,7 @@ def predict(
 
 
 # =============================================================================
-# Estimate time to flood
+# Alert timing estimator
 # =============================================================================
 
 def estimate_time_to_flood(
@@ -344,75 +362,40 @@ def estimate_time_to_flood(
     w_avg_delta: float,
     flood_label: int,
 ) -> dict:
-    """
-    Estimate how many hours until the next flood threshold is crossed,
-    based on the current rate of water level rise.
-
-    This gives the early warning time estimate —
-    e.g. "flood conditions expected in approximately 4-6 hours"
-
-    Only computed when flood_label >= 1 (Alert or above).
-
-    Args:
-        station_id:  'BAD01' or 'THA01'
-        w_avg:       current average water level (m)
-        w_avg_delta: rate of change m per day (from lag features)
-                     converted to per hour internally
-        flood_label: current prediction class (0-3)
-
-    Returns:
-        dict with estimated_hours_to_flood and next_threshold_m
-        Returns empty dict if Normal or rate is not rising
-    """
     if flood_label == 0:
         return {}
 
     thresholds = THRESHOLDS[station_id]
 
-    # Determine the next threshold above current level
     if w_avg < thresholds['alert']:
-        next_threshold = thresholds['alert']
-        next_label     = 'Alert'
+        next_threshold, next_label = thresholds['alert'], 'Alert'
     elif w_avg < thresholds['minor']:
-        next_threshold = thresholds['minor']
-        next_label     = 'Minor Flood'
+        next_threshold, next_label = thresholds['minor'], 'Minor Flood'
     elif w_avg < thresholds['major']:
-        next_threshold = thresholds['major']
-        next_label     = 'Major Flood'
+        next_threshold, next_label = thresholds['major'], 'Major Flood'
     else:
-        # Already at or above major flood threshold
         return {
             'estimated_hours_to_next_threshold': 0,
             'next_threshold_label': 'Major Flood',
             'next_threshold_m': thresholds['major'],
-            'note': 'Already at or above major flood level'
+            'note': 'Already at or above major flood level',
         }
 
-    # w_avg_delta is per day — convert to per hour
     rise_per_hour = w_avg_delta / 24.0
-
     if rise_per_hour <= 0:
-        return {
-            'note': 'Water level not rising — no flood time estimate available'
-        }
+        return {'note': 'Water level not rising — no flood time estimate'}
 
-    # Gap to next threshold
-    gap_m = next_threshold - w_avg
-    hours = gap_m / rise_per_hour
-
-    # Round to nearest hour and add ±2 hour uncertainty window
-    hours_rounded = max(1, round(hours))
-
+    hours = max(1, round((next_threshold - w_avg) / rise_per_hour))
     return {
-        'estimated_hours_to_next_threshold': hours_rounded,
+        'estimated_hours_to_next_threshold': hours,
         'next_threshold_label': next_label,
         'next_threshold_m':     next_threshold,
         'current_water_level':  round(w_avg, 3),
         'rise_rate_m_per_hour': round(rise_per_hour, 4),
         'note': (
             f"At current rise rate, {next_label} conditions "
-            f"expected in approximately {hours_rounded} hour(s)"
-        )
+            f"expected in approximately {hours} hour(s)"
+        ),
     }
 
 
@@ -421,41 +404,32 @@ def estimate_time_to_flood(
 # =============================================================================
 
 def run_pipeline():
-    """
-    Main pipeline — runs every hour.
-    Reads live data, assembles features, predicts, writes prediction.json.
-    """
-    now = datetime.now()
-    today = str(date.today())
+    now         = datetime.now()
     is_midnight = now.hour in [0, 1]
 
     logger.info("=" * 55)
     logger.info(f"PIPELINE RUN — {now.strftime('%Y-%m-%d %H:%M')}")
     logger.info("=" * 55)
 
-    # ── Load models ──
     xgb_model, lgbm_model, curves, weights, feature_cols = load_models()
-
-    # ── Read live data ──
     dmc_data, weather_data, river_data = read_live_data()
 
-    # ── Parse live data ──
     dmc_parsed    = parse_dmc(dmc_data)
     arcgis_parsed = parse_arcgis(river_data)
     owm_rainfall  = parse_owm(weather_data)
 
-    # ── Load accumulator and history ──
-    acc     = load_accumulator()
-    history = load_history()
+    acc          = load_accumulator()
+    history      = load_history()
+    upstream_acc = load_upstream_accumulator()
 
-    # ── Process each target station ──
+    # FIX 1 — accumulate upstream rainfall
+    upstream_acc = update_upstream_accumulator(upstream_acc, owm_rainfall)
+
     station_predictions = {}
 
     for station_id in TARGET_STATIONS:
-
         logger.info(f"\nProcessing {station_id}...")
 
-        # Get best available water level — prefer ArcGIS, fallback to DMC
         arcgis = arcgis_parsed.get(station_id, {})
         dmc    = dmc_parsed.get(station_id, {})
 
@@ -463,46 +437,44 @@ def run_pipeline():
         rainfall_1h = arcgis.get('rainfall_mm', 0.0)
         rising_flag = dmc.get('rising_flag', 0)
 
-        # Add this hour's reading to accumulator
-        acc = add_reading(acc, station_id, water_level, rainfall_1h, rising_flag)
+        acc       = add_reading(acc, station_id, water_level, rainfall_1h, rising_flag)
         acc_stats = get_station_stats(acc, station_id)
 
-        # Estimate discharge from water level using rating curve
         discharge = estimate_discharge(
             station_id,
-            acc_stats['w_avg'],
-            acc_stats['w_max'],
-            acc_stats['w_min'],
+            acc_stats['w_avg'], acc_stats['w_max'], acc_stats['w_min'],
             curves,
         )
 
-        # Get lag features from history store
         lag_features = get_lag_features(history, station_id)
 
-        # Build 36-feature vector
+        # pass accumulated upstream totals
         X = build_feature_vector(
-            station_id,
-            acc_stats,
-            discharge,
-            lag_features,
-            owm_rainfall,
-            feature_cols,
+            station_id, acc_stats, discharge,
+            lag_features, upstream_acc, feature_cols,
         )
 
-        # Run ensemble prediction
         flood_label, flood_category, confidence, probabilities = predict(
-            xgb_model, lgbm_model, weights, X
+            xgb_model, lgbm_model, weights, X, feature_cols
         )
 
-        # Estimate time to flood
-        w_avg_delta = lag_features.get('w_avg_lag_1', 0.0)
-        w_avg_delta_val = acc_stats['w_avg'] - w_avg_delta
+        # log to daily_log.csv
+        append_to_daily_log(
+            station_id     = station_id,
+            run_time       = now.strftime('%Y-%m-%dT%H:%M:%S'),
+            feature_cols   = feature_cols,
+            feature_vec    = X,
+            flood_label    = flood_label,
+            flood_category = flood_category,
+            confidence     = confidence,
+        )
+
+        w_avg_delta_val = acc_stats['w_avg'] - lag_features.get('w_avg_lag_1', 0.0)
         timing = estimate_time_to_flood(
             station_id, acc_stats['w_avg'], w_avg_delta_val, flood_label
         )
 
         thresholds = THRESHOLDS[station_id]
-
         station_predictions[station_id] = {
             'flood_category':        flood_category,
             'flood_label':           flood_label,
@@ -521,7 +493,7 @@ def run_pipeline():
                 'arcgis_available': bool(arcgis),
                 'dmc_available':    bool(dmc),
                 'owm_available':    bool(owm_rainfall),
-            }
+            },
         }
 
         logger.info(
@@ -529,49 +501,38 @@ def run_pipeline():
             f"(confidence={confidence:.2%}, w={water_level:.3f}m)"
         )
 
-        if timing.get('note'):
-            logger.info(f"  Timing: {timing['note']}")
-
-    # ─ Save accumulator ─
+    # Save accumulators
     save_accumulator(acc)
+    save_upstream_accumulator(upstream_acc)   # FIX 1
 
-    # ─ At midnight — update history store with yesterday's completed values ─
+    # Midnight — update history with correctly accumulated values
     if is_midnight:
-        logger.info("\nMidnight — updating history store with yesterday's values...")
+        logger.info("\nMidnight — updating history store...")
         yesterday = str(date.fromordinal(date.today().toordinal() - 1))
 
         for station_id in TARGET_STATIONS:
-            # Load accumulator BEFORE checking for new day
-            acc_raw = {}
-            if ACCUMULATOR_PATH.exists():
-                with open(ACCUMULATOR_PATH, 'r') as f:
-                    acc_raw = json.load(f)
-
-            is_new_day = acc_raw.get('date') != today
-
             acc_stats = get_station_stats(acc, station_id)
 
-            # Build upstream rainfall totals for yesterday
+            # upstream_acc has the real daily totals
             upstream_totals = {
-                sid: owm_rainfall.get(sid, 0.0)
-                for sid in ['DEN01', 'LAN01', 'THA01', 'UDU01', 'MAK01']
+                sid: upstream_acc.get(sid, 0.0)
+                for sid in UPSTREAM_STATIONS
             }
 
             daily_record = build_daily_record(
-                date_str=yesterday,
-                station_id=station_id,
-                w_avg=acc_stats['w_avg'],
-                w_max=acc_stats['w_max'],
-                w_min=acc_stats['w_min'],
-                rainfall_mm=acc_stats['rainfall_mm'],
-                upstream_rainfall=upstream_totals,
+                date_str          = yesterday,
+                station_id        = station_id,
+                w_avg             = acc_stats['w_avg'],
+                w_max             = acc_stats['w_max'],
+                w_min             = acc_stats['w_min'],
+                rainfall_mm       = acc_stats['rainfall_mm'],
+                upstream_rainfall = upstream_totals,
             )
-
             history = update_history(history, station_id, daily_record)
 
         save_history(history)
 
-    # ─ Write prediction.json ─
+    # Write prediction.json
     prediction = {
         'predicted_at': now.strftime('%Y-%m-%dT%H:%M:%S'),
         'model':        'XGBoost + LightGBM ensemble',
@@ -593,11 +554,11 @@ def run_pipeline():
 if __name__ == "__main__":
     prediction = run_pipeline()
 
-    print("\n-- Prediction output --")
-    for station_id, result in prediction['stations'].items():
-        print(f"\n{station_id}:")
-        print(f"  Category:   {result['flood_category']}")
-        print(f"  Confidence: {result['confidence']:.2%}")
-        print(f"  Water level:{result['current_water_level_m']} m")
+    print("\n── Prediction output ──")
+    for sid, result in prediction['stations'].items():
+        print(f"\n{sid}:")
+        print(f"  Category:    {result['flood_category']}")
+        print(f"  Confidence:  {result['confidence']:.2%}")
+        print(f"  Water level: {result['current_water_level_m']}m")
         if result['flood_timing'].get('note'):
-            print(f"  Timing:     {result['flood_timing']['note']}")
+            print(f"  Timing:      {result['flood_timing']['note']}")
