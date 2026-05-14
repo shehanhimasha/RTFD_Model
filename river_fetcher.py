@@ -61,7 +61,7 @@ def query_arcgis() -> list[dict] | None:
         "outFields": "gauge,water_level,rain_fall,EditDate,alertpull,minorpull,majorpull",
         "f": "json",
         "orderByFields": "EditDate DESC",
-        "resultRecordCount": 50,
+        "resultRecordCount": 200,
     }
     try:
         resp = requests.get(ARCGIS_SERVICE_URL, params=params, timeout=30)
@@ -95,7 +95,7 @@ def parse_epoch_ms(val) -> str:
         return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S")
 
 
-def build_station_record(attrs: dict, station_info: dict) -> dict:
+def build_station_record(attrs: dict, station_info: dict, daily_rainfall: float = None) -> dict:
     """Convert confirmed ArcGIS attribute dict into the required schema."""
     water_level = attrs.get("water_level")
     rain_fall   = attrs.get("rain_fall")
@@ -107,6 +107,7 @@ def build_station_record(attrs: dict, station_info: dict) -> dict:
         "river_name":              RIVER_NAME,
         "current_water_level_m":   float(water_level) if water_level is not None else None,
         "rainfall_mm_per_hour":    float(rain_fall)   if rain_fall   is not None else None,
+        "rainfall_mm_per_day":     daily_rainfall,
         "observed_at":             parse_epoch_ms(edit_date),
         # Bonus: flood thresholds from the layer itself
         "alert_level_m":           attrs.get("alertpull"),
@@ -160,26 +161,51 @@ def collect_data() -> None:
         save_output([])
         return
 
-    # Collect the LATEST record per target station (features ordered DESC)
-    seen: set[str] = set()
-    station_records: list[dict] = []
-
+    # Group features by station id to calculate daily sums
+    station_features = {}
     for attrs in features:
         gauge_name = str(attrs.get("gauge", "")).strip().lower()
         info = TARGET_STATIONS.get(gauge_name)
-        if info is None:
-            continue
+        if info:
+            sid = info["station_id"]
+            if sid not in station_features:
+                station_features[sid] = []
+            station_features[sid].append(attrs)
+
+    station_records: list[dict] = []
+    
+    for gauge_name, info in TARGET_STATIONS.items():
         sid = info["station_id"]
-        if sid in seen:
-            continue          # already captured the latest reading
-        seen.add(sid)
-        record = build_station_record(attrs, info)
+        s_features = station_features.get(sid, [])
+        if not s_features:
+            continue
+            
+        # Latest feature
+        latest_attrs = s_features[0]
+        latest_time = latest_attrs.get("EditDate", 0) or 0
+        
+        # Calculate 24-hour rainfall sum
+        # 24 hours = 24 * 60 * 60 * 1000 = 86400000 ms
+        day_ago = latest_time - 86400000
+        daily_rainfall = 0.0
+        
+        for attr in s_features:
+            edit_date = attr.get("EditDate", 0) or 0
+            if edit_date >= day_ago:
+                rf = attr.get("rain_fall")
+                if rf is not None:
+                    daily_rainfall += float(rf)
+            else:
+                break # Since ordered DESC
+                
+        record = build_station_record(latest_attrs, info, round(daily_rainfall, 2))
         station_records.append(record)
         log.info(
-            "%s — water_level=%.2f m, rain_fall=%.1f mm, observed_at=%s",
+            "%s — water_level=%.2f m, rain_fall=%.1f mm/h, rain_fall_day=%.1f mm/d, observed_at=%s",
             info["canonical"],
             record["current_water_level_m"] or 0.0,
             record["rainfall_mm_per_hour"]  or 0.0,
+            record["rainfall_mm_per_day"],
             record["observed_at"],
         )
 
