@@ -204,14 +204,13 @@ def load_models() -> tuple:
 # Read and parse live data
 # =============================================================================
 
-def read_live_data() -> tuple:
-    def safe_load(path):
-        try:
-            with open(path, 'r') as f:
-                return json.load(f)
-        except Exception as e:
-            logger.warning(f"Could not load {path.name}: {e}")
-            return {}
+def safe_load(path):
+    try:
+        with open(path, 'r') as f:
+            return json.load(f)
+    except Exception as e:
+        logger.warning(f"Could not load {path.name}: {e}")
+        return {} 
 
     dmc_data     = safe_load(DMC_PATH)
     weather_data = safe_load(WEATHER_PATH)
@@ -250,7 +249,16 @@ def parse_dmc(dmc_data: dict) -> dict:
 
 def parse_arcgis(river_data: dict) -> dict:
     result = {}
-    for s in river_data.get('stations', []):
+
+    # Handle both formats:
+    # Format A (normal): {"source": "...", "stations": [...]}
+    # Format B (raw list): [{"station_id": "BAD01", ...}, ...]
+    if isinstance(river_data, list):
+        stations = river_data
+    else:
+        stations = river_data.get('stations', [])
+
+    for s in stations:
         sid = s.get('station_id')
         if sid in TARGET_STATIONS:
             result[sid] = {
