@@ -1,5 +1,5 @@
 """
-SOURCE 2 — OpenWeatherMap Live Rainfall Fetcher
+SOURCE 2 — Open-Meteo Live Rainfall Fetcher
 Runs every 1 hour (via GitHub Actions schedule).
 Fetches current weather for 6 Gin Ganga basin stations and saves
 results to data/weather_data.json.
@@ -7,23 +7,13 @@ results to data/weather_data.json.
 
 import json
 import logging
-import os
 from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
 
-# Load .env for local development (no-op in GitHub Actions where secrets are injected)
-try:
-    from dotenv import load_dotenv
-    load_dotenv()
-except ImportError:
-    pass  # python-dotenv not installed; rely on environment variables
-
 # ── Configuration ────────────────────────────────────────────────────────────
 
-API_KEY = os.environ.get("OPENWEATHER_API_KEY", "")
-OWM_URL = "https://api.openweathermap.org/data/2.5/weather"
 OUTPUT_FILE = Path("data/weather_data.json")
 
 STATIONS = [
@@ -38,7 +28,7 @@ STATIONS = [
 RIVER_NAME = "Gin Ganga"
 
 logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s [OWM] %(levelname)s %(message)s"
+    level=logging.INFO, format="%(asctime)s [OPEN-METEO] %(levelname)s %(message)s"
 )
 log = logging.getLogger(__name__)
 
@@ -48,17 +38,19 @@ log = logging.getLogger(__name__)
 
 def fetch_station(station: dict) -> dict | None:
     """
-    Fetch current weather for one station.
+    Fetch current weather for one station using Open-Meteo.
     Returns a location dict on success, None on failure.
     """
+    url = "https://api.open-meteo.com/v1/forecast"
     params = {
-        "lat": station["lat"],
-        "lon": station["lon"],
-        "appid": API_KEY,
-        "units": "metric",
+        "latitude": station["lat"],
+        "longitude": station["lon"],
+        "current": "precipitation,relative_humidity_2m,cloud_cover,weather_code",
+        "timezone": "Asia/Colombo",
     }
+    
     try:
-        resp = requests.get(OWM_URL, params=params, timeout=15)
+        resp = requests.get(url, params=params, timeout=15)
         resp.raise_for_status()
         data = resp.json()
     except requests.RequestException as exc:
@@ -68,12 +60,17 @@ def fetch_station(station: dict) -> dict | None:
         log.error("JSON decode error for %s: %s", station["station_name"], exc)
         return None
 
-    # Extract rainfall — OWM only returns 'rain' key when it's actually raining
-    rain_block = data.get("rain", {})
-    rainfall_1h_mm = rain_block.get("1h", 0.0) if isinstance(rain_block, dict) else 0.0
+    current = data.get("current", {})
+    
+    # Extract data, default to 0.0 or None if missing
+    rainfall_1h_mm = current.get("precipitation", 0.0)
+    humidity = current.get("relative_humidity_2m")
+    clouds_pct = current.get("cloud_cover")
+    weather_code = current.get("weather_code")
 
-    weather_list = data.get("weather", [{}])
-    weather_desc = weather_list[0].get("description", "") if weather_list else ""
+    # Map WMO weather code to description
+    # Mapping based on Open-Meteo WMO code documentation
+    weather_desc = f"WMO Code {weather_code}" if weather_code is not None else ""
 
     return {
         "station_id": station["station_id"],
@@ -81,9 +78,9 @@ def fetch_station(station: dict) -> dict | None:
         "river_name": RIVER_NAME,
         "lat": station["lat"],
         "lon": station["lon"],
-        "rainfall_1h_mm": float(rainfall_1h_mm),
-        "humidity": data.get("main", {}).get("humidity"),
-        "clouds_pct": data.get("clouds", {}).get("all"),
+        "rainfall_1h_mm": float(rainfall_1h_mm) if rainfall_1h_mm is not None else 0.0,
+        "humidity": humidity,
+        "clouds_pct": clouds_pct,
         "weather_description": weather_desc,
     }
 
@@ -91,7 +88,7 @@ def fetch_station(station: dict) -> dict | None:
 def save_output(locations: list[dict]) -> None:
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     payload = {
-        "source": "openweathermap",
+        "source": "open-meteo",
         "fetched_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S"),
         "locations": locations,
     }
@@ -121,11 +118,7 @@ def save_output(locations: list[dict]) -> None:
 
 
 def main() -> None:
-    log.info("=== OpenWeatherMap Fetcher starting ===")
-
-    if not API_KEY:
-        log.error("OPENWEATHER_API_KEY environment variable is not set. Aborting.")
-        return
+    log.info("=== Open-Meteo Fetcher starting ===")
 
     locations = []
     for station in STATIONS:

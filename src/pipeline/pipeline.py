@@ -82,7 +82,7 @@ THRESHOLDS = {
 
 # =============================================================================
 # Upstream accumulator
-# Accumulates OWM hourly rainfall for all stations throughout the day.
+# Accumulates Open-Meteo hourly rainfall for all stations throughout the day.
 # At midnight these totals go into history_store as the day's upstream
 # rainfall — replacing the broken approach of reading a single midnight value.
 # =============================================================================
@@ -111,16 +111,16 @@ def _empty_upstream_acc(today: str) -> dict:
     return acc
 
 
-def update_upstream_accumulator(acc: dict, owm_rainfall: dict) -> dict:
+def update_upstream_accumulator(acc: dict, open_meteo_rainfall: dict) -> dict:
     """
-    Add this hour's OWM rainfall reading to each station's running daily total.
+    Add this hour's Open-Meteo rainfall reading to each station's running daily total.
 
-    owm_rainfall contains rainfall_1h_mm for all 6 stations.
+    open_meteo_rainfall contains rainfall_1h_mm for all 6 stations.
     We sum these hourly values throughout the day so that at midnight
     we have the true daily total — not a single midnight reading.
     """
     for sid in ALL_STATIONS:
-        hourly    = float(owm_rainfall.get(sid, 0.0))
+        hourly    = float(open_meteo_rainfall.get(sid, 0.0))
         acc[sid]  = round(acc.get(sid, 0.0) + hourly, 2)
 
     non_zero = {k: v for k, v in acc.items() if k != 'date' and v > 0}
@@ -223,7 +223,7 @@ def read_live_data() -> tuple:
 
     logger.info(
         f"Live data: DMC={bool(dmc_data)}, "
-        f"OWM={bool(weather_data)}, ArcGIS={bool(river_data)}"
+        f"Open-Meteo={bool(weather_data)}, ArcGIS={bool(river_data)}"
     )
 
     return dmc_data, weather_data, river_data
@@ -274,7 +274,7 @@ def parse_arcgis(river_data: dict) -> dict:
     return result
 
 
-def parse_owm(weather_data: dict) -> dict:
+def parse_open_meteo(weather_data: dict) -> dict:
     return extract_upstream_rainfall(weather_data)
 
 
@@ -294,7 +294,7 @@ def build_feature_vector(
     Assemble the exact 36-column feature vector in feature_columns.txt order.
 
     upstream_daily: accumulated daily totals from upstream_accumulator
-                    (not raw hourly OWM — that was FIX 1)
+                    (not raw hourly Open-Meteo — that was FIX 1)
     """
     w_avg = acc_stats['w_avg']
 
@@ -430,14 +430,14 @@ def run_pipeline():
 
     dmc_parsed    = parse_dmc(dmc_data)
     arcgis_parsed = parse_arcgis(river_data)
-    owm_rainfall  = parse_owm(weather_data)
+    open_meteo_rainfall = parse_open_meteo(weather_data)
 
     acc          = load_accumulator()
     history      = load_history()
     upstream_acc = load_upstream_accumulator()
 
     # accumulate upstream rainfall
-    upstream_acc = update_upstream_accumulator(upstream_acc, owm_rainfall)
+    upstream_acc = update_upstream_accumulator(upstream_acc, open_meteo_rainfall)
 
     station_predictions = {}
 
@@ -516,7 +516,7 @@ def run_pipeline():
             'data_source': {
                 'arcgis_available': bool(arcgis),
                 'dmc_available':    bool(dmc),
-                'owm_available':    bool(owm_rainfall),
+                'open_meteo_available': bool(open_meteo_rainfall),
             },
         }
 
