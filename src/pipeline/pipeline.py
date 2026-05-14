@@ -208,9 +208,13 @@ def safe_load(path):
     try:
         with open(path, 'r') as f:
             return json.load(f)
+
     except Exception as e:
         logger.warning(f"Could not load {path.name}: {e}")
-        return {} 
+        return {}
+
+
+def read_live_data() -> tuple:
 
     dmc_data     = safe_load(DMC_PATH)
     weather_data = safe_load(WEATHER_PATH)
@@ -220,6 +224,7 @@ def safe_load(path):
         f"Live data: DMC={bool(dmc_data)}, "
         f"OWM={bool(weather_data)}, ArcGIS={bool(river_data)}"
     )
+
     return dmc_data, weather_data, river_data
 
 
@@ -430,7 +435,7 @@ def run_pipeline():
     history      = load_history()
     upstream_acc = load_upstream_accumulator()
 
-    # FIX 1 — accumulate upstream rainfall
+    # accumulate upstream rainfall
     upstream_acc = update_upstream_accumulator(upstream_acc, owm_rainfall)
 
     station_predictions = {}
