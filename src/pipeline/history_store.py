@@ -120,6 +120,9 @@ def update_history(
     if station_id not in history:
         history[station_id] = []
 
+    # Remove any existing record for this date to ensure idempotency
+    history[station_id] = [r for r in history[station_id] if r['date'] != daily_values['date']]
+
     # Append today's record
     history[station_id].append(daily_values)
 

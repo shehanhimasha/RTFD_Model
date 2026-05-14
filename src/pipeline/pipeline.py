@@ -451,6 +451,18 @@ def run_pipeline():
         rainfall_1h = arcgis.get('rainfall_mm', 0.0)
         rising_flag = dmc.get('rising_flag', 0)
 
+        lag_features = get_lag_features(history, station_id)
+
+        # Forward-fill missing water level to prevent sudden drops to 0.
+        if water_level <= 0:
+            prev_stats = get_station_stats(acc, station_id)
+            if prev_stats['w_avg'] > 0:
+                water_level = prev_stats['w_avg']
+                logger.warning(f"  Missing live water level for {station_id}. Forward-filling with today's average {water_level:.3f}m")
+            elif lag_features.get('w_avg_lag_1', 0.0) > 0:
+                water_level = lag_features.get('w_avg_lag_1', 0.0)
+                logger.warning(f"  Missing live water level for {station_id}. Forward-filling with yesterday's average {water_level:.3f}m")
+
         acc       = add_reading(acc, station_id, water_level, rainfall_1h, rising_flag)
         acc_stats = get_station_stats(acc, station_id)
 
@@ -459,8 +471,6 @@ def run_pipeline():
             acc_stats['w_avg'], acc_stats['w_max'], acc_stats['w_min'],
             curves,
         )
-
-        lag_features = get_lag_features(history, station_id)
 
         # pass accumulated upstream totals
         X = build_feature_vector(
