@@ -31,6 +31,7 @@ import joblib
 import numpy as np
 import pandas as pd
 from datetime import datetime, date
+from zoneinfo import ZoneInfo
 from pathlib import Path
 from config.settings import paths
 from src.pipeline.accumulator import (
@@ -88,7 +89,7 @@ THRESHOLDS = {
 
 def load_upstream_accumulator() -> dict:
     """Load upstream accumulator, reset if from a previous day."""
-    today = str(date.today())
+    today = str(datetime.now(ZoneInfo("Asia/Colombo")).date())
 
     if UPSTREAM_ACC_PATH.exists():
         with open(UPSTREAM_ACC_PATH, 'r') as f:
@@ -417,7 +418,7 @@ def estimate_time_to_flood(
 # =============================================================================
 
 def run_pipeline():
-    now         = datetime.now()
+    now         = datetime.now(ZoneInfo("Asia/Colombo"))
     is_midnight = now.hour in [0, 1]
 
     logger.info("=" * 55)
@@ -521,7 +522,7 @@ def run_pipeline():
     # Midnight — update history with correctly accumulated values
     if is_midnight:
         logger.info("\nMidnight — updating history store...")
-        yesterday = str(date.fromordinal(date.today().toordinal() - 1))
+        yesterday = str(date.fromordinal(datetime.now(ZoneInfo("Asia/Colombo")).date().toordinal() - 1))
 
         for station_id in TARGET_STATIONS:
             acc_stats = get_station_stats(acc, station_id)

@@ -26,6 +26,8 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run prediction pipeline
+        env:
+          TZ: Asia/Colombo
         run: python -m src.pipeline.pipeline
 
       - name: Commit prediction.json

@@ -3,6 +3,7 @@ import json
 import uuid
 import logging
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 import requests
 from pathlib import Path
 from config.settings import config
@@ -99,14 +100,14 @@ class AlertGenerator:
             alert_info = self.determine_severity_and_messages(station_code, station_data)
             
             if alert_info:
-                timestamp = datetime.now(timezone.utc).isoformat()
+                timestamp = datetime.now(ZoneInfo("Asia/Colombo")).isoformat()
                 area_name = self.station_mappings.get(station_code, {}).get("area", station_code)
                 district = self.station_mappings.get(station_code, {}).get("district", "Unknown")
                 safe_area_name = area_name.replace(" ", "_")
                 
                 # Construct the full alert payload matching the required standard format
                 full_payload = {
-                    "alert_id": f"flood_{safe_area_name}_{int(datetime.now().timestamp())}",
+                    "alert_id": f"flood_{safe_area_name}_{int(datetime.now(ZoneInfo('Asia/Colombo')).timestamp())}",
                     "confidence": station_data.get("confidence", 0.0),
                     "metrics": {
                         "water_level_m": station_data.get("current_water_level_m", 0.0),

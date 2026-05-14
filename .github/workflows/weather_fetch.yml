@@ -32,6 +32,7 @@ jobs:
       - name: Fetch weather data
         env:
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
+          TZ: Asia/Colombo
         run: python weather_fetcher.py
 
       - name: Commit and push updated data

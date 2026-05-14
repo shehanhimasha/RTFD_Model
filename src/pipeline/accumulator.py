@@ -36,6 +36,7 @@
 
 import json
 from datetime import datetime, date
+from zoneinfo import ZoneInfo
 from pathlib import Path
 from config.settings import paths
 from src.utils.logger import setup_logger
@@ -62,7 +63,7 @@ def load_accumulator() -> dict:
     Returns:
         dict with today's accumulated readings per station
     """
-    today = str(date.today())
+    today = str(datetime.now(ZoneInfo("Asia/Colombo")).date())
 
     if ACCUMULATOR_PATH.exists():
         with open(ACCUMULATOR_PATH, 'r') as f:

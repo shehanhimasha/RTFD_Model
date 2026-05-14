@@ -31,6 +31,8 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run PDF watcher
+        env:
+          TZ: Asia/Colombo
         run: python pdf_watcher.py
 
       - name: Commit and push updated data
