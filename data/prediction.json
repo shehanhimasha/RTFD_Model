@@ -1,19 +1,19 @@
 {
-  "predicted_at": "2026-05-14T11:04:43",
+  "predicted_at": "2026-05-14T13:20:30",
   "model": "XGBoost + LightGBM ensemble",
   "stations": {
     "BAD01": {
       "flood_category": "Normal",
       "flood_label": 0,
-      "confidence": 0.9863,
+      "confidence": 0.9866,
       "probabilities": {
-        "Normal": 0.9863,
-        "Alert": 0.0117,
+        "Normal": 0.9866,
+        "Alert": 0.0115,
         "Minor Flood": 0.001,
         "Major Flood": 0.0009
       },
-      "current_water_level_m": 3.2,
-      "w_avg_m": 3.235,
+      "current_water_level_m": 3.13,
+      "w_avg_m": 3.2,
       "w_max_m": 3.27,
       "rainfall_today_mm": 0.0,
       "rising_flag": 0,
@@ -37,9 +37,9 @@
         "Minor Flood": 0.0006,
         "Major Flood": 0.0006
       },
-      "current_water_level_m": 2.22,
-      "w_avg_m": 2.11,
-      "w_max_m": 2.22,
+      "current_water_level_m": 2.44,
+      "w_avg_m": 2.22,
+      "w_max_m": 2.44,
       "rainfall_today_mm": 0.0,
       "rising_flag": 0,
       "alert_level_m": 4.0,
