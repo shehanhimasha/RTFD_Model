@@ -1,19 +1,19 @@
 {
-  "predicted_at": "2026-05-16T01:38:17",
+  "predicted_at": "2026-05-16T03:12:18",
   "model": "XGBoost + LightGBM ensemble",
   "stations": {
     "BAD01": {
       "flood_category": "Normal",
       "flood_label": 0,
-      "confidence": 0.9888,
+      "confidence": 0.9889,
       "probabilities": {
-        "Normal": 0.9888,
+        "Normal": 0.9889,
         "Alert": 0.0094,
-        "Minor Flood": 0.001,
-        "Major Flood": 0.0009
+        "Minor Flood": 0.0009,
+        "Major Flood": 0.0008
       },
-      "current_water_level_m": 3.16,
-      "w_avg_m": 3.16,
+      "current_water_level_m": 3.11,
+      "w_avg_m": 3.135,
       "w_max_m": 3.16,
       "rainfall_today_mm": 0.0,
       "rising_flag": 0,
@@ -22,7 +22,7 @@
       "major_flood_level_m": 5.0,
       "flood_timing": {},
       "data_source": {
-        "arcgis_available": false,
+        "arcgis_available": true,
         "dmc_available": true,
         "open_meteo_available": true
       }
@@ -37,9 +37,9 @@
         "Minor Flood": 0.0006,
         "Major Flood": 0.0006
       },
-      "current_water_level_m": 2.1,
-      "w_avg_m": 2.1,
-      "w_max_m": 2.1,
+      "current_water_level_m": 2.14,
+      "w_avg_m": 2.12,
+      "w_max_m": 2.14,
       "rainfall_today_mm": 0.0,
       "rising_flag": 0,
       "alert_level_m": 4.0,
@@ -47,7 +47,7 @@
       "major_flood_level_m": 7.5,
       "flood_timing": {},
       "data_source": {
-        "arcgis_available": false,
+        "arcgis_available": true,
         "dmc_available": true,
         "open_meteo_available": true
       }
