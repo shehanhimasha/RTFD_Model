@@ -253,24 +253,34 @@ def parse_dmc(dmc_data: dict) -> dict:
     return result
 
 
-def parse_arcgis(river_data: dict) -> dict:
+def parse_arcgis(river_data) -> dict:
     result = {}
-
-    # Handle both formats:
-    # Format A (normal): {"source": "...", "stations": [...]}
-    # Format B (raw list): [{"station_id": "BAD01", ...}, ...]
+    
+    # Extract all station objects
+    stations_list = []
     if isinstance(river_data, list):
-        stations = river_data
-    else:
-        stations = river_data.get('stations', [])
+        for item in river_data:
+            if 'stations' in item:
+                stations_list.extend(item['stations'])
+            else:
+                stations_list.append(item)
+    elif isinstance(river_data, dict):
+        stations_list = river_data.get('stations', [])
 
-    for s in stations:
+    # Get the latest reading for each station
+    latest = {}
+    for s in stations_list:
         sid = s.get('station_id')
         if sid in TARGET_STATIONS:
-            result[sid] = {
-                'water_level': float(s.get('current_water_level_m', 0.0) or 0.0),
-                'rainfall_mm': float(s.get('rainfall_mm_per_hour', 0.0) or 0.0),
-            }
+            obs_time = s.get('observed_at', '')
+            if sid not in latest or obs_time > latest[sid].get('observed_at', ''):
+                latest[sid] = s
+
+    for sid, s in latest.items():
+        result[sid] = {
+            'water_level': float(s.get('current_water_level_m', 0.0) or 0.0),
+            'rainfall_mm': float(s.get('rainfall_mm_per_hour', 0.0) or 0.0),
+        }
     return result
 
 
