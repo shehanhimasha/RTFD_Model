@@ -106,6 +106,7 @@ def add_reading(
     water_level: float,
     rainfall_mm: float,
     rising_flag: int = 0,
+    rainfall_day_mm: float = None,
 ) -> dict:
     """
     Add one hourly reading to the accumulator and recompute daily stats.
@@ -143,7 +144,10 @@ def add_reading(
         s['w_min'] = round(min(s['readings']), 4)
 
     # Total rainfall accumulated since midnight
-    s['rainfall_mm'] = round(sum(s['rainfall_readings']), 2)
+    if rainfall_day_mm is not None:
+        s['rainfall_mm'] = round(float(rainfall_day_mm), 2)
+    else:
+        s['rainfall_mm'] = round(sum(s['rainfall_readings']), 2)
 
     # Update rising flag — if DMC says rising at any point today, flag=1
     # We keep the highest flag seen today (once rising, stays rising until reset)

@@ -280,6 +280,7 @@ def parse_arcgis(river_data) -> dict:
         result[sid] = {
             'water_level': float(s.get('current_water_level_m', 0.0) or 0.0),
             'rainfall_mm': float(s.get('rainfall_mm_per_hour', 0.0) or 0.0),
+            'rainfall_mm_per_day': s.get('rainfall_mm_per_day'),
         }
     return result
 
@@ -459,6 +460,7 @@ def run_pipeline():
 
         water_level = arcgis.get('water_level') or dmc.get('water_level', 0.0)
         rainfall_1h = arcgis.get('rainfall_mm', 0.0)
+        rainfall_day = arcgis.get('rainfall_mm_per_day')
         rising_flag = dmc.get('rising_flag', 0)
 
         lag_features = get_lag_features(history, station_id)
@@ -473,7 +475,7 @@ def run_pipeline():
                 water_level = lag_features.get('w_avg_lag_1', 0.0)
                 logger.warning(f"  Missing live water level for {station_id}. Forward-filling with yesterday's average {water_level:.3f}m")
 
-        acc       = add_reading(acc, station_id, water_level, rainfall_1h, rising_flag)
+        acc       = add_reading(acc, station_id, water_level, rainfall_1h, rising_flag, rainfall_day_mm=rainfall_day)
         acc_stats = get_station_stats(acc, station_id)
 
         discharge = estimate_discharge(
