@@ -40,33 +40,45 @@ class AlertGenerator:
         category = prediction_data.get("flood_category", "Normal")
         water_level = prediction_data.get("current_water_level_m", 0)
         rainfall = prediction_data.get("rainfall_today_mm", 0)
+        rising_flag = prediction_data.get("rising_flag", 0)
+        flood_timing = prediction_data.get("flood_timing", {})
         
         station_info = self.station_mappings.get(station_code, {})
         area_name = station_info.get("area", f"Region {station_code}")
         district = station_info.get("district", "Unknown")
         
+        timing_str = flood_timing.get("note", "")
+        if timing_str:
+            timing_str = f" {timing_str}."
+            
+        trend_str = "rising" if rising_flag == 1 else "falling" if rising_flag == -1 else "steady"
+
         # Default empty payload if no alert is needed
         alert_payload = None
 
         if category == "Major Flood":
+            actions = [
+                "Evacuate to higher ground immediately.",
+                "Do not attempt to cross flooded roads or bridges."
+            ]
+            if rising_flag == -1:
+                actions = ["Water levels are high but receding. Remain extremely cautious."]
+                
             alert_payload = {
                 "severity_level": "CRITICAL",
                 "event_type": "FLASH_FLOOD",
                 "title": "Flash Flood Warning",
-                "short_message": f"Expect severe flooding in {area_name} within the next few hours.",
-                "detailed_message": f"Critical warning: River levels at {area_name} have reached {water_level}m with {rainfall}mm of rainfall. Severe flooding is imminent affecting low-lying residential zones.",
-                "recommended_action": [
-                    "Evacuate to higher ground immediately.",
-                    "Do not attempt to cross flooded roads or bridges."
-                ]
+                "short_message": f"CRITICAL: Severe flooding imminent or occurring in {area_name}.{timing_str}",
+                "detailed_message": f"River levels at {area_name} have reached {water_level}m ({trend_str}) with {rainfall}mm of rainfall.{timing_str} Immediate action required.",
+                "recommended_action": actions
             }
         elif category == "Minor Flood":
             alert_payload = {
                 "severity_level": "HIGH",
                 "event_type": "MODERATE_FLOOD",
                 "title": "Flood Warning",
-                "short_message": f"Moderate flood risk in low-lying areas of {area_name}.",
-                "detailed_message": f"Water levels have risen to {water_level}m at {area_name}. Minor flooding is expected in immediate low-lying areas.",
+                "short_message": f"HIGH: Moderate flood risk in {area_name}.{timing_str}",
+                "detailed_message": f"Water levels are at {water_level}m ({trend_str}). Minor flooding is expected in immediate low-lying areas.{timing_str}",
                 "recommended_action": [
                     "Prepare to move valuables to higher ground.",
                     "Avoid parking vehicles near river banks."
@@ -74,14 +86,27 @@ class AlertGenerator:
             }
         elif category == "Alert":
             alert_payload = {
-                "severity_level": "LOW",
-                "event_type": "HEAVY_RAIN_ADVISORY",
-                "title": "Heavy Rain & Advisory",
-                "short_message": f"High water levels detected in {area_name}. Please monitor updates.",
-                "detailed_message": f"Rainfall and river levels are increasing (currently at {water_level}m). The situation is being monitored.",
+                "severity_level": "MEDIUM",
+                "event_type": "HIGH_WATER_ALERT",
+                "title": "Rising Water Alert",
+                "short_message": f"MEDIUM: High water levels detected in {area_name}.{timing_str}",
+                "detailed_message": f"River levels are increasing (currently {water_level}m, {trend_str}). Situation is being closely monitored.{timing_str}",
                 "recommended_action": [
                     "Stay tuned to local weather channels and app updates.",
-                    "No immediate evacuation required."
+                    "Prepare emergency kits."
+                ]
+            }
+        elif category == "Normal" and rainfall >= 30.0:
+            # Heavy rainfall advisory even when water levels are normal
+            alert_payload = {
+                "severity_level": "LOW",
+                "event_type": "HEAVY_RAIN_ADVISORY",
+                "title": "Heavy Rain Advisory",
+                "short_message": f"LOW: Heavy rainfall detected in {area_name} ({rainfall}mm). River levels are normal but monitor closely.",
+                "detailed_message": f"Significant rainfall of {rainfall}mm recorded today. Current river level is safe at {water_level}m ({trend_str}), but may rise if rain continues.",
+                "recommended_action": [
+                    "No immediate threat.",
+                    "Monitor weather updates in case rainfall continues."
                 ]
             }
             
@@ -126,7 +151,7 @@ class AlertGenerator:
                 
                 logger.info(f"Generated {full_payload['severity_level']} alert for {station_code}.")
                 
-                # Send to .NET Backend
+                # Send to Backend
                 self.send_to_backend(full_payload)
                 alerts_sent += 1
             else:
