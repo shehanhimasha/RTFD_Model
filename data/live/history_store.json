@@ -1,18 +1,6 @@
 {
   "BAD01": [
     {
-      "date": "2026-05-17",
-      "w_avg": 2.09,
-      "w_max": 2.13,
-      "w_min": 2.05,
-      "rainfall_mm": 4.3,
-      "rainfall_DEN01": 0.0,
-      "rainfall_LAN01": 0.0,
-      "rainfall_THA01": 0.0,
-      "rainfall_UDU01": 0.0,
-      "rainfall_MAK01": 0.0
-    },
-    {
       "date": "2026-05-18",
       "w_avg": 1.7,
       "w_max": 1.7,
@@ -83,21 +71,21 @@
       "rainfall_THA01": 0.0,
       "rainfall_UDU01": 0.0,
       "rainfall_MAK01": 0.1
-    }
-  ],
-  "THA01": [
+    },
     {
-      "date": "2026-05-17",
-      "w_avg": 2.12,
-      "w_max": 2.15,
-      "w_min": 2.09,
-      "rainfall_mm": 5.2,
+      "date": "2026-05-25",
+      "w_avg": 1.66,
+      "w_max": 1.66,
+      "w_min": 1.66,
+      "rainfall_mm": 21.7,
       "rainfall_DEN01": 0.0,
       "rainfall_LAN01": 0.0,
       "rainfall_THA01": 0.0,
-      "rainfall_UDU01": 0.0,
+      "rainfall_UDU01": 0.1,
       "rainfall_MAK01": 0.0
-    },
+    }
+  ],
+  "THA01": [
     {
       "date": "2026-05-18",
       "w_avg": 1.8,
@@ -169,6 +157,18 @@
       "rainfall_THA01": 0.0,
       "rainfall_UDU01": 0.0,
       "rainfall_MAK01": 0.1
+    },
+    {
+      "date": "2026-05-25",
+      "w_avg": 2.1,
+      "w_max": 2.1,
+      "w_min": 2.1,
+      "rainfall_mm": 51.4,
+      "rainfall_DEN01": 0.0,
+      "rainfall_LAN01": 0.0,
+      "rainfall_THA01": 0.0,
+      "rainfall_UDU01": 0.1,
+      "rainfall_MAK01": 0.0
     }
   ]
 }
