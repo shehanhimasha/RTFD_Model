@@ -28,6 +28,9 @@ jobs:
       - name: Run prediction pipeline
         env:
           TZ: Asia/Colombo
+          DOTNET_WEBHOOK_URL: ${{ secrets.DOTNET_WEBHOOK_URL }}
+          DOTNET_PREDICTION_URL: ${{ secrets.DOTNET_PREDICTION_URL }}
+          INTERNAL_API_KEY: ${{ secrets.INTERNAL_API_KEY }}
         run: python -m src.pipeline.pipeline
 
       - name: Configure Git

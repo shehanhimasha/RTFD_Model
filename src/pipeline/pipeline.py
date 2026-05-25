@@ -30,12 +30,11 @@ import json
 import joblib
 import numpy as np
 import pandas as pd
-import requests
 from datetime import datetime, date
 from zoneinfo import ZoneInfo
 from pathlib import Path
 from config.settings import paths
-from config.settings import config
+from src.db_integration import send_prediction_data, send_intermediate_data
 from src.pipeline.accumulator import (
     load_accumulator, add_reading, get_station_stats,
     save_accumulator, parse_rising_flag, extract_upstream_rainfall,
@@ -80,10 +79,6 @@ THRESHOLDS = {
     'BAD01': {'alert': 3.5, 'minor': 4.0, 'major': 5.0},
     'THA01': {'alert': 4.0, 'minor': 6.0, 'major': 7.5},
 }
-
-PREDICTION_INGEST_URL = config.DOTNET_PREDICTION_URL
-INTERNAL_API_KEY = config.INTERNAL_API_KEY
-
 
 # =============================================================================
 # Upstream accumulator
@@ -187,37 +182,6 @@ def append_to_daily_log(
         row_df.to_csv(DAILY_LOG_PATH, mode='w', header=True, index=False)
 
     logger.info(f"  Appended to daily_log.csv")
-
-
-# =============================================================================
-# Send predictions to backend
-# =============================================================================
-
-def send_prediction_to_backend(prediction: dict) -> None:
-    if not PREDICTION_INGEST_URL or not INTERNAL_API_KEY:
-        logger.warning("Prediction ingest URL or API key not set — skipping backend sync")
-        return
-
-    try:
-        headers = {
-            "Content-Type": "application/json",
-            "X-Api-Key": INTERNAL_API_KEY,
-        }
-        response = requests.post(
-            PREDICTION_INGEST_URL,
-            json=prediction,
-            headers=headers,
-            timeout=10,
-        )
-
-        if response.status_code in (200, 201, 202):
-            logger.info("Prediction synced to backend")
-        else:
-            logger.error(
-                f"Prediction sync failed: {response.status_code} {response.text}"
-            )
-    except requests.exceptions.RequestException as exc:
-        logger.error(f"Prediction sync connection error: {exc}")
 
 
 # =============================================================================
@@ -616,7 +580,15 @@ def run_pipeline():
         json.dump(prediction, f, indent=2)
 
     logger.info(f"\nPrediction written → {PREDICTION_PATH}")
-    send_prediction_to_backend(prediction)
+    send_prediction_data(prediction)
+    send_intermediate_data(
+        {
+            'predicted_at': prediction['predicted_at'],
+            'stations': prediction['stations'],
+            'upstream_accumulator': upstream_acc,
+            'target_stations': TARGET_STATIONS,
+        }
+    )
     logger.info("=" * 55)
     logger.info("PIPELINE COMPLETE")
     logger.info("=" * 55)
