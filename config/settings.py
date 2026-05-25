@@ -17,6 +17,7 @@ class Paths:
 @dataclass
 class Config:
     DOTNET_WEBHOOK_URL = os.getenv("DOTNET_WEBHOOK_URL")
+    DOTNET_PREDICTION_URL = os.getenv("DOTNET_PREDICTION_URL")
     INTERNAL_API_KEY = os.getenv("INTERNAL_API_KEY")
 
 paths = Paths()
