@@ -39,10 +39,12 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Commit prediction.json
-        uses: EndBug/add-and-commit@v9
-        with:
-          add: "data/prediction.json data/live/"
-          message: "Update prediction data [skip ci]"
-          default_author: github_actions
-          pull: "--rebase --autostash"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git add data/prediction.json data/live/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Update prediction data [skip ci]"
+          git pull --rebase --autostash
+          git push
