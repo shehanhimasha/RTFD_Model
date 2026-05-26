@@ -3,31 +3,35 @@
   "BAD01": {
     "readings": [
       2.03,
-      2.02
+      2.02,
+      2.0
     ],
     "rainfall_readings": [
       0.25,
-      0.0
+      0.0,
+      1.8
     ],
-    "w_avg": 2.025,
+    "w_avg": 2.0167,
     "w_max": 2.03,
-    "w_min": 2.02,
-    "rainfall_mm": 26.1,
+    "w_min": 2.0,
+    "rainfall_mm": 27.15,
     "rising_flag": 0
   },
   "THA01": {
     "readings": [
       2.09,
-      2.02
+      2.02,
+      1.99
     ],
     "rainfall_readings": [
       0.0,
+      0.0,
       0.0
     ],
-    "w_avg": 2.055,
+    "w_avg": 2.0333,
     "w_max": 2.09,
-    "w_min": 2.02,
-    "rainfall_mm": 20.1,
+    "w_min": 1.99,
+    "rainfall_mm": 16.9,
     "rising_flag": 0
   }
 }
