@@ -87733,5 +87733,22 @@
         "weather_description": "WMO Code 53"
       }
     ]
+  },
+  {
+    "source": "open-meteo",
+    "fetched_at": "2026-05-26T02:01:02",
+    "locations": [
+      {
+        "station_id": "DEN01",
+        "station_name": "Deniyaya",
+        "river_name": "Gin Ganga",
+        "lat": 6.35,
+        "lon": 80.56,
+        "rainfall_1h_mm": 0.1,
+        "humidity": 98,
+        "clouds_pct": 100,
+        "weather_description": "WMO Code 51"
+      }
+    ]
   }
 ]
