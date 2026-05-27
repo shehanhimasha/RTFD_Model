@@ -4,33 +4,37 @@
     "readings": [
       2.03,
       2.02,
-      2.0
+      2.0,
+      1.97
     ],
     "rainfall_readings": [
       0.25,
       0.0,
-      1.8
+      1.8,
+      9.0
     ],
-    "w_avg": 2.0167,
+    "w_avg": 2.005,
     "w_max": 2.03,
-    "w_min": 2.0,
-    "rainfall_mm": 27.15,
+    "w_min": 1.97,
+    "rainfall_mm": 28.25,
     "rising_flag": 0
   },
   "THA01": {
     "readings": [
       2.09,
       2.02,
-      1.99
+      1.99,
+      1.96
     ],
     "rainfall_readings": [
       0.0,
       0.0,
+      0.0,
       0.0
     ],
-    "w_avg": 2.0333,
+    "w_avg": 2.015,
     "w_max": 2.09,
-    "w_min": 1.99,
+    "w_min": 1.96,
     "rainfall_mm": 16.9,
     "rising_flag": 0
   }
