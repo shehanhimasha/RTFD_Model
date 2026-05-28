@@ -86,6 +86,7 @@ def _empty_accumulator(today: str) -> dict:
     for station in TARGET_STATIONS:
         acc[station] = {
             'readings':          [],   # list of hourly water level values
+            'reading_times':     [],   # ISO timestamps for each water level reading
             'rainfall_readings': [],   # list of hourly rainfall values
             'w_avg':             0.0,
             'w_max':             0.0,
@@ -130,9 +131,15 @@ def add_reading(
 
     s = acc[station_id]
 
+    if 'reading_times' not in s:
+        s['reading_times'] = []
+
     # Append new reading
     if water_level > 0:
         s['readings'].append(float(water_level))
+        s['reading_times'].append(
+            datetime.now(ZoneInfo("Asia/Colombo")).isoformat()
+        )
 
     if rainfall_mm >= 0:
         s['rainfall_readings'].append(float(rainfall_mm))

@@ -384,14 +384,33 @@ def predict(
 def estimate_time_to_flood(
     station_id:  str,
     w_avg:       float,
-    w_avg_delta: float,
+    w_avg_delta: float,   # today w_avg minus yesterday w_avg
     flood_label: int,
 ) -> dict:
-    if flood_label == 0:
-        return {}
-
+    """
+    Estimate hours until the next flood threshold is crossed.
+ 
+    FIX: Previously returned {} when flood_label == 0 (Normal).
+    This meant timing warnings never fired before the model flipped category.
+ 
+    Now returns timing for ALL categories as long as the river is rising
+    (w_avg_delta > 0). A Normal station at 2.90m rising at 0.3m/hour
+    will now get estimated_hours_to_next_threshold populated, allowing
+    the alert engine to fire a timing warning hours before the threshold
+    is crossed.
+ 
+    Returns {} only when water is not rising — no point estimating
+    time to a threshold the river is moving away from.
+    """
     thresholds = THRESHOLDS[station_id]
-
+ 
+    # FIX: was "if flood_label == 0: return {}"
+    # Now: only skip if water is not rising
+    rise_per_hour = w_avg_delta / 24.0
+    if rise_per_hour <= 0:
+        return {}   # falling or steady — no flood timing estimate needed
+ 
+    # Determine the next threshold above current level
     if w_avg < thresholds['alert']:
         next_threshold, next_label = thresholds['alert'], 'Alert'
     elif w_avg < thresholds['minor']:
@@ -405,12 +424,10 @@ def estimate_time_to_flood(
             'next_threshold_m': thresholds['major'],
             'note': 'Already at or above major flood level',
         }
-
-    rise_per_hour = w_avg_delta / 24.0
-    if rise_per_hour <= 0:
-        return {'note': 'Water level not rising — no flood time estimate'}
-
-    hours = max(1, round((next_threshold - w_avg) / rise_per_hour))
+ 
+    gap_m = next_threshold - w_avg
+    hours = max(1, round(gap_m / rise_per_hour))
+ 
     return {
         'estimated_hours_to_next_threshold': hours,
         'next_threshold_label': next_label,
@@ -478,6 +495,22 @@ def run_pipeline():
         acc       = add_reading(acc, station_id, water_level, rainfall_1h, rising_flag, rainfall_day_mm=rainfall_day)
         acc_stats = get_station_stats(acc, station_id)
 
+        current_rise_rate = 0.0
+        station_acc = acc.get(station_id, {})
+        readings = station_acc.get('readings', [])
+        reading_times = station_acc.get('reading_times', [])
+        if len(readings) >= 2 and len(reading_times) >= 2:
+            try:
+                last_level = float(readings[-1])
+                prev_level = float(readings[-2])
+                last_time = datetime.fromisoformat(reading_times[-1])
+                prev_time = datetime.fromisoformat(reading_times[-2])
+                delta_hours = (last_time - prev_time).total_seconds() / 3600.0
+                if delta_hours > 0:
+                    current_rise_rate = (last_level - prev_level) / delta_hours
+            except (ValueError, TypeError):
+                current_rise_rate = 0.0
+
         discharge = estimate_discharge(
             station_id,
             acc_stats['w_avg'], acc_stats['w_max'], acc_stats['w_min'],
@@ -519,6 +552,9 @@ def run_pipeline():
             'current_water_level_m': round(water_level, 3),
             'w_avg_m':               acc_stats['w_avg'],
             'w_max_m':               acc_stats['w_max'],
+            'w_min_m':               acc_stats['w_min'],
+            'w_avg_delta_m':         round(w_avg_delta_val, 4),
+            'current_rise_rate_m_per_hour': round(current_rise_rate, 4),
             'rainfall_today_mm':     acc_stats['rainfall_mm'],
             'rising_flag':           acc_stats['rising_flag'],
             'alert_level_m':         thresholds['alert'],
