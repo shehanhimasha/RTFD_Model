@@ -29,6 +29,42 @@ PROB_MAJOR_THRESHOLD = 0.01   # P(Major Flood) > 1%
 RATE_OF_RISE_THRESHOLD = 0.25 # metres per hour
 TIMING_WARNING_HOURS = 6      # warn if flood expected within 6 hours
 
+FLOOD_LABELS = {
+    "Alert": {
+        "en": "Alert",
+        "si": "අවදානම්",
+        "ta": "எச்சரிக்கை",
+    },
+    "Minor Flood": {
+        "en": "Minor Flood",
+        "si": "කුඩා ගංවතුර",
+        "ta": "சிறிய வெள்ளம்",
+    },
+    "Major Flood": {
+        "en": "Major Flood",
+        "si": "ප්‍රධාන ගංවතුර",
+        "ta": "பெரிய வெள்ளம்",
+    },
+}
+
+TREND_LABELS = {
+    "rising": {
+        "en": "rising",
+        "si": "ඉහළ යමින්",
+        "ta": "உயர்ந்து வருகிறது",
+    },
+    "falling": {
+        "en": "falling",
+        "si": "පහළ යමින්",
+        "ta": "குறைந்து வருகிறது",
+    },
+    "steady": {
+        "en": "steady",
+        "si": "ස්ථාවරයි",
+        "ta": "நிலையாக உள்ளது",
+    },
+}
+
 
 class AlertGenerator:
 
@@ -41,6 +77,377 @@ class AlertGenerator:
             return None
         with open(self.data_path, 'r') as f:
             return json.load(f)
+
+    def _label_for_lang(self, label: str, lang: str) -> str:
+        return FLOOD_LABELS.get(label, {}).get(lang, label)
+
+    def _trend_for_lang(self, trend: str, lang: str) -> str:
+        return TREND_LABELS.get(trend, {}).get(lang, trend)
+
+    def _render_localized(self, key: str, ctx: dict, lang: str) -> dict:
+        area = ctx.get("area", "")
+
+        if key == "PROXIMITY_WARNING":
+            pct = ctx.get("pct_of_alert", 0.0)
+            headroom = ctx.get("headroom_m", 0.0)
+            water = ctx.get("water_level", 0.0)
+            alert = ctx.get("alert_level", 0.0)
+            if lang == "si":
+                return {
+                    "title": "ඇඟවීමේ මට්ටමට ආසන්න ජල මට්ටම",
+                    "short_message": (
+                        f"අඩු: {area} හි ජල මට්ටම ඇඟවීමේ මට්ටමේ {pct}%යි. "
+                        f"තවත් {headroom}m පමණ ඉතිරි."
+                    ),
+                    "detailed_message": (
+                        f"දැනට {area} හි ජල මට්ටම {water}mයි. "
+                        f"ඇඟවීමේ මට්ටම {alert}m — තවත් {headroom}m පමණ ඉතිරි. "
+                        "ගංවතුරක් තව නැති නමුත් නිරීක්ෂණය අවශ්‍යයි."
+                    ),
+                    "recommended_actions": [
+                        "ඊළඟ පැය කිහිපය තුළ ගඟේ මට්ටම නිරන්තරයෙන් නිරීක්ෂණය කරන්න.",
+                        "තත්ත්වය වැඩි වුවහොත් සූදානම්ව සිටින්න.",
+                        "ගඟ අසල වටිනා දේවල් තැබීමෙන් වළකින්න.",
+                    ],
+                }
+            if lang == "ta":
+                return {
+                    "title": "எச்சரிக்கை மட்டத்திற்கு நெருக்கமான நீர்மட்டம்",
+                    "short_message": (
+                        f"குறைவு: {area} பகுதியில் நீர்மட்டம் எச்சரிக்கை மட்டத்தின் {pct}% ஆக உள்ளது. "
+                        f"மேலும் {headroom}m மட்டுமே உள்ளது."
+                    ),
+                    "detailed_message": (
+                        f"தற்போது {area} இல் நீர்மட்டம் {water}m. "
+                        f"எச்சரிக்கை மட்டம் {alert}m — மேலும் {headroom}m மட்டுமே உள்ளது. "
+                        "இன்னும் வெள்ளம் இல்லை, ஆனால் கண்காணிப்பு அவசியம்."
+                    ),
+                    "recommended_actions": [
+                        "அடுத்த சில மணிநேரங்களில் நீர்மட்டத்தை கவனமாக கண்காணிக்கவும்.",
+                        "நிலை மோசமானால் தயாராக இருங்கள்.",
+                        "ஆற்றுப்பகுதிக்கு அருகே வாகனங்கள் அல்லது மதிப்புள்ள பொருட்களை வைக்க வேண்டாம்.",
+                    ],
+                }
+            return {
+                "title": "Water Level Approaching Alert Threshold",
+                "short_message": (
+                    f"LOW: Water level at {area} is {pct}% of alert threshold. "
+                    f"{headroom}m remaining before alert level."
+                ),
+                "detailed_message": (
+                    f"Current water level at {area} is {water}m. "
+                    f"Alert threshold is {alert}m — only {headroom}m of headroom remains. "
+                    "No flood yet but situation requires monitoring."
+                ),
+                "recommended_actions": [
+                    "Monitor river levels closely over the next few hours.",
+                    "Prepare emergency kits in case situation escalates.",
+                    "Avoid parking vehicles or storing valuables near the river bank.",
+                ],
+            }
+
+        if key in {"PROBABILITY_MAJOR", "PROBABILITY_MINOR", "PROBABILITY_ALERT"}:
+            prob = ctx.get("probability", 0.0)
+            water = ctx.get("water_level", 0.0)
+            label = ctx.get("label", "Alert")
+            label_local = self._label_for_lang(label, lang)
+            if lang == "si":
+                return {
+                    "title": "ඉහළ අවදානම් ප්‍රතිශතයක් හඳුනාගැනීම",
+                    "short_message": (
+                        f"{area} සඳහා {label_local} අවදානම ඉහළයි "
+                        f"(P={prob:.1%}). දැනට {water}m."
+                    ),
+                    "detailed_message": (
+                        f"ගඟේ දැනටමත් {water}m ලෙස පවතින නමුත් "
+                        f"{label_local} අවදානම සඳහා ආදර්ශය {prob:.1%}ක ප්‍රතිශතයක් දක්වයි. "
+                        "මෙය ඉදිරි අවදානමක් පෙන්වයි."
+                    ),
+                    "recommended_actions": [
+                        "යෙදුම හරහා යාවත්කාලීන දැනුම්දීම් බලන්න.",
+                        "ගඟ අසල වටිනා දේවල් ආරක්ෂිත ස්ථානයකට ගන්න.",
+                    ],
+                }
+            if lang == "ta":
+                return {
+                    "title": "உயர்ந்த அபாயச் சாத்தியம் கண்டறியப்பட்டது",
+                    "short_message": (
+                        f"{area} பகுதியில் {label_local} அபாயம் உயர்ந்துள்ளது "
+                        f"(P={prob:.1%}). தற்போது {water}m."
+                    ),
+                    "detailed_message": (
+                        f"தற்போது நீர்மட்டம் {water}m ஆக இருந்தாலும், "
+                        f"{label_local} அபாயத்திற்கு மாதிரி {prob:.1%} சாத்தியத்தை காட்டுகிறது. "
+                        "இது வளர்ந்து வரும் நிலையை குறிக்கிறது."
+                    ),
+                    "recommended_actions": [
+                        "செயலி புதுப்பிப்புகளை கவனமாகப் பாருங்கள்.",
+                        "ஆற்றருகிலுள்ள மதிப்புள்ள பொருட்களை பாதுகாப்பாக மாற்றவும்.",
+                    ],
+                }
+            return {
+                "title": "Elevated Flood Probability Detected",
+                "short_message": (
+                    f"LOW: Model detecting elevated {label} risk at {area} "
+                    f"(P={prob:.1%}). Water level {water}m."
+                ),
+                "detailed_message": (
+                    f"The model has assigned a {prob:.1%} probability of {label} at {area}. "
+                    f"Current water level is {water}m but conditions are developing."
+                ),
+                "recommended_actions": [
+                    "Stay informed via app updates.",
+                    "Move valuables away from river-adjacent areas as a precaution.",
+                ],
+            }
+
+        if key == "RATE_OF_RISE_WARNING":
+            rise = ctx.get("rise_rate", 0.0)
+            water = ctx.get("water_level", 0.0)
+            alert = ctx.get("alert_level", 0.0)
+            projected_1h = ctx.get("projected_1h", 0.0)
+            projected_3h = ctx.get("projected_3h", 0.0)
+            if lang == "si":
+                return {
+                    "title": "ගඟේ වේගවත් ඉහළ යාමක් හඳුනාගෙන ඇත",
+                    "short_message": (
+                        f"මධ්‍යම: {area} හි ජල මට්ටම පැයට {rise:.2f}m දක්වා ඉහළ යයි. "
+                        f"දැනට {water}m. ඇඟවීමේ මට්ටම {alert}m."
+                    ),
+                    "detailed_message": (
+                        f"{area} හි ජල මට්ටම පැයට {rise:.2f}m පමණ වේගයෙන් ඉහළ යයි. "
+                        f"දැනට {water}m. පැය 1කින් {projected_1h}m, පැය 3කින් {projected_3h}m. "
+                        f"ඇඟවීමේ මට්ටම {alert}m."
+                    ),
+                    "recommended_actions": [
+                        "15–30 මිනිත්තු අතරින් ජල මට්ටම නිරීක්ෂණය කරන්න.",
+                        "අවශ්‍ය হলে ඉහළ මට්ටමකට මාරුවීමට සූදානම් වන්න.",
+                        "පහත් මාර්ග හරහා ගමන් කිරීමෙන් වළකින්න.",
+                    ],
+                }
+            if lang == "ta":
+                return {
+                    "title": "நதி வேகமாக உயர்வது கண்டறியப்பட்டது",
+                    "short_message": (
+                        f"நடுத்தரம்: {area} பகுதியில் நீர்மட்டம் மணிக்கு {rise:.2f}m உயர்கிறது. "
+                        f"தற்போது {water}m. எச்சரிக்கை மட்டம் {alert}m."
+                    ),
+                    "detailed_message": (
+                        f"{area} இல் நீர்மட்டம் மணிக்கு சுமார் {rise:.2f}m உயர்கிறது. "
+                        f"தற்போது {water}m. 1 மணி நேரத்தில் {projected_1h}m, 3 மணிநேரத்தில் {projected_3h}m. "
+                        f"எச்சரிக்கை மட்டம் {alert}m."
+                    ),
+                    "recommended_actions": [
+                        "15–30 நிமிடங்களுக்கு ஒருமுறை நீர்மட்டத்தை பார்க்கவும்.",
+                        "தேவைப்பட்டால் உயர்ந்த இடத்திற்கு செல்ல தயாராக இருக்கவும்.",
+                        "தாழ்வான சாலைகளில் செல்ல வேண்டாம்.",
+                    ],
+                }
+            return {
+                "title": "Rapid River Rise Detected",
+                "short_message": (
+                    f"MEDIUM: River at {area} rising at ~{rise:.2f}m/hour. "
+                    f"Current level {water}m. Alert level {alert}m."
+                ),
+                "detailed_message": (
+                    f"Water level at {area} is rising at approximately {rise:.2f}m/hour. "
+                    f"Current level is {water}m. Projected: {projected_1h}m in 1 hour, "
+                    f"{projected_3h}m in 3 hours. Alert threshold is {alert}m."
+                ),
+                "recommended_actions": [
+                    "Monitor river levels every 15-30 minutes.",
+                    "Be ready to move to higher ground at short notice.",
+                    "Do not attempt to cross rivers or low-lying roads.",
+                ],
+            }
+
+        if key == "TIMING_WARNING":
+            hours = ctx.get("hours", 0)
+            next_label = ctx.get("next_label", "Alert")
+            next_level = ctx.get("next_level", 0.0)
+            water = ctx.get("water_level", 0.0)
+            label_local = self._label_for_lang(next_label, lang)
+            if lang == "si":
+                return {
+                    "title": f"සමීප {label_local} — සෑමට {hours} පැයකින්",
+                    "short_message": (
+                        f"{area} හි ජල මට්ටම {water}m. "
+                        f"{label_local} මට්ටම {next_level}m."
+                    ),
+                    "detailed_message": (
+                        f"මෙම වේගයෙන් ඉහළ යනවිට {label_local} මට්ටම ආසන්නයෙන් {hours} පැයකින් හැරෙයි. "
+                        f"දැනට {water}m."
+                    ),
+                    "recommended_actions": self._timing_actions_localized(hours, next_label, lang),
+                }
+            if lang == "ta":
+                return {
+                    "title": f"{label_local} ~ {hours} மணிநேரத்தில் எதிர்பார்க்கப்படுகிறது",
+                    "short_message": (
+                        f"{area} இல் நீர்மட்டம் {water}m. "
+                        f"{label_local} மட்டம் {next_level}m."
+                    ),
+                    "detailed_message": (
+                        f"தற்போதைய உயர்வு வேகத்தில் {label_local} மட்டம் சுமார் {hours} மணிநேரத்தில் அடையும். "
+                        f"தற்போது {water}m."
+                    ),
+                    "recommended_actions": self._timing_actions_localized(hours, next_label, lang),
+                }
+            return {
+                "title": f"{next_label} Expected in ~{hours} Hour(s)",
+                "short_message": (
+                    f"Current water level at {area} is {water}m. "
+                    f"{next_label} threshold is {next_level}m."
+                ),
+                "detailed_message": (
+                    f"At the current rise rate, {next_label} threshold is expected in approximately "
+                    f"{hours} hour(s). Current water level at {area} is {water}m."
+                ),
+                "recommended_actions": self._timing_actions_localized(hours, next_label, lang),
+            }
+
+        if key in {"CONFIRMED_MAJOR", "CONFIRMED_MINOR", "CONFIRMED_ALERT"}:
+            water = ctx.get("water_level", 0.0)
+            rainfall = ctx.get("rainfall", 0.0)
+            trend = self._trend_for_lang(ctx.get("trend", "steady"), lang)
+            label = ctx.get("label", "Alert")
+            label_local = self._label_for_lang(label, lang)
+            receding = ctx.get("receding", False)
+            if lang == "si":
+                return {
+                    "title": f"{label_local} ඇඟවීම",
+                    "short_message": f"{area} හි {label_local} තත්ත්වය හඳුනාගෙන ඇත.",
+                    "detailed_message": (
+                        f"{area} හි ජල මට්ටම {water}m ({trend})යි. "
+                        f"අද වැසි {rainfall}mm."
+                    ),
+                    "recommended_actions": (
+                        ["ජල මට්ටම ඉහළ නමුත් පහළ යමින් පවතී. විශේෂ අවධානයෙන් සිටින්න."]
+                        if receding and label == "Major Flood"
+                        else [
+                            "ඉක්මනින් ඉහළ ස්ථානයකට ඉවත් වන්න.",
+                            "ගංවතුර ඇති මාර්ග හෝ පාලම් හරහා යාමෙන් වළකින්න.",
+                        ]
+                        if label == "Major Flood"
+                        else [
+                            "වටිනා දේවල් ඉහළ ස්ථානයකට මාරු කරන්න.",
+                            "ගඟ අසල වාහන නවතා නොතබන්න.",
+                        ]
+                        if label == "Minor Flood"
+                        else [
+                            "දේශීය කාලගුණ දැනුම්දීම් අනුගමනය කරන්න.",
+                            "හදිසි කට්ටලයක් සූදානම් කරගන්න.",
+                        ]
+                    ),
+                }
+            if lang == "ta":
+                return {
+                    "title": f"{label_local} எச்சரிக்கை",
+                    "short_message": f"{area} பகுதியில் {label_local} நிலை கண்டறியப்பட்டுள்ளது.",
+                    "detailed_message": (
+                        f"{area} இல் நீர்மட்டம் {water}m ({trend}). "
+                        f"இன்றைய மழை {rainfall}mm."
+                    ),
+                    "recommended_actions": (
+                        ["நீர்மட்டம் உயர்ந்தாலும் குறைந்து வருகிறது. மிகுந்த கவனமாக இருங்கள்."]
+                        if receding and label == "Major Flood"
+                        else [
+                            "உடனடியாக உயரமான இடத்திற்கு செல்லவும்.",
+                            "வெள்ளம் உள்ள சாலைகள் அல்லது பாலங்களை கடக்க வேண்டாம்.",
+                        ]
+                        if label == "Major Flood"
+                        else [
+                            "மதிப்புள்ள பொருட்களை உயர்ந்த இடத்திற்கு மாற்றவும்.",
+                            "ஆற்றருகில் வாகனங்களை நிறுத்த வேண்டாம்.",
+                        ]
+                        if label == "Minor Flood"
+                        else [
+                            "உள்ளூர் வானிலை அறிவிப்புகளை கவனிக்கவும்.",
+                            "அவசர கிட்டை தயாராக்கவும்.",
+                        ]
+                    ),
+                }
+            return {
+                "title": f"{label} Warning",
+                "short_message": f"{label} conditions detected at {area}.",
+                "detailed_message": (
+                    f"Water level at {area} is {water}m ({trend}). "
+                    f"Today's rainfall is {rainfall}mm."
+                ),
+                "recommended_actions": ctx.get("actions", []),
+            }
+
+        if key == "HEAVY_RAIN":
+            rainfall = ctx.get("rainfall", 0.0)
+            water = ctx.get("water_level", 0.0)
+            if lang == "si":
+                return {
+                    "title": "දැඩි වැසි ඇඟවීම",
+                    "short_message": (
+                        f"අඩු: {area} හි අද {rainfall}mm වැසි ලැබී ඇත. "
+                        "ජල මට්ටම සාමාන්‍යයි."
+                    ),
+                    "detailed_message": (
+                        f"අද {rainfall}mm වැසි ලැබී ඇත. දැනට {area} හි ජල මට්ටම {water}mයි. "
+                        "වැසි දිගු වුවහොත් මට්ටම ඉහළ යා හැක."
+                    ),
+                    "recommended_actions": [
+                        "කාලගුණ යාවත්කාලීන දැනුම්දීම් නිරීක්ෂණය කරන්න.",
+                        "අවශ්‍ය නම් සූදානම්ව සිටින්න.",
+                    ],
+                }
+            if lang == "ta":
+                return {
+                    "title": "கடுமையான மழை அறிவுரை",
+                    "short_message": (
+                        f"குறைவு: {area} பகுதியில் இன்று {rainfall}mm மழை. "
+                        "நீர்மட்டம் சாதாரணமாக உள்ளது."
+                    ),
+                    "detailed_message": (
+                        f"இன்று {rainfall}mm மழை பதிவாகியுள்ளது. தற்போது {area} இல் நீர்மட்டம் {water}m. "
+                        "மழை தொடர்ந்தால் நீர்மட்டம் உயரலாம்."
+                    ),
+                    "recommended_actions": [
+                        "வானிலை புதுப்பிப்புகளை கவனிக்கவும்.",
+                        "தேவைப்பட்டால் தயாராக இருங்கள்.",
+                    ],
+                }
+            return {
+                "title": "Heavy Rain Advisory",
+                "short_message": (
+                    f"LOW: Heavy rainfall at {area} ({rainfall}mm today). "
+                    "River level currently normal."
+                ),
+                "detailed_message": (
+                    f"Significant rainfall of {rainfall}mm recorded today. "
+                    f"Current water level is {water}m but may rise if rain continues."
+                ),
+                "recommended_actions": [
+                    "Monitor weather updates in case rainfall continues.",
+                    "No immediate threat.",
+                ],
+            }
+
+        return {}
+
+    def _build_localized_fields(self, alert_info: dict) -> dict:
+        key = alert_info.get("localization_key")
+        ctx = alert_info.get("localization_context", {})
+        if not key:
+            return {}
+
+        si = self._render_localized(key, ctx, "si")
+        ta = self._render_localized(key, ctx, "ta")
+        return {
+            "titleSi": si.get("title"),
+            "titleTa": ta.get("title"),
+            "shortMessageSi": si.get("short_message"),
+            "shortMessageTa": ta.get("short_message"),
+            "detailedMessageSi": si.get("detailed_message"),
+            "detailedMessageTa": ta.get("detailed_message"),
+            "recommendedActionsSi": si.get("recommended_actions", []),
+            "recommendedActionsTa": ta.get("recommended_actions", []),
+        }
 
     # ==========================================================================
     # TRIGGER 1 — Proximity Warning
@@ -87,6 +494,14 @@ class AlertGenerator:
                 "Prepare emergency kits in case situation escalates.",
                 "Avoid parking vehicles or storing valuables near the river bank.",
             ],
+            "localization_key": "PROXIMITY_WARNING",
+            "localization_context": {
+                "area": area,
+                "pct_of_alert": pct_of_alert,
+                "headroom_m": headroom_m,
+                "water_level": water_level,
+                "alert_level": alert_level,
+            },
         }
 
     # ==========================================================================
@@ -134,6 +549,13 @@ class AlertGenerator:
                     "Prepare evacuation plans for low-lying areas.",
                     "Alert local authorities and emergency services.",
                 ],
+                "localization_key": "PROBABILITY_MAJOR",
+                "localization_context": {
+                    "area": area,
+                    "probability": p_major,
+                    "water_level": water_level,
+                    "label": "Major Flood",
+                },
             }
 
         if p_minor >= PROB_MINOR_THRESHOLD:
@@ -155,6 +577,13 @@ class AlertGenerator:
                     "Stay informed via app updates.",
                     "Move valuables away from river-adjacent areas as a precaution.",
                 ],
+                "localization_key": "PROBABILITY_MINOR",
+                "localization_context": {
+                    "area": area,
+                    "probability": p_minor,
+                    "water_level": water_level,
+                    "label": "Minor Flood",
+                },
             }
 
         if p_alert >= PROB_ALERT_THRESHOLD:
@@ -175,6 +604,13 @@ class AlertGenerator:
                     "No immediate action needed.",
                     "Check app for updates over the next few hours.",
                 ],
+                "localization_key": "PROBABILITY_ALERT",
+                "localization_context": {
+                    "area": area,
+                    "probability": p_alert,
+                    "water_level": water_level,
+                    "label": "Alert",
+                },
             }
 
         return None
@@ -233,6 +669,15 @@ class AlertGenerator:
                 "Be ready to move to higher ground at short notice.",
                 "Do not attempt to cross rivers or low-lying roads.",
             ],
+            "localization_key": "RATE_OF_RISE_WARNING",
+            "localization_context": {
+                "area": area,
+                "rise_rate": round(rise_per_hour, 2),
+                "water_level": water_level,
+                "alert_level": alert_level,
+                "projected_1h": projected_1h,
+                "projected_3h": projected_3h,
+            },
         }
 
     # ==========================================================================
@@ -283,6 +728,14 @@ class AlertGenerator:
                 f"{'Immediate action required.' if hours <= 1 else 'Prepare now.'}"
             ),
             "recommended_action": self._timing_actions(hours, next_label),
+            "localization_key": "TIMING_WARNING",
+            "localization_context": {
+                "area": area,
+                "hours": hours,
+                "next_label": next_label,
+                "next_level": next_level,
+                "water_level": water_level,
+            },
         }
 
     def _timing_actions(self, hours: int, next_label: str) -> list:
@@ -303,6 +756,45 @@ class AlertGenerator:
             "Prepare emergency kit as a precaution.",
             "Stay tuned to app updates and local weather broadcasts.",
         ]
+
+    def _timing_actions_localized(self, hours: int, next_label: str, lang: str) -> list:
+        if lang == "si":
+            if hours <= 1:
+                return [
+                    "අනතුරු කලාපයක සිටිනවා නම් ඉක්මනින් ඉහළ ස්ථානයකට යන්න.",
+                    "ප්‍රමාද නොවන්න — වහාම ඉවත් වන්න.",
+                    "අවශ්‍ය නම් හදිසි සේවාවන් අමතන්න.",
+                ]
+            if hours <= 3:
+                return [
+                    "වටිනා දේවල් සහ වාහන ඉහළ ස්ථාන වලට මාරු කරන්න.",
+                    "අත්‍යවශ්‍ය භාණ්ඩ සහිත හදිසි කට්ටලයක් සූදානම් කරන්න.",
+                    "ඉවත් වීමේ මාර්ගය පෙරින් දැනගන්න.",
+                ]
+            return [
+                "ඊළඟ පැය කිහිපය තුළ තත්ත්වය නිරීක්ෂණය කරන්න.",
+                "හදිසි කට්ටලය සූදානම් කරගන්න.",
+                "යෙදුම් සහ දේශීය කාලගුණ යාවත්කාලීන බලන්න.",
+            ]
+        if lang == "ta":
+            if hours <= 1:
+                return [
+                    "வெள்ள அபாயப் பகுதியில் இருந்தால் உடனடியாக உயரமான இடத்திற்கு செல்லவும்.",
+                    "தாமதிக்க வேண்டாம் — உடனடியாக வெளியேறவும்.",
+                    "தேவைப்பட்டால் அவசர சேவைகளை அழைக்கவும்.",
+                ]
+            if hours <= 3:
+                return [
+                    "மதிப்புள்ள பொருட்கள் மற்றும் வாகனங்களை உயர்ந்த இடத்திற்கு மாற்றவும்.",
+                    "அவசர உதவி பொருட்கள் கொண்ட கிட்டை தயாராக்கவும்.",
+                    "வெளியேறும் பாதையை முன்பே தெரிந்து கொள்ளவும்.",
+                ]
+            return [
+                "அடுத்த சில மணிநேரங்களில் நிலையை கவனமாக கண்காணிக்கவும்.",
+                "அவசர கிட்டை தயார் நிலையில் வைத்திருக்கவும்.",
+                "செயலி மற்றும் உள்ளூர் வானிலை புதுப்பிப்புகளை பார்க்கவும்.",
+            ]
+        return self._timing_actions(hours, next_label)
 
     # ==========================================================================
     # Confirmed flood alerts — last line when threshold already crossed
@@ -346,6 +838,15 @@ class AlertGenerator:
                     f"with {rainfall}mm of rainfall today.{timing_str}"
                 ),
                 "recommended_action": actions,
+                "localization_key": "CONFIRMED_MAJOR",
+                "localization_context": {
+                    "area": area,
+                    "water_level": water_level,
+                    "rainfall": rainfall,
+                    "trend": trend_str,
+                    "label": "Major Flood",
+                    "receding": rising_flag == -1,
+                },
             }
 
         if category == "Minor Flood":
@@ -363,6 +864,15 @@ class AlertGenerator:
                     "Move valuables to higher ground.",
                     "Avoid parking vehicles near river banks.",
                 ],
+                "localization_key": "CONFIRMED_MINOR",
+                "localization_context": {
+                    "area": area,
+                    "water_level": water_level,
+                    "rainfall": rainfall,
+                    "trend": trend_str,
+                    "label": "Minor Flood",
+                    "receding": False,
+                },
             }
 
         if category == "Alert":
@@ -380,6 +890,15 @@ class AlertGenerator:
                     "Stay informed via local weather channels and app updates.",
                     "Prepare emergency kits.",
                 ],
+                "localization_key": "CONFIRMED_ALERT",
+                "localization_context": {
+                    "area": area,
+                    "water_level": water_level,
+                    "rainfall": rainfall,
+                    "trend": trend_str,
+                    "label": "Alert",
+                    "receding": False,
+                },
             }
 
         if category == "Normal" and rainfall >= 30.0:
@@ -401,6 +920,12 @@ class AlertGenerator:
                     "No immediate threat.",
                     "Monitor weather updates in case rainfall continues.",
                 ],
+                "localization_key": "HEAVY_RAIN",
+                "localization_context": {
+                    "area": area,
+                    "water_level": water_level,
+                    "rainfall": rainfall,
+                },
             }
 
         return None
@@ -499,6 +1024,18 @@ class AlertGenerator:
             "created_at": now.isoformat(),
         }
         payload.update({k: v for k, v in alert_info.items() if k != "trigger"})
+
+        if "short_message" in alert_info:
+            payload["shortMessage"] = alert_info.get("short_message")
+        if "detailed_message" in alert_info:
+            payload["detailedMessage"] = alert_info.get("detailed_message")
+        if "recommended_action" in alert_info:
+            payload["recommendedActions"] = alert_info.get("recommended_action")
+
+        payload.update(self._build_localized_fields(alert_info))
+
+        payload.pop("localization_key", None)
+        payload.pop("localization_context", None)
 
         logger.info(
             f"[{trigger}] {alert_info['severity_level']} alert for {station_code}: "
