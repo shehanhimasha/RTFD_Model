@@ -42,7 +42,7 @@ FLOOD_LABELS = {
     },
     "Major Flood": {
         "en": "Major Flood",
-        "si": "ප්‍රධාන ගංවතුර",
+        "si": "විශාල ගංවතුර",
         "ta": "பெரிய வெள்ளம்",
     },
 }
@@ -94,20 +94,21 @@ class AlertGenerator:
             alert = ctx.get("alert_level", 0.0)
             if lang == "si":
                 return {
-                    "title": "ඇඟවීමේ මට්ටමට ආසන්න ජල මට්ටම",
+                    "title": "ගඟේ ජල මට්ටම අනතුරු සීමාවට ළඟා වෙමින් පවතී",
                     "short_message": (
-                        f"අඩු: {area} හි ජල මට්ටම ඇඟවීමේ මට්ටමේ {pct}%යි. "
-                        f"තවත් {headroom}m පමණ ඉතිරි."
+                        f"{area} ප්‍රදේශයේ ජල මට්ටම දැන් {water}m දක්වා ඉහළ ගොස් ඇත. "
+                        f"අනතුරු මට්ටමට ළඟා වීමට තවත් {headroom}m පමණක් ඉතිරිව ඇත."
                     ),
                     "detailed_message": (
-                        f"දැනට {area} හි ජල මට්ටම {water}mයි. "
-                        f"ඇඟවීමේ මට්ටම {alert}m — තවත් {headroom}m පමණ ඉතිරි. "
-                        "ගංවතුරක් තව නැති නමුත් නිරීක්ෂණය අවශ්‍යයි."
+                        f"{area} ප්‍රදේශයේ ගඟේ ජල මට්ටම {water}m දක්වා ඉහළ ගොස් ඇති අතර, "
+                        f"නිල අනතුරු මට්ටම වන {alert}m ට ළඟා වීමට {headroom}m පමණක් ඉතිරිව ඇත. "
+                        "ගංවතුරක් තවම සිදු නොවූවත්, ගඟ ආශ්‍රිත ජනතාව දැඩි අවධානයෙන් සිටිය යුතු බව "
+                        "ආපදා කළමනාකරණ මධ්‍යස්ථානය දන්වා සිටී."
                     ),
                     "recommended_actions": [
-                        "ඊළඟ පැය කිහිපය තුළ ගඟේ මට්ටම නිරන්තරයෙන් නිරීක්ෂණය කරන්න.",
-                        "තත්ත්වය වැඩි වුවහොත් සූදානම්ව සිටින්න.",
-                        "ගඟ අසල වටිනා දේවල් තැබීමෙන් වළකින්න.",
+                        "ඉදිරි පැය කිහිපය තුළ ගඟේ ජල මට්ටම නිතරම නිරීක්ෂණය කරන්න.",
+                        "තත්ත්වය නරක වුවහොත් ඉක්මනින් ක්‍රියා කළ හැකිව සිටින්න.",
+                        "ගඟ අසල වාහන නවතා නොතබා, වටිනා දේවල් ආරක්ෂිත ස්ථානයකට ගෙන යන්න.",
                     ],
                 }
             if lang == "ta":
@@ -153,19 +154,21 @@ class AlertGenerator:
             label_local = self._label_for_lang(label, lang)
             if lang == "si":
                 return {
-                    "title": "ඉහළ අවදානම් ප්‍රතිශතයක් හඳුනාගැනීම",
+                    "title": "ගංවතුර ඇතිවීමේ අවදානමක් හඳුනාගෙන ඇත",
                     "short_message": (
-                        f"{area} සඳහා {label_local} අවදානම ඉහළයි "
-                        f"(P={prob:.1%}). දැනට {water}m."
+                        f"{area} ප්‍රදේශය සම්බන්ධයෙන් {label_local} අවදානමේ සම්භාවිතාව "
+                        f"{prob:.1%} දක්වා ඉහළ ගොස් ඇත. දැනට ජල මට්ටම {water}m යි."
                     ),
                     "detailed_message": (
-                        f"ගඟේ දැනටමත් {water}m ලෙස පවතින නමුත් "
-                        f"{label_local} අවදානම සඳහා ආදර්ශය {prob:.1%}ක ප්‍රතිශතයක් දක්වයි. "
-                        "මෙය ඉදිරි අවදානමක් පෙන්වයි."
+                        f"ගංවතුර පුරෝකථන ආකෘතිය {area} ප්‍රදේශය සඳහා {label_local} "
+                        f"ඇතිවීමේ සම්භාවිතාව {prob:.1%} ලෙස ගණනය කර ඇත. "
+                        f"දැනට ගඟේ ජල මට්ටම {water}m වන නමුත්, "
+                        "ජලධාරා ඉහළ ප්‍රදේශවල ඇති රටාව ඉදිරි පැය කිහිපය තුළ "
+                        "තත්ත්වය වෙනස් විය හැකි බව පෙන්නුම් කරයි."
                     ),
                     "recommended_actions": [
-                        "යෙදුම හරහා යාවත්කාලීන දැනුම්දීම් බලන්න.",
-                        "ගඟ අසල වටිනා දේවල් ආරක්ෂිත ස්ථානයකට ගන්න.",
+                        "යෙදුම හරහා නිකුත් කෙරෙන නිවේදන දිගටම නිරීක්ෂණය කරන්න.",
+                        "ගඟ ආශ්‍රිත ස්ථානවල ඇති වටිනා දේවල් ඉදිරියේදී ආරක්ෂිත ස්ථානයකට ගෙනයාමට සූදානම් වන්න.",
                     ],
                 }
             if lang == "ta":
@@ -209,20 +212,21 @@ class AlertGenerator:
             projected_3h = ctx.get("projected_3h", 0.0)
             if lang == "si":
                 return {
-                    "title": "ගඟේ වේගවත් ඉහළ යාමක් හඳුනාගෙන ඇත",
+                    "title": "ගඟේ ජල මට්ටම වේගයෙන් ඉහළ යමින් පවතී",
                     "short_message": (
-                        f"මධ්‍යම: {area} හි ජල මට්ටම පැයට {rise:.2f}m දක්වා ඉහළ යයි. "
-                        f"දැනට {water}m. ඇඟවීමේ මට්ටම {alert}m."
+                        f"{area} ප්‍රදේශයේ ගඟේ ජල මට්ටම පැයකට {rise:.2f}m බැගින් ඉහළ යමින් "
+                        f"ඇති බව වාර්තා වේ. දැනට {water}m යි. නිල අනතුරු මට්ටම {alert}m යි."
                     ),
                     "detailed_message": (
-                        f"{area} හි ජල මට්ටම පැයට {rise:.2f}m පමණ වේගයෙන් ඉහළ යයි. "
-                        f"දැනට {water}m. පැය 1කින් {projected_1h}m, පැය 3කින් {projected_3h}m. "
-                        f"ඇඟවීමේ මට්ටම {alert}m."
+                        f"{area} ප්‍රදේශයේ ගඟ දැනට පැයකට {rise:.2f}m පමණ වේගයෙන් ඉහළ "
+                        f"යමින් ඇත. වත්මන් ජල මට්ටම {water}m වන අතර, මෙම වේගය පවතී නම් "
+                        f"පැයකින් {projected_1h}m ට සහ පැය තුනකින් {projected_3h}m ට ළඟා "
+                        f"විය හැකිය. නිල අනතුරු මට්ටම {alert}m යි."
                     ),
                     "recommended_actions": [
-                        "15–30 මිනිත්තු අතරින් ජල මට්ටම නිරීක්ෂණය කරන්න.",
-                        "අවශ්‍ය হলে ඉහළ මට්ටමකට මාරුවීමට සූදානම් වන්න.",
-                        "පහත් මාර්ග හරහා ගමන් කිරීමෙන් වළකින්න.",
+                        "විනාඩි 15 සිට 30 ත් අතර කාල පරතරයෙන් ගඟේ ජල මට්ටම නිරීක්ෂණය කරන්න.",
+                        "ඉහළ ස්ථානයකට ඉක්මනින් ගෙනයා හැකි ළදරුවන්, වයෝවෘද්ධයන් සහ ගෘහ සතුන් සූදානම් කරගන්න.",
+                        "ජලය නොකඩවා ගලා යන මාර්ග හෝ පාලම් හරහා ගමන් නොකරන්න.",
                     ],
                 }
             if lang == "ta":
@@ -269,14 +273,17 @@ class AlertGenerator:
             label_local = self._label_for_lang(next_label, lang)
             if lang == "si":
                 return {
-                    "title": f"සමීප {label_local} — සෑමට {hours} පැයකින්",
+                    "title": f"{area} ප්‍රදේශයේ {label_local} තත්ත්වයක් ළඟදීම ඇතිවිය හැකිය",
                     "short_message": (
-                        f"{area} හි ජල මට්ටම {water}m. "
-                        f"{label_local} මට්ටම {next_level}m."
+                        f"{area} ප්‍රදේශයේ ජල මට්ටම දැනට {water}m යි. "
+                        f"මෙම වේගයෙන් ඉහළ ගියහොත් {label_local} මට්ටම ({next_level}m) "
+                        f"ළඟා වීමට ආසන්නයෙන් පැය {hours}ක් ගත විය හැකිය."
                     ),
                     "detailed_message": (
-                        f"මෙම වේගයෙන් ඉහළ යනවිට {label_local} මට්ටම ආසන්නයෙන් {hours} පැයකින් හැරෙයි. "
-                        f"දැනට {water}m."
+                        f"ගංවතුර නිරීක්ෂණ දත්ත අනුව, {area} ප්‍රදේශයේ ගඟේ ජල මට්ටම "
+                        f"දිගින් දිගටම ඉහළ ගියහොත් {label_local} මට්ටම වන {next_level}m ට "
+                        f"ළඟා වීමට ආසන්නයෙන් පැය {hours}ක් ගත විය හැකි බව ඇස්තමේන්තු කෙරේ. "
+                        f"දැනට ජල මට්ටම {water}m ලෙස පවතී."
                     ),
                     "recommended_actions": self._timing_actions_localized(hours, next_label, lang),
                 }
@@ -315,28 +322,48 @@ class AlertGenerator:
             receding = ctx.get("receding", False)
             if lang == "si":
                 return {
-                    "title": f"{label_local} ඇඟවීම",
-                    "short_message": f"{area} හි {label_local} තත්ත්වය හඳුනාගෙන ඇත.",
+                    "title": f"{area} ප්‍රදේශයේ {label_local} ඇඟවීම නිකුත් කෙරේ",
+                    "short_message": (
+                        f"{area} ප්‍රදේශයේ ගඟ {label_local} මට්ටමට ළඟා වී ඇත. "
+                        f"දැනට ජල මට්ටම {water}m ක් ලෙස {trend} ලෙස ඇත."
+                    ),
                     "detailed_message": (
-                        f"{area} හි ජල මට්ටම {water}m ({trend})යි. "
-                        f"අද වැසි {rainfall}mm."
+                        f"{area} ප්‍රදේශයේ ගඟේ ජල මට්ටම {water}m ({trend}) දක්වා ළඟා වී ඇති අතර, "
+                        f"අදට ලැබුණු මුළු වර්ෂාපතනය {rainfall}mm ලෙස වාර්තා වේ. "
+                        + (
+                            "ජල මට්ටම ඉහළ ශ්‍රේණියක පවතිනවා නමුත් දැනට සෙමෙන් පහළ "
+                            "යමින් ඇති බව සටහන් කෙරේ. ප්‍රදේශය තවමත් අවදානම් කලාපයේ "
+                            "පවතින බැවින් ජනතාව සතුටෙන් නිවෙස්වල රැඳෙන ලෙස ඉල්ලා සිටිනු ලැබේ."
+                            if receding and label == "Major Flood"
+                            else
+                            "ගඟ ආශ්‍රිත ජනතාව ඉක්මනින් ඉහළ ස්ථානවලට ඉවත් වන ලෙස "
+                            "ආපදා කළමනාකරණ මධ්‍යස්ථානය දැඩිව දන්වා සිටී."
+                            if label == "Major Flood"
+                            else
+                            "පහත් බිම් ප්‍රදේශවල ගෘහ සතුන් හා අය්ත්‍ය ඉහළ ස්ථානවලට "
+                            "ගෙනයාමට ඉල්ලා සිටිනු ලැබේ."
+                        )
                     ),
                     "recommended_actions": (
-                        ["ජල මට්ටම ඉහළ නමුත් පහළ යමින් පවතී. විශේෂ අවධානයෙන් සිටින්න."]
+                        [
+                            "ජල මට්ටම ක්‍රමයෙන් පහළ යමින් ඇතත්, ගංවතුර ස්ථාන ආසන්නයේ "
+                            "රැඳීමෙන් වළකින්න. ආපදා නිලධාරීන්ගේ දැනුම් දෙන ලද ස්ථානවල "
+                            "නිවෙස්වලට ආපසු යාම ආරම්භ කිරීමට රැඳෙන්න."
+                        ]
                         if receding and label == "Major Flood"
                         else [
-                            "ඉක්මනින් ඉහළ ස්ථානයකට ඉවත් වන්න.",
-                            "ගංවතුර ඇති මාර්ග හෝ පාලම් හරහා යාමෙන් වළකින්න.",
+                            "ගංවතුරට ලක් වූ ප්‍රදේශ ආශ්‍රිත ජනතාව ඉක්මනින් ආරක්ෂිත ස්ථානවලට ඉවත් වන්න.",
+                            "ජලයෙන් යටවූ මාර්ග, පාලම් හෝ ගඟ ආශ්‍රිත ස්ථාන ළඟා නොවන්න.",
                         ]
                         if label == "Major Flood"
                         else [
-                            "වටිනා දේවල් ඉහළ ස්ථානයකට මාරු කරන්න.",
-                            "ගඟ අසල වාහන නවතා නොතබන්න.",
+                            "ගෘහ භාණ්ඩ, ලේඛන සහ ගෘහ සතුන් ඉහළ ස්ථානවලට ගෙනයන්න.",
+                            "ගඟ ආශ්‍රිතව නවතා ඇති වාහන ඉවත් කරන්න.",
                         ]
                         if label == "Minor Flood"
                         else [
-                            "දේශීය කාලගුණ දැනුම්දීම් අනුගමනය කරන්න.",
-                            "හදිසි කට්ටලයක් සූදානම් කරගන්න.",
+                            "ජාතික ආපදා ව්‍යාප්ති ශාලාව සහ යෙදුම හරහා නවතම නිවේදන නිරීක්ෂණය කරන්න.",
+                            "හදිසි ආරක්ෂිත කට්ටලයක් සූදානම් කරගන්න.",
                         ]
                     ),
                 }
@@ -382,18 +409,21 @@ class AlertGenerator:
             water = ctx.get("water_level", 0.0)
             if lang == "si":
                 return {
-                    "title": "දැඩි වැසි ඇඟවීම",
+                    "title": f"{area} ප්‍රදේශයේ දැඩි වර්ෂාව",
                     "short_message": (
-                        f"අඩු: {area} හි අද {rainfall}mm වැසි ලැබී ඇත. "
-                        "ජල මට්ටම සාමාන්‍යයි."
+                        f"{area} ප්‍රදේශයේ අදට {rainfall}mm ක් ලෙස දැඩි වර්ෂාවක් "
+                        "ලැබී ඇති නමුත් දැනට ගඟේ ජල මට්ටම සාමාන්‍ය පරාසය තුළ පවතී."
                     ),
                     "detailed_message": (
-                        f"අද {rainfall}mm වැසි ලැබී ඇත. දැනට {area} හි ජල මට්ටම {water}mයි. "
-                        "වැසි දිගු වුවහොත් මට්ටම ඉහළ යා හැක."
+                        f"අද {area} ප්‍රදේශයේ {rainfall}mm ක් ලෙස ප්‍රබල වර්ෂාවක් ලැබී ඇත. "
+                        f"දැනට ගඟේ ජල මට්ටම {water}m ලෙස ආරක්ෂිත සීමාවෙහි පවතී. "
+                        "කෙසේ නමුත් වර්ෂාව දිගටම ඇදී ගියහොත් ජල මට්ටම ඉහළ "
+                        "යා හැකි බැවින් ජනතාව දිගටම අවධානයෙන් සිටිය යුතු බව "
+                        "ආපදා කළමනාකරණ ජාතික මධ්‍යස්ථානය දන්වා සිටී."
                     ),
                     "recommended_actions": [
-                        "කාලගුණ යාවත්කාලීන දැනුම්දීම් නිරීක්ෂණය කරන්න.",
-                        "අවශ්‍ය නම් සූදානම්ව සිටින්න.",
+                        "කාලගුණ දෙපාර්තමේන්තුවේ නවතම නිවේදන අනුගමනය කරන්න.",
+                        "දැනට හදිසි තත්ත්වයක් නොමැත; නමුත් සූදානම්ව සිටීම යෝග්‍ය වේ.",
                     ],
                 }
             if lang == "ta":
@@ -454,11 +484,6 @@ class AlertGenerator:
     # ==========================================================================
 
     def check_proximity_warning(self, station_code: str, data: dict) -> dict | None:
-        """
-        Fires when water level reaches 80% of alert threshold while Normal.
-        BAD01: alert=3.50m → warn at 2.80m
-        THA01: alert=4.00m → warn at 3.20m
-        """
         if data.get("flood_category", "Normal") != "Normal":
             return None
 
@@ -506,17 +531,9 @@ class AlertGenerator:
 
     # ==========================================================================
     # TRIGGER 2 — Probability Warning
-    # FIX (Low): removed unused max_flood_prob variable
     # ==========================================================================
 
     def check_probability_warning(self, station_code: str, data: dict) -> dict | None:
-        """
-        Reads the model's internal class probabilities.
-        Fires when non-Normal probability exceeds threshold even while
-        flood_category is still Normal — often hours before the category flips.
-
-        FIX: Removed unused max_flood_prob = max(p_alert, p_minor, p_major).
-        """
         if data.get("flood_category", "Normal") != "Normal":
             return None
 
@@ -526,8 +543,6 @@ class AlertGenerator:
         p_major     = probs.get("Major Flood", 0.0)
         water_level = data.get("current_water_level_m", 0.0)
         area        = STATION_META.get(station_code, {}).get("area", station_code)
-
-        # FIX: max_flood_prob was computed here but never used — removed
 
         if p_major >= PROB_MAJOR_THRESHOLD:
             return {
@@ -617,22 +632,9 @@ class AlertGenerator:
 
     # ==========================================================================
     # TRIGGER 3 — Rate of Rise Warning
-    # FIX (Medium): no longer depends on flood_timing.rise_rate_m_per_hour
-    # Now reads w_avg_delta_m directly from prediction.json (always populated)
     # ==========================================================================
 
     def check_rate_of_rise_warning(self, station_code: str, data: dict) -> dict | None:
-        """
-        Fires when the river is rising rapidly while in Normal category.
-
-        FIX: Previously read rise_rate_m_per_hour from flood_timing, which is
-        only populated when flood_label >= 1. This meant the rate-of-rise
-        early warning never fired for Normal stations.
-
-        Now reads current_rise_rate_m_per_hour directly from prediction.json.
-        This is computed from the last two accumulator readings and the
-        actual time between pipeline runs.
-        """
         if data.get("flood_category", "Normal") != "Normal":
             return None
 
@@ -682,19 +684,9 @@ class AlertGenerator:
 
     # ==========================================================================
     # TRIGGER 4 — Timing Warning
-    # FIX (Medium): now fires for Normal stations because pipeline.py
-    # populates flood_timing for all categories when river is rising
     # ==========================================================================
 
     def check_timing_warning(self, station_code: str, data: dict) -> dict | None:
-        """
-        Fires when the pipeline estimates flood threshold crossing within N hours.
-
-        FIX: Previously never fired for Normal stations because pipeline.py
-        returned empty flood_timing when flood_label == 0. The pipeline fix
-        (removing the early return for Normal) means this now fires correctly
-        whenever the river is rising toward a threshold — regardless of category.
-        """
         flood_timing = data.get("flood_timing", {})
         hours        = flood_timing.get("estimated_hours_to_next_threshold")
         next_label   = flood_timing.get("next_threshold_label", "")
@@ -761,20 +753,20 @@ class AlertGenerator:
         if lang == "si":
             if hours <= 1:
                 return [
-                    "අනතුරු කලාපයක සිටිනවා නම් ඉක්මනින් ඉහළ ස්ථානයකට යන්න.",
-                    "ප්‍රමාද නොවන්න — වහාම ඉවත් වන්න.",
-                    "අවශ්‍ය නම් හදිසි සේවාවන් අමතන්න.",
+                    "ගංවතුරට ලක් විය හැකි ප්‍රදේශයක සිටිනවා නම් ඉතා ඉක්මනින් ඉහළ ස්ථානයකට ගෙනයන්න.",
+                    "ප්‍රමාද නොකරන්න — දැන් ම ඉවත් වන්න. ඔරලෝසු ගෙවෙමින් ඇත.",
+                    "ඉවත් වීමට ආධාර අවශ්‍ය නම් ආපදා හදිසි දුරකථන අංකය (1938) අමතන්න.",
                 ]
             if hours <= 3:
                 return [
-                    "වටිනා දේවල් සහ වාහන ඉහළ ස්ථාන වලට මාරු කරන්න.",
-                    "අත්‍යවශ්‍ය භාණ්ඩ සහිත හදිසි කට්ටලයක් සූදානම් කරන්න.",
-                    "ඉවත් වීමේ මාර්ගය පෙරින් දැනගන්න.",
+                    "ගෘහ භාණ්ඩ, ලේඛන, ඖෂධ සහ ගෘහ සතුන් ඉහළ ස්ථානවලට ගෙනයාම දැන් ම ආරම්භ කරන්න.",
+                    "ජල බෝතල්, ආහාර, ඖෂධ සහ ගෘහ ලේඛන ඇතුළත් හදිසි ඇසුරුමක් සූදානම් කරගන්න.",
+                    "ඉවත් වීමේ මාර්ගය කල්තියා නිශ්චිත කරගන්න.",
                 ]
             return [
-                "ඊළඟ පැය කිහිපය තුළ තත්ත්වය නිරීක්ෂණය කරන්න.",
-                "හදිසි කට්ටලය සූදානම් කරගන්න.",
-                "යෙදුම් සහ දේශීය කාලගුණ යාවත්කාලීන බලන්න.",
+                "ඉදිරි පැය කිහිපය තුළ ගඟේ ජල මට්ටම දිගටම නිරීක්ෂණය කරන්න.",
+                "හදිසි ආරක්ෂිත ඇසුරුමක් ලෑස්ති කරගෙන සූදානම්ව සිටින්න.",
+                "ජාතික ආපදා ව්‍යාප්ති ශාලාවේ සහ යෙදුමේ නිවේදන දිගටම පරීක්ෂා කරන්න.",
             ]
         if lang == "ta":
             if hours <= 1:
@@ -797,7 +789,7 @@ class AlertGenerator:
         return self._timing_actions(hours, next_label)
 
     # ==========================================================================
-    # Confirmed flood alerts — last line when threshold already crossed
+    # Confirmed flood alerts
     # ==========================================================================
 
     def check_confirmed_alert(self, station_code: str, data: dict) -> dict | None:
@@ -940,14 +932,11 @@ class AlertGenerator:
         confirmed = self.check_confirmed_alert(station_code, data)
         if confirmed:
             alerts.append(confirmed)
-            # Still check timing even in confirmed flood state
-            # so "X hours to Major Flood" fires during Minor Flood
             timing = self.check_timing_warning(station_code, data)
             if timing:
                 alerts.append(timing)
             return alerts
 
-        # No confirmed flood — run all early warning checks in priority order
         for check in [
             self.check_timing_warning,
             self.check_rate_of_rise_warning,
@@ -985,14 +974,6 @@ class AlertGenerator:
         logger.info(f"Alert processing complete. {alerts_sent} alert(s) dispatched.")
 
     def _dispatch(self, station_code: str, station_data: dict, alert_info: dict):
-        """
-        Build and send one alert payload to the backend.
-
-        FIX (High): alert_id now includes trigger name to prevent collision
-        when multiple alerts fire for the same station in one run.
-        Previously: flood_Baddegama_Region_1747123456 (same for all triggers)
-        Now:        flood_Baddegama_Region_PROXIMITY_WARNING_1747123456
-        """
         now       = datetime.now(ZoneInfo("Asia/Colombo"))
         area_meta = STATION_META.get(station_code, {})
         area_name = area_meta.get("area", station_code)
@@ -1001,7 +982,6 @@ class AlertGenerator:
         trigger   = alert_info.get("trigger", "UNKNOWN")
 
         payload = {
-            # FIX: trigger name included — no more same-second collisions
             "alert_id":   f"flood_{station_code}_{safe_name}_{trigger}_{int(now.timestamp())}",
             "confidence": station_data.get("confidence", 0.0),
             "trigger":    trigger,
