@@ -695,7 +695,7 @@ class AlertGenerator:
         water_level  = data.get("current_water_level_m", 0.0)
         area         = STATION_META.get(station_code, {}).get("area", station_code)
 
-        if hours is None or hours > TIMING_WARNING_HOURS:
+        if hours is None or hours <= 0 or hours > TIMING_WARNING_HOURS:
             return None
 
         if hours <= 1:
@@ -822,8 +822,8 @@ class AlertGenerator:
             return {
                 "trigger":        "CONFIRMED_FLOOD",
                 "severity_level": "CRITICAL",
-                "event_type":     "FLASH_FLOOD",
-                "title":          "Flash Flood Warning",
+                "event_type":     "MAJOR_FLOOD",
+                "title":          "Major Flood Warning",
                 "short_message":  f"CRITICAL: Severe flooding at {area}.{timing_str}",
                 "detailed_message": (
                     f"River levels at {area} have reached {water_level}m ({trend_str}) "
