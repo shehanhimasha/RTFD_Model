@@ -23,9 +23,9 @@ STATION_META = {
 
 # ── Early warning thresholds ───────────────────────────────────────────────────
 PROXIMITY_FRACTION   = 0.80   # warn when water reaches 80% of alert threshold
-PROB_ALERT_THRESHOLD = 0.05   # P(Alert) > 5%
-PROB_MINOR_THRESHOLD = 0.02   # P(Minor Flood) > 2%
-PROB_MAJOR_THRESHOLD = 0.01   # P(Major Flood) > 1%
+PROB_ALERT_THRESHOLD = 0.20   # P(Alert) > 5%
+PROB_MINOR_THRESHOLD = 0.12   # P(Minor Flood) > 2%
+PROB_MAJOR_THRESHOLD = 0.8   # P(Major Flood) > 1%
 RATE_OF_RISE_THRESHOLD = 0.25 # metres per hour
 TIMING_WARNING_HOURS = 6      # warn if flood expected within 6 hours
 
