@@ -91245,5 +91245,22 @@
         "weather_description": "WMO Code 1"
       }
     ]
+  },
+  {
+    "source": "open-meteo",
+    "fetched_at": "2026-05-31T19:00:11",
+    "locations": [
+      {
+        "station_id": "UDU01",
+        "station_name": "Udugama",
+        "river_name": "Gin Ganga",
+        "lat": 6.23,
+        "lon": 80.32,
+        "rainfall_1h_mm": 0.0,
+        "humidity": 89,
+        "clouds_pct": 45,
+        "weather_description": "WMO Code 1"
+      }
+    ]
   }
 ]
