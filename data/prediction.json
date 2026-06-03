@@ -1,5 +1,5 @@
 {
-  "predicted_at": "2026-06-04T02:12:23",
+  "predicted_at": "2026-06-04T04:25:15",
   "model": "XGBoost + LightGBM ensemble",
   "stations": {
     "BAD01": {
