@@ -1,5 +1,5 @@
 {
-  "predicted_at": "2026-06-06T22:19:37",
+  "predicted_at": "2026-06-07T00:26:36",
   "model": "XGBoost + LightGBM ensemble",
   "stations": {
     "BAD01": {
@@ -13,11 +13,11 @@
         "Major Flood": 0.0006
       },
       "current_water_level_m": 1.96,
-      "w_avg_m": 2.018,
-      "w_max_m": 2.15,
+      "w_avg_m": 1.96,
+      "w_max_m": 1.96,
       "w_min_m": 1.96,
-      "w_avg_delta_m": -0.132,
-      "current_rise_rate_m_per_hour": -0.0056,
+      "w_avg_delta_m": -0.19,
+      "current_rise_rate_m_per_hour": 0.0,
       "rainfall_today_mm": 1.2,
       "rising_flag": 0,
       "alert_level_m": 3.5,
@@ -33,31 +33,31 @@
     "THA01": {
       "flood_category": "Normal",
       "flood_label": 0,
-      "confidence": 0.9983,
+      "confidence": 0.9982,
       "probabilities": {
-        "Normal": 0.9983,
+        "Normal": 0.9982,
         "Alert": 0.0006,
         "Minor Flood": 0.0006,
         "Major Flood": 0.0006
       },
-      "current_water_level_m": 2.23,
-      "w_avg_m": 2.079,
-      "w_max_m": 2.25,
-      "w_min_m": 1.86,
-      "w_avg_delta_m": 0.219,
+      "current_water_level_m": 2.2,
+      "w_avg_m": 2.2,
+      "w_max_m": 2.2,
+      "w_min_m": 2.2,
+      "w_avg_delta_m": 0.34,
       "current_rise_rate_m_per_hour": 0.0,
-      "rainfall_today_mm": 26.9,
+      "rainfall_today_mm": 25.7,
       "rising_flag": 0,
       "alert_level_m": 4.0,
       "minor_flood_level_m": 6.0,
       "major_flood_level_m": 7.5,
       "flood_timing": {
-        "estimated_hours_to_next_threshold": 211,
+        "estimated_hours_to_next_threshold": 127,
         "next_threshold_label": "Alert",
         "next_threshold_m": 4.0,
-        "current_water_level": 2.079,
-        "rise_rate_m_per_hour": 0.0091,
-        "note": "At current rise rate, Alert conditions expected in approximately 211 hour(s)"
+        "current_water_level": 2.2,
+        "rise_rate_m_per_hour": 0.0142,
+        "note": "At current rise rate, Alert conditions expected in approximately 127 hour(s)"
       },
       "data_source": {
         "arcgis_available": true,
