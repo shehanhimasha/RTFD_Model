@@ -1,35 +1,35 @@
 {
-  "predicted_at": "2026-06-08T22:10:28",
+  "predicted_at": "2026-06-09T00:40:40",
   "model": "XGBoost + LightGBM ensemble",
   "stations": {
     "BAD01": {
       "flood_category": "Normal",
       "flood_label": 0,
-      "confidence": 0.998,
+      "confidence": 0.9981,
       "probabilities": {
-        "Normal": 0.998,
+        "Normal": 0.9981,
         "Alert": 0.0007,
         "Minor Flood": 0.0006,
         "Major Flood": 0.0006
       },
       "current_water_level_m": 2.56,
-      "w_avg_m": 2.6043,
-      "w_max_m": 2.72,
-      "w_min_m": 2.48,
-      "w_avg_delta_m": 0.1243,
-      "current_rise_rate_m_per_hour": -0.0228,
+      "w_avg_m": 2.56,
+      "w_max_m": 2.56,
+      "w_min_m": 2.56,
+      "w_avg_delta_m": 0.08,
+      "current_rise_rate_m_per_hour": 0.0,
       "rainfall_today_mm": 9.65,
       "rising_flag": 0,
       "alert_level_m": 3.5,
       "minor_flood_level_m": 4.0,
       "major_flood_level_m": 5.0,
       "flood_timing": {
-        "estimated_hours_to_next_threshold": 173,
+        "estimated_hours_to_next_threshold": 282,
         "next_threshold_label": "Alert",
         "next_threshold_m": 3.5,
-        "current_water_level": 2.604,
-        "rise_rate_m_per_hour": 0.0052,
-        "note": "At current rise rate, Alert conditions expected in approximately 173 hour(s)"
+        "current_water_level": 2.56,
+        "rise_rate_m_per_hour": 0.0033,
+        "note": "At current rise rate, Alert conditions expected in approximately 282 hour(s)"
       },
       "data_source": {
         "arcgis_available": true,
@@ -40,19 +40,19 @@
     "THA01": {
       "flood_category": "Normal",
       "flood_label": 0,
-      "confidence": 0.9982,
+      "confidence": 0.9983,
       "probabilities": {
-        "Normal": 0.9982,
+        "Normal": 0.9983,
         "Alert": 0.0006,
         "Minor Flood": 0.0006,
         "Major Flood": 0.0006
       },
       "current_water_level_m": 1.94,
-      "w_avg_m": 2.16,
-      "w_max_m": 2.33,
+      "w_avg_m": 1.94,
+      "w_max_m": 1.94,
       "w_min_m": 1.94,
-      "w_avg_delta_m": -0.16,
-      "current_rise_rate_m_per_hour": -0.0091,
+      "w_avg_delta_m": -0.38,
+      "current_rise_rate_m_per_hour": 0.0,
       "rainfall_today_mm": 7.2,
       "rising_flag": 0,
       "alert_level_m": 4.0,
