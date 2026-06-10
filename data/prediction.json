@@ -1,5 +1,5 @@
 {
-  "predicted_at": "2026-06-10T20:11:02",
+  "predicted_at": "2026-06-10T23:15:48",
   "model": "XGBoost + LightGBM ensemble",
   "stations": {
     "BAD01": {
@@ -12,13 +12,13 @@
         "Minor Flood": 0.0006,
         "Major Flood": 0.0006
       },
-      "current_water_level_m": 1.77,
-      "w_avg_m": 1.8743,
+      "current_water_level_m": 1.72,
+      "w_avg_m": 1.855,
       "w_max_m": 1.97,
-      "w_min_m": 1.77,
-      "w_avg_delta_m": -0.0957,
-      "current_rise_rate_m_per_hour": -0.0123,
-      "rainfall_today_mm": 3.7,
+      "w_min_m": 1.72,
+      "w_avg_delta_m": -0.115,
+      "current_rise_rate_m_per_hour": -0.0162,
+      "rainfall_today_mm": 0.5,
       "rising_flag": 0,
       "alert_level_m": 3.5,
       "minor_flood_level_m": 4.0,
@@ -40,24 +40,24 @@
         "Minor Flood": 0.0006,
         "Major Flood": 0.0006
       },
-      "current_water_level_m": 1.88,
-      "w_avg_m": 1.8029,
-      "w_max_m": 1.88,
+      "current_water_level_m": 1.97,
+      "w_avg_m": 1.8238,
+      "w_max_m": 1.97,
       "w_min_m": 1.76,
-      "w_avg_delta_m": 0.0029,
-      "current_rise_rate_m_per_hour": 0.0154,
-      "rainfall_today_mm": 7.7,
+      "w_avg_delta_m": 0.0238,
+      "current_rise_rate_m_per_hour": 0.0292,
+      "rainfall_today_mm": 8.7,
       "rising_flag": 0,
       "alert_level_m": 4.0,
       "minor_flood_level_m": 6.0,
       "major_flood_level_m": 7.5,
       "flood_timing": {
-        "estimated_hours_to_next_threshold": 18183,
+        "estimated_hours_to_next_threshold": 2194,
         "next_threshold_label": "Alert",
         "next_threshold_m": 4.0,
-        "current_water_level": 1.803,
-        "rise_rate_m_per_hour": 0.0001,
-        "note": "At current rise rate, Alert conditions expected in approximately 18183 hour(s)"
+        "current_water_level": 1.824,
+        "rise_rate_m_per_hour": 0.001,
+        "note": "At current rise rate, Alert conditions expected in approximately 2194 hour(s)"
       },
       "data_source": {
         "arcgis_available": true,
