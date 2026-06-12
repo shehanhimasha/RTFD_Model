@@ -1,5 +1,5 @@
 {
-  "predicted_at": "2026-06-12T15:17:48",
+  "predicted_at": "2026-06-12T19:22:51",
   "model": "XGBoost + LightGBM ensemble",
   "stations": {
     "BAD01": {
@@ -12,24 +12,24 @@
         "Minor Flood": 0.0006,
         "Major Flood": 0.0006
       },
-      "current_water_level_m": 2.67,
-      "w_avg_m": 2.154,
-      "w_max_m": 2.67,
+      "current_water_level_m": 2.81,
+      "w_avg_m": 2.2633,
+      "w_max_m": 2.81,
       "w_min_m": 1.84,
-      "w_avg_delta_m": 0.314,
-      "current_rise_rate_m_per_hour": 0.1015,
-      "rainfall_today_mm": 10.95,
+      "w_avg_delta_m": 0.4233,
+      "current_rise_rate_m_per_hour": 0.0343,
+      "rainfall_today_mm": 45.35,
       "rising_flag": 0,
       "alert_level_m": 3.5,
       "minor_flood_level_m": 4.0,
       "major_flood_level_m": 5.0,
       "flood_timing": {
-        "estimated_hours_to_next_threshold": 103,
+        "estimated_hours_to_next_threshold": 70,
         "next_threshold_label": "Alert",
         "next_threshold_m": 3.5,
-        "current_water_level": 2.154,
-        "rise_rate_m_per_hour": 0.0131,
-        "note": "At current rise rate, Alert conditions expected in approximately 103 hour(s)"
+        "current_water_level": 2.263,
+        "rise_rate_m_per_hour": 0.0176,
+        "note": "At current rise rate, Alert conditions expected in approximately 70 hour(s)"
       },
       "data_source": {
         "arcgis_available": true,
@@ -40,31 +40,31 @@
     "THA01": {
       "flood_category": "Normal",
       "flood_label": 0,
-      "confidence": 0.9736,
+      "confidence": 0.9765,
       "probabilities": {
-        "Normal": 0.9736,
-        "Alert": 0.0219,
-        "Minor Flood": 0.0023,
-        "Major Flood": 0.0021
+        "Normal": 0.9765,
+        "Alert": 0.0195,
+        "Minor Flood": 0.0021,
+        "Major Flood": 0.0019
       },
-      "current_water_level_m": 3.23,
-      "w_avg_m": 3.256,
+      "current_water_level_m": 2.94,
+      "w_avg_m": 3.2033,
       "w_max_m": 3.64,
-      "w_min_m": 2.96,
-      "w_avg_delta_m": 0.296,
-      "current_rise_rate_m_per_hour": -0.0924,
-      "rainfall_today_mm": 37.5,
+      "w_min_m": 2.94,
+      "w_avg_delta_m": 0.2433,
+      "current_rise_rate_m_per_hour": -0.071,
+      "rainfall_today_mm": 52.9,
       "rising_flag": 0,
       "alert_level_m": 4.0,
       "minor_flood_level_m": 6.0,
       "major_flood_level_m": 7.5,
       "flood_timing": {
-        "estimated_hours_to_next_threshold": 60,
+        "estimated_hours_to_next_threshold": 79,
         "next_threshold_label": "Alert",
         "next_threshold_m": 4.0,
-        "current_water_level": 3.256,
-        "rise_rate_m_per_hour": 0.0123,
-        "note": "At current rise rate, Alert conditions expected in approximately 60 hour(s)"
+        "current_water_level": 3.203,
+        "rise_rate_m_per_hour": 0.0101,
+        "note": "At current rise rate, Alert conditions expected in approximately 79 hour(s)"
       },
       "data_source": {
         "arcgis_available": true,
